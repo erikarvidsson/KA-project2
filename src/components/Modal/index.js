@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const Button = styled.button`
-    width: 100px;
-    height: 50px;
-    background: blue;
-    color: white;
-`
+// const Button = styled.button`
+//     width: 100px;
+//     height: 50px;
+//     background: blue;
+//     color: white;
+// `
+
 const Img = styled.img`
   width: 100px;
   height: 150px;
@@ -28,13 +29,14 @@ const Container = styled.div`
   color: white;
 `;
 const Window = styled.div`
+  scroll-snap-align: start;
   border-radius: 15px;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   z-index: 3;
@@ -45,6 +47,7 @@ const Modal = (props) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
 
   return (
     <>
@@ -56,16 +59,9 @@ const Modal = (props) => {
       {/* <Button onClick={handleShow}>This button opens a modal</Button> */}
 
       {show && (
-        <Window show={show} onHide={handleClose} onClick={handleClose}>
+        <Window show={show} onClick={handleClose}>
           <div closeButton>
-            {/* <h1>Modal heading</h1>
-          </div>
-          <h1>Välkommen till modalen</h1>
-          <div> */}
             {props.children}
-            {/* <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button> */}
           </div>
         </Window>
       )}

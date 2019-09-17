@@ -9,11 +9,15 @@ const Button = styled.button`
 `
 const Window = styled.div`
   border-radius: 15px;
-  width: 90vw;
-  height: 50vh;
-  background: blue;
+  width: 80vw;
+  height: 80vh;
+  background: transparent;
   color: white;
   margin: 0 auto;
+  position: fixed;
+  left: 10vw;
+  top: 10vh;
+  z-index: 3;
 `;
 
 const Modal = (props) => {
@@ -24,7 +28,8 @@ const Modal = (props) => {
 
   return (
     <>
-      <Button onClick={handleShow}>This button opens a modal</Button>
+      <img src={props.url} alt="" onClick={handleShow} />
+      {/* <Button onClick={handleShow}>This button opens a modal</Button> */}
 
       {show && (
         <Window show={show} onHide={handleClose}>

@@ -15,8 +15,8 @@ const YPlayer = (props) => {
       url={props.link}
       className='react-player'
       playing
-      width='100%'
-      height='50vh'
+      width='80vw'
+      height='80vh'
     />
   </PlayerWrapper>)
   }

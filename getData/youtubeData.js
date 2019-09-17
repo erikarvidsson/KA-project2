@@ -38,7 +38,7 @@ const youtubeData = () => {
                 title: data.items[0].snippet.title,
                 publishedAt: data.items[0].snippet.publishedAt,
                 description: data.items[0].snippet.description,
-                url: `http://youtube.com/watch?w=${data.items[0].id}`,
+                url: `http://youtube.com/watch?v=${data.items[0].id}`,
                 thumbnail: data.items[0].snippet.thumbnails.high.url,
                 // tags: fakeTags[i % (fakeTags.length - 1)], // data.items[0].snippet.tags,
                 duration: data.items[0].contentDetails.duration,

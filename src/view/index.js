@@ -7,11 +7,18 @@ import SoundData from "../data/playlists.json"
 
 
 const Index = () => {
-  console.log(SoundData);
+  console.log(VideoData);
   return (
     <div>
       <Layout>
         <h1> This is the Index page! </h1>
+          {VideoData.map(video => {
+            return (
+              <Modal url={video.thumbnail}>
+                <YPlayer link={video.url} />
+              </Modal>
+            );
+          })}
         <Modal>
           <YPlayer link={VideoData[0].url} />
         </Modal>

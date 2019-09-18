@@ -7,7 +7,7 @@ import SoundData from "../data/playlists.json"
 import SideScroll from "../components/SideScroll";
 import AudioPlayer from "../components/AudioPlayer"
 import LikeButton from "../components/LikeButton"
-
+import ProfilePage from "../components/ProfilePage";
 
 const Index = () => {
   console.log(SoundData);

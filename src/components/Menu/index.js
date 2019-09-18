@@ -9,7 +9,7 @@ const MenuDiv = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left:0;
     margin: 0;

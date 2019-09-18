@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Menu from "../Menu";
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -13,20 +14,8 @@ const Wrapper = styled.div`
 const Layout = (props) => {
   return (
     <Wrapper>
-      {/* <ul>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-          <br />
-          <Link href="/index">
-            <a>Home</a>
-          </Link>
-          <br />
-          <Link href="/login">
-            <a>Login</a>
-          </Link>
-      </ul> */}
       {props.children}
+      <Menu />
     </Wrapper>
   );
 }

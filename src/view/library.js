@@ -8,7 +8,7 @@ const Library = () => {
                 <h1>This is the Library page!</h1>
             </Layout>
         </div>
-    );
+    )
 };
 
 export default Library;

@@ -7,7 +7,7 @@ const About = () => {
     <div>
       <Layout>
         <h1> This is the About page! </h1>
-        <Menu />
+        
       </Layout>
     </div>
   );

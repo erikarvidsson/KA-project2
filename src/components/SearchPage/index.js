@@ -3,17 +3,16 @@ import styled from "styled-components";
 
 
 const Wrapper = styled.div`
-  display: flex;
-  height: 100%;
-  width: 100vw;
+
 
   &>h1 {
-  color: #fff;
-  height: 80px;
-  width: 100vw;
-  flex-direction: column;
-  justify-content: flex-start;
-
+    color: black;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
   }
 
   section h2 {
@@ -27,10 +26,9 @@ const SearchPage = () => {
     return (
     <div>
         <Wrapper>
-            <h1>kplay</h1>
-
-            <section>
-              <h2>Sök</h2>
+              <h1>kplay</h1>
+                <section>
+                <h2>Sök</h2>
             </section>
         </Wrapper>
     </div>

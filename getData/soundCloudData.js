@@ -13,7 +13,7 @@ const soundCloudData = async () => {
       `${SOUNDCLOUD_URI}/users/${USER_NAME}/playlists/${CLIENT_ID}&limit=200    `
     );
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
     // Double loop in playlists
 
     let playlists = [];

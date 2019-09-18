@@ -5,10 +5,12 @@ import YPlayer from "../components/YPlayer";
 import VideoData from "../data/youtube.json"
 import SoundData from "../data/playlists.json"
 import SideScroll from "../components/SideScroll";
+import AudioPlayer from "../components/AudioPlayer"
+import LikeButton from "../components/LikeButton"
 
 
 const Index = () => {
-  console.log(VideoData);
+  console.log(SoundData);
   return (
     <div>
       <Layout>
@@ -18,6 +20,19 @@ const Index = () => {
               return (
                 <Modal url={video.thumbnail} title={video.title}>
                   <YPlayer link={video.url} />
+                </Modal>
+              );
+            })}
+          <Modal>
+            <YPlayer link={VideoData[0].url} />
+          </Modal>
+        </SideScroll>
+        <SideScroll>
+          {SoundData.map(sound => {
+              return (
+                <Modal url={sound.thumbnail} title={sound.title}>
+                  <AudioPlayer thumbnail={sound.thumbnail} src="/audio/audiofile1.mp3"></AudioPlayer>
+                  <LikeButton id={sound.id}/>
                 </Modal>
               );
             })}

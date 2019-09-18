@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactAudioPlayer from "react-audio-player";
 import styled from "styled-components";
 
 const PlayerWrapper = styled.div`
@@ -7,16 +6,15 @@ const PlayerWrapper = styled.div`
     height: 100%;
 `;
 
+
 const AudioPlayer = (props) => {
   return (
-    <PlayerWrapper>
-      <ReactAudioPlayer
-        src={props.src}
-        autoPlay
-        controls
-      />
-    </PlayerWrapper>
-  );
-}
+  <PlayerWrapper>
+    <img src={props.thumbnail} alt=""/>
+        <audio controls autoPlay>
+          <source src={props.src} typ="audio/mpeg" />
+        </audio>
+  </PlayerWrapper>
+)}
 
 export default AudioPlayer

@@ -14,13 +14,18 @@ const MenuDiv = styled.div`
     margin: 0;
 `;
 
+const Icons = styled.img`
+    height: 30px;
+    width: 30px;
+`
+
 const Menu = () => {
     return (
         <MenuDiv>
-            <Link to='/Library'>Library</Link>
-            <Link to = '/Explore'> Explore </Link>
-            <Link to='/Search'>Search</Link>
-            <Link to='/Notification'>Notification</Link>            
+            <Link to='/Library'><Icons src='assets/icons/bookmark.svg'/></Link>
+            <Link to = '/Explore'><Icons src='assets/icons/utforska.svg'/></Link>
+            <Link to='/Search'><Icons src='assets/icons/search.svg'/></Link>
+            <Link to='/Notification'><Icons src='assets/icons/notiser.svg'/></Link>            
         </MenuDiv>
     )
 }

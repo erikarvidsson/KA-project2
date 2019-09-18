@@ -5,6 +5,7 @@ import './App.css';
 import Home from "./view/";
 import About from "./view/about";
 import LogIn from "./view/login";
+
 function App() {
   // console.log(Route)
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/About" component={About} />
         <Route path="/Login" component={LogIn} />
+
       </header>
     </div>
   );

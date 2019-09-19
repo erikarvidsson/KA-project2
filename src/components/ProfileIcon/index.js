@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Icon = styled.img`
@@ -9,7 +10,7 @@ const Icon = styled.img`
 const ProfileIcon = () => {
     return(
         <div>
-            <Icon src='assets/icons/profile.svg'/>
+            <Link to='/Profile'><Icon src='assets/icons/Profilbild.svg'/></Link>
         </div>
     )
 

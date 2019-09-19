@@ -8,8 +8,8 @@ import { Header, P, H2 } from '../components/typo';
 
 
 const BackIcon = styled.img `
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 `
 const StyledLink = styled(Link)`
     text-decoration: none;

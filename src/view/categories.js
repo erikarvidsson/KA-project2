@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 const Categories = () => {
     return(
         <div>
-            <Layout></Layout>
+            <Layout />
         </div>
     )
 }

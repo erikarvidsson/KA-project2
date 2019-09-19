@@ -4,7 +4,7 @@ import { Route, Switch, Link } from "react-router-dom";
 import Layout from '../components/Layout';
 import ProfileIcon from '../components/ProfileIcon';
 import NavigationButton from '../components/NavigationButton';
-import { Header, P } from '../components/typo';
+import { Header, P, H2 } from '../components/typo';
 
 
 const BackIcon = styled.img `
@@ -31,6 +31,7 @@ const Library = (props) => {
                 <StyledLink to='/Categories'><NavigationButton goTo='Kategorier' img='assets/icons/right-arrow.svg'/></StyledLink>
                 <StyledLink to='/Episodes'><NavigationButton goTo='Avsnitt' img='assets/icons/right-arrow.svg'/></StyledLink>
                 <StyledLink to='/Favorites'><NavigationButton goTo='Favoriter' img='assets/icons/right-arrow.svg'/></StyledLink>
+                <H2 text='Senaste avsnitt'/>
             </Layout>
         </div>
     )

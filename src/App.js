@@ -13,6 +13,20 @@ import Notification from './view/notification';
 import Profile from './view/profile';
 import Konto from './view/konto';
 
+window.addEventListener('load', () => {
+  registerSW();
+})
+
+async function registerSW() {
+  if('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register("./service-worker.js");
+    } catch (e) {
+        console.log('SW faild')
+    }
+  }
+}
+
 const history = createBrowserHistory()
 
 function App() {

@@ -18,7 +18,17 @@ const MenuDiv = styled.div`
 const Icons = styled.img`
     height: 30px;
     width: 30px;
-`
+    /* transition: 0.4s; */
+
+    &:active{
+        transform: scale(1.5, 1.5);
+        
+    }
+    /* Detta funkar inte */
+    /* &::after{
+        background-image: url('assets/icons/rocket-launch.svg')
+    } */
+`;
 
 const Menu = () => {
     return (

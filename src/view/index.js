@@ -7,10 +7,11 @@ import SoundData from "../data/playlists.json"
 import SideScroll from "../components/SideScroll";
 import AudioPlayer from "../components/AudioPlayer"
 import LikeButton from "../components/LikeButton"
+import { P, Header } from "../components/typo";
 
 
 const Index = () => {
-  console.log(SoundData);
+  console.log(VideoData);
   return (
     <div>
       <Layout>
@@ -19,12 +20,15 @@ const Index = () => {
             {VideoData.map(video => {
               return (
                 <Modal url={video.thumbnail} title={video.title}>
-                  <YPlayer link={video.url} />
+                  <YPlayer link={video.url} height="100px" top="0vh" />
+                  <Header>{video.title}</Header>
+                  <P>{video.description}</P>
                 </Modal>
               );
             })}
           <Modal>
             <YPlayer link={VideoData[0].url} />
+            />
           </Modal>
         </SideScroll>
         <SideScroll>

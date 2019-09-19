@@ -10,6 +10,7 @@ import Library from './view/library';
 import Explore from './view/explore';
 import Search from './view/search';
 import Notification from './view/notification';
+import Profile from './view/profile';
 
 const history = createBrowserHistory()
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Explore" component={Explore} />
           <Route path="/Search" component={Search} />
           <Route path="/Notification" component={Notification} />
+          <Route path="/Profile" component={Profile} />
         </div>
 
 

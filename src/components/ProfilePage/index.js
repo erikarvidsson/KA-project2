@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
+import NavigationButton from '../NavigationButton';
 
 
 const Section = styled.section`
@@ -35,28 +36,9 @@ const Icon = styled.div`
 `;
 
 const Div = styled.div`
-  height: 40vh;
+  /* height: 40vh; */
   width: 100vw;
 
-
-  ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  line-height: 20px;
-  }
-
-  li {
-  display: flex;
-  border-bottom: 1px solid white;
-  padding-bottom: 25px;
-  width: 90vw;
-  height: 30px;
-  line-height: 4;
-  justify-content: space-between;
-  }
 
   h3 {
   display: flex;
@@ -95,12 +77,10 @@ const ProfilePage = () => {
         <Div>
           <h3>Namn Efternamn</h3>
           <h5>Kulturförvaltare</h5>
-          <ul>
-            <li>Konto<Link to='/Konto'><img src='assets/icons/right-arrow.svg'></img></Link></li>
-            <li>Inställningar<Link to='/'><img src='assets/icons/right-arrow.svg'></img></Link></li>
-            <li>Hjälp<Link to='/'><img src='assets/icons/right-arrow.svg'></img></Link></li>
-            <li>Logga ut<Link to='/'><img src='assets/icons/logout.svg'></img></Link></li>
-          </ul>
+          <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
+          <Link to='/Konto'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
+          <Link to='/Konto'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
+          <Link to='/Konto'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
           </Div>
       </Section>
     </div>

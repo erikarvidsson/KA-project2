@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from "react-router-dom";
 import './App.css';
+import { createBrowserHistory } from 'history';
 
 import Home from "./view/";
 import About from "./view/about";
@@ -9,6 +10,8 @@ import Library from './view/library';
 import Explore from './view/explore';
 import Search from './view/search';
 import Notification from './view/notification';
+
+const history = createBrowserHistory()
 
 function App() {
   // console.log(Route)
@@ -19,14 +22,17 @@ function App() {
         <Link to="/About">About Page</Link>
         <Link to="/Login">Login page</Link>
 
+        <div history={history}>
+          <Route path="/" exact component={Home} />
+          <Route path="/About" component={About} />
+          <Route path="/Login" component={LogIn} />
+          <Route path="/Library" component={Library} />
+          <Route path="/Explore" component={Explore} />
+          <Route path="/Search" component={Search} />
+          <Route path="/Notification" component={Notification} />
+        </div>
 
-        <Route path="/" exact component={Home} />
-        <Route path="/About" component={About} />
-        <Route path="/Login" component={LogIn} />
-        <Route path="/Library" component={Library} />
-        <Route path="/Explore" component={Explore} />
-        <Route path="/Search" component={Search} />
-        <Route path="/Notification" component={Notification} />
+
       </header>
     </div>
   );

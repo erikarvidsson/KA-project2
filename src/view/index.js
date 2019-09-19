@@ -14,15 +14,16 @@ const Index = () => {
   console.log(VideoData);
   return (
     <div>
-      <Layout>
+      <Layout >
           <h1> This is the Index page! </h1>
         <SideScroll>
             {VideoData.map(video => {
               return (
                 <Modal url={video.thumbnail} title={video.title}>
-                  <YPlayer link={video.url} height="100px" top="0vh" />
-                  <Header>{video.title}</Header>
-                  <P>{video.description}</P>
+                  <LikeButton />
+                  <YPlayer link={video.url} height="270px" top="120px" />
+                  <Header text={video.title}></Header>
+                  <P top="300px" text={video.description}></P>
                 </Modal>
               );
             })}

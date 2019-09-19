@@ -3,14 +3,13 @@ import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
 
-
 const Section = styled.section`
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
 
-
   img {
-  height: 250px;
+  height: 200px;
+  filter:invert(1);
 }
 
 `;
@@ -39,6 +38,10 @@ const Div = styled.div`
   /* height: 40vh; */
   width: 100vw;
 
+  a {
+  color: #fff;
+  text-decoration: none;
+}
 
   h3 {
   display: flex;

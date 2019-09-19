@@ -21,7 +21,7 @@ const Div = styled.div`
   padding-bottom: 25px;
   width: 90vw;
   /* height: 30px; */
-  line-height: 4;
+
   justify-content: space-between;
   }
 

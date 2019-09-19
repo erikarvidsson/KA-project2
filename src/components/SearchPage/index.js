@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
-
+import ProfileIcon from '../ProfileIcon';
 
 const Icon = styled.div`
 color: #fff;
@@ -80,7 +80,7 @@ const SearchPage = () => {
         </Icon>
 
         <Profile>
-          <Link to='/Profile'><img src='assets/icons/profile.svg'/></Link>
+          <Link to='/Profile'><ProfileIcon/></Link>
         </Profile>
 
         <Section>

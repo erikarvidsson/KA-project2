@@ -33,6 +33,7 @@ function App() {
           <Route path="/Search" component={Search} />
           <Route path="/Notification" component={Notification} />
           <Route path="/Profile" component={Profile} />
+          <Route path="/Konto" component={Konto} />
         </div>
 
 

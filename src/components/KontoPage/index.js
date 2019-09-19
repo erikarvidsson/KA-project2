@@ -63,7 +63,7 @@ border-bottom: 1px solid white;
 padding-bottom: 25px;
 width: 90vw;
 height: 30px;
-line-height: 4;
+line-height: 2;
 justify-content: space-between;
 
   }

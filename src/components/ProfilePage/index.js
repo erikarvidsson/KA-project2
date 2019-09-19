@@ -96,7 +96,7 @@ const ProfilePage = () => {
           <h3>Namn Efternamn</h3>
           <h5>Kulturförvaltare</h5>
           <ul>
-            <li>Konto<Link to='/'><img src='assets/icons/right-arrow.svg'></img></Link></li>
+            <li>Konto<Link to='/Konto'><img src='assets/icons/right-arrow.svg'></img></Link></li>
             <li>Inställningar<Link to='/'><img src='assets/icons/right-arrow.svg'></img></Link></li>
             <li>Hjälp<Link to='/'><img src='assets/icons/right-arrow.svg'></img></Link></li>
             <li>Logga ut<Link to='/'><img src='assets/icons/logout.svg'></img></Link></li>

@@ -43,6 +43,7 @@ img {
 width:20px;
 height:auto;
 filter:invert(1);
+margin-right: 20px;
 }
 `;
 

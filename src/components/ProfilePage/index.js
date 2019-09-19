@@ -4,12 +4,12 @@ import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
 
 const Section = styled.section`
-  /* height: 100vh; */
+  height: 100vh;
   width: 100vw;
 
   img {
   height: 200px;
-  filter:invert(1);
+
 }
 
 `;
@@ -29,7 +29,6 @@ const Icon = styled.div`
   img {
   width:20px;
   height:auto;
-  filter:invert(1);
   }
 
 `;
@@ -63,7 +62,6 @@ const Div = styled.div`
 
   img {
   height: 25px;
-  filter:invert(1);
   margin-right: 20px;
   }
 
@@ -76,7 +74,7 @@ const ProfilePage = () => {
       <Icon>
         <Link to='/'><img src='assets/icons/left-arrow.svg'/></Link>
       </Icon>
-        <img src='assets/icons/profile.svg'></img>
+        <img src='assets/icons/Profilbild.svg'></img>
         <Div>
           <h3>Namn Efternamn</h3>
           <h5>Kulturförvaltare</h5>

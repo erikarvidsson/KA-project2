@@ -9,6 +9,7 @@ import AudioPlayer from "../components/AudioPlayer"
 import LikeButton from "../components/LikeButton"
 import { P, Header } from "../components/typo";
 
+import ProfilePage from "../components/ProfilePage";
 
 const Index = () => {
   console.log(VideoData);

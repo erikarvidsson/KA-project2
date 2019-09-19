@@ -1,15 +1,15 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import SearchPage from '../components/SearchPage';
+import ProfilePage from '../components/ProfilePage';
 
-const Search = () => {
+const Profile = () => {
     return(
         <div>
             <Layout>
-              <SearchPage />
+              <ProfilePage />
             </Layout>
         </div>
     )
 }
 
-export default Search;
+export default Profile;

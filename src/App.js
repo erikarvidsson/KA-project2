@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from "react-router-dom";
 import './App.css';
+import { createBrowserHistory } from 'history';
 
 import Home from "./view/";
 import About from "./view/about";
@@ -12,6 +13,8 @@ import Notification from './view/notification';
 import Profile from './view/profile';
 import Konto from './view/konto';
 
+const history = createBrowserHistory()
+
 function App() {
   // console.log(Route)
   return (
@@ -21,16 +24,18 @@ function App() {
         <Link to="/About">About Page</Link>
         <Link to="/Login">Login page</Link>
 
+        <div history={history}>
+          <Route path="/" exact component={Home} />
+          <Route path="/About" component={About} />
+          <Route path="/Login" component={LogIn} />
+          <Route path="/Library" component={Library} />
+          <Route path="/Explore" component={Explore} />
+          <Route path="/Search" component={Search} />
+          <Route path="/Notification" component={Notification} />
+          <Route path="/Profile" component={Profile} />
+        </div>
 
-        <Route path="/" exact component={Home} />
-        <Route path="/About" component={About} />
-        <Route path="/Login" component={LogIn} />
-        <Route path="/Library" component={Library} />
-        <Route path="/Explore" component={Explore} />
-        <Route path="/Search" component={Search} />
-        <Route path="/Notification" component={Notification} />
-        <Route path="/Profile" component={Profile} />
-        <Route path="/Konto" component={Konto} />
+
       </header>
     </div>
   );

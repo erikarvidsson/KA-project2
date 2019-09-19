@@ -1,12 +1,39 @@
+import React from "react";
 import styled from "styled-components";
 
-export const Header = styled.h1`
-  font-size: 30px;
-  color: green;
+
+
+const HeaderStyle = styled.h1`
+         /* @font-face {
+           font-family: Grand-Hotel;
+           src: url(${"fonts/GrandHotel-Regular.otf"}) format("opentype");
+         }; */
+         font-size: 22px;
+         font-weight: ${props => props.fontWeight || "bold"};
+         margin-top: ${props => props.top || "300px"};
+         margin-left: 12px;
+         margin-right: 12px;
+         color: white;
+         text-align: left;
+         width: 90%;  
+       `;
+
+const PStyle = styled.p`
+  top: ${props => props.top};
+  margin-left: 12px;
+  margin-right: 12px;
+  width: 90%;
+  font-size: 20px;
+  color: white;
+  text-align: left;
 `;
 
-export const P = styled.p`
-  font-size: 20px;
-  color: yellow;
-`;
+
+export const Header = props => {
+  return <HeaderStyle {...props}>{props.text}</HeaderStyle>
+} 
+export const P = props => {
+  return <PStyle {...props}>{props.text}</PStyle>
+} 
+
 

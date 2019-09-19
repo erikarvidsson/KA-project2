@@ -8,13 +8,14 @@ const Layout = (props) => {
   const [buttonColor, setButtonColor] = useState('red')
 
   const Button = styled.button`
-    position: fixed;
+    position: absolute;
     z-index: 999;
     height: 50px;
     width: 50px;
     margin: 0 auto;
     text-align: center;
-    background-color: ${buttonColor};
+  
+    background-color:${buttonColor};
   `; 
 
 
@@ -24,18 +25,20 @@ const Layout = (props) => {
   const setSubmit = () => {
     if (liked === 0) {
       setLiked(liked + 1);
-      setButtonColor('blue')
+      setButtonColor("red");
       sessionStorage.setItem('liked', liked);
+
+      
       
     } else {
       setLiked(liked - 1);
-      setButtonColor('red')
+      setButtonColor("blue");
       sessionStorage.setItem("liked", liked);
     }
   };
   
   return (
-  <Button  onClick={setSubmit} />
+  <Button {...props}  onClick={setSubmit} />
   )
 };
 

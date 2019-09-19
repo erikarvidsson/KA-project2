@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-// const Button = styled.button`
-//     width: 100px;
-//     height: 50px;
-//     background: blue;
-//     color: white;
-// `
+const Button = styled.button`
+  position: absolute;
+  top: 50px;
+  width: 28px;
+  height: 28px;
+  left: 0;
+  background: white;
+  color: white;
+  background-image: url("assets/icons/left-arrow.svg");
+`;
 
 const Img = styled.img`
   width: 100px;
@@ -31,12 +35,15 @@ const Container = styled.div`
 const Window = styled.div`
   scroll-snap-align: start;
   border-radius: 15px;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  /* height: 100vh; */
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: black;
   color: white;
   margin: 0 auto;
   position: absolute;
+  /* padding-left: 12px;
+  padding-right: 12px; */
   left: 0;
   top: 0;
   z-index: 3;
@@ -51,15 +58,16 @@ const Modal = (props) => {
 
   return (
     <>
+    
       <Container>
         <Img src={props.url} alt="" onClick={handleShow} />
         <Title>{props.title}</Title>
       </Container>
 
-      {/* <Button onClick={handleShow}>This button opens a modal</Button> */}
 
       {show && (
-        <Window show={show} onClick={handleClose}>
+        <Window show={show} >
+          <Button onClick={handleClose}></Button>
           <div closeButton>
             {props.children}
           </div>

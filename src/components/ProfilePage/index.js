@@ -1,15 +1,17 @@
 import React from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
 
 const Section = styled.section`
   height: 100vh;
   width: 100vw;
+
   .profilePicture {
     height: 200px;
   }
 `;
+
 const Icon = styled.div`
   color: #fff;
   display: flex;
@@ -22,6 +24,7 @@ const Icon = styled.div`
     display:flex;
     align-items:center;
   }
+
   img {
     width:20px;
     height:auto;
@@ -34,6 +37,7 @@ const Div = styled.div`
     color: #fff;
     text-decoration: none;
   }
+
   h3 {
     display: flex;
     flex-direction: row;
@@ -51,16 +55,13 @@ const Div = styled.div`
   }
 `;
 
-const BackIcon = styled.img `
-    height: 20px;
-    width: 20px;
-`;
-
 const ProfilePage = (props) => {
     return (
     <div>
       <Section>
-      <BackIcon src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
+      <Icon>
+        <Link to='/'><img src='assets/icons/left-arrow.svg'/></Link>
+      </Icon>
         <img className='profilePicture'src='assets/icons/Profilbild.svg' alt=''></img>
         <Div>
           <h3>Namn Efternamn</h3>

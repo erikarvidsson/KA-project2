@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Icon = styled.img`
-    height: 20px;
-    width: 20px;
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
 `
 
 const ProfileIcon = () => {
@@ -13,7 +14,6 @@ const ProfileIcon = () => {
             <Link to='/Profile'><Icon src='assets/icons/Profilbild.svg'/></Link>
         </div>
     )
-
 }
 
 export default ProfileIcon;

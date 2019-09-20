@@ -12,7 +12,24 @@ import Search from './view/search';
 import Notification from './view/notification';
 import Profile from './view/profile';
 import Konto from './view/konto';
+import Categories from './view/categories';
+import Episodes from './view/episodes';
+import Favorites from './view/favorites';
 import Settings from './view/settings';
+
+window.addEventListener('load', () => {
+  registerSW();
+})
+
+async function registerSW() {
+  if('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register("./service-worker.js");
+    } catch (e) {
+        console.log('SW faild')
+    }
+  }
+}
 
 const history = createBrowserHistory()
 
@@ -32,6 +49,9 @@ function App() {
           <Route path="/Notification" component={Notification} />
           <Route path="/Profile" component={Profile} />
           <Route path="/Konto" component={Konto} />
+          <Route path="/Categories" component={Categories} />
+          <Route path="/Episodes" component={Episodes} />
+          <Route path="/Favorites" component={Favorites} />
           <Route path="/Settings" component={Settings} />
         </div>
 

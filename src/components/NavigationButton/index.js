@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 const DivStyled = styled.div`
     height: 51px;
     width: 100vw;
@@ -22,6 +23,8 @@ const LiStyled = styled.li`
     display: flex;
     justify-content: space-between;
     list-style: none;
+
+
 `;
 const ImgStyled = styled.img `
     height: 25px;

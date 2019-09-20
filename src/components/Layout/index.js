@@ -5,17 +5,14 @@ import { Route, Switch, Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  text-align: center;
+  text-align: ${props => props.textAlign || 'left'};
   background-color: black;
-  ul{
-    list-style: none;
-    padding: 0%;
-  }
+  margin-bottom: 68px;
 `;
 
 const Layout = (props) => {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       {props.children}
       <Menu />
     </Wrapper>

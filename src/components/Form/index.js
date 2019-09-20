@@ -1,79 +1,92 @@
-// import React, { Component, useState } from 'react';
-// import { Route, Switch, Link } from "react-router-dom";
-// import styled from 'styled-components';
-//
-//
-// const Div = styled.div`
-//   /* height: 40vh; */
-//   width: 100vw;
-//   display: flex;
-//   justify-content: center;
-//
-//   form {
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   border-bottom: 1px solid white;
-//   height: 60px;
-//   width: 90vw;
-// }
-//
-//
-// input {
-// width: 60vw;
-// height: 45px;
-// background-color: black;
-// border: 0;
-//
-// }
-//
-// input[type=text]
-// {
-// color: #fff;
-// font-size: 20px;
-// height: 58px;
-// padding-left: 10px;
-// text-decoration: none;
-// border: 0;
-// }
-//
-// button {
-// height: 20px
-// width: 20px;
-// background-color: #fff;
-//
-// }
-//
-// }`;
-//
-// window.onload=function(){
-// document.getElementById("button").style.visibility='hidden';
-//
-// }
-//
-// const showButton = () => {
-//   document.getElementById("button").style.display='block';
-//     console.log('showButton')
-// }
-// const hideButton = () => {
-//   // document.getElementById("button").style.display='none';
-//     console.log('hidebutton')
-// }
-//
-//
-// const Form = (props) => {
-//
-//
-//     // console.log(name)
-//     return(
-//
-//       <div>
-//         <Div>
-//           <form>{props.goTo}
-//
-//           </form>
-//         </Div>
-//       </div>
-//     )
-// }
-// export default Form;
+import React,{ useState } from 'react';
+import { Route, Switch, Link } from "react-router-dom";
+import styled from "styled-components";
+import {Header, H2, H3, P} from '../typo';
+
+const DivStyled = styled.div`
+width: 100vw;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+`;
+
+const FormStyled = styled.form`
+width: 100vw;
+display: flex;
+border-bottom: 1px solid white;
+padding-bottom: 25px;
+height: 35px;
+width: 90vw;
+list-style: none;
+`;
+
+const Input = styled.input`
+height: 55px;
+background-color: black;
+border: none;
+color: #fff;
+font-size: 20px;
+padding-left: 10px;
+text-decoration: none;
+border: 0;
+
+`;
+
+const Label = styled.label`
+
+`;
+
+const Form = (props) => {
+  const [namn, setNamn] = useState('');
+  const [yrke, setYrke] = useState('');
+  const [mailadress, setMailadress] = useState('');
+  const [telefon, setTelefon] = useState('');
+
+
+    return (
+      <DivStyled>
+        <FormStyled>
+          <Label>
+            Namn
+          <Input
+            value={namn}
+            onChange={e => setNamn(e.target.value)}
+            type="text"
+            id="userText"/>
+          </Label>
+        </FormStyled>
+        <FormStyled>
+          <Label>
+            Yrke
+          <Input
+            value={yrke}
+            onChange={e => setYrke(e.target.value)}
+            type="text"
+            id="userText"/>
+            </Label>
+          </FormStyled>
+        <FormStyled>
+          <Label>
+            Mailadress
+          <Input
+            value={mailadress}
+            onChange={e => setMailadress(e.target.value)}
+            type="text"
+            id="userText"/>
+          </Label>
+        </FormStyled>
+        <FormStyled>
+          <Label>
+            Telefon
+          <Input
+            value={telefon}
+            onChange={e => setTelefon(e.target.value)}
+            type="text"
+            id="userText"/>
+            </Label>
+          </FormStyled>
+      </DivStyled>
+  )}
+
+export default Form;

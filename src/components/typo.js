@@ -10,7 +10,7 @@ const HeaderStyle = styled.h1`
   }; */
   font-size: 48px;
   font-weight: ${props => props.fontWeight || "normal"};
-  margin-top: ${props => props.top || "12px"};
+  margin-top: ${props => props.marginTop || "12px"};
   margin-left: 12px;
   margin-right: 12px;
   color: white;
@@ -21,7 +21,7 @@ const HeaderStyle = styled.h1`
 const H2Style = styled.h2`
   font-size: 38px;
   font-weight: ${props => props.fontWeight || "normal"};
-  margin-top: ${props => props.top || "12px"};
+  margin-top: ${props => props.marginTop || "12px"};
   margin-left: 12px;
   margin-right: 12px;
   color: white;
@@ -32,7 +32,7 @@ const H2Style = styled.h2`
 const H3Style = styled.h3 `
   font-size: 22px;
   font-weight: ${props => props.fontWeight || "normal"};
-  margin-top: ${props => props.top || "12px"};
+  margin-top: ${props => props.marginTop || "12px"};
   margin-left: 12px;
   margin-right: 12px;
   color: white;
@@ -41,13 +41,14 @@ const H3Style = styled.h3 `
 `
 
 const PStyle = styled.p`
+  font-size: 16px;
+  font-weight: ${props => props.fontWeight || "normal"};
   top: ${props => props.top};
   margin-left: 12px;
   margin-right: 12px;
-  width: 90%;
-  font-size: 20px;
   color: white;
   text-align: ${props => props.textAlign || 'left'};
+  width: 90%;
 `;
 
 

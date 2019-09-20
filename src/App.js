@@ -12,6 +12,9 @@ import Search from './view/search';
 import Notification from './view/notification';
 import Profile from './view/profile';
 import Konto from './view/konto';
+import Categories from './view/categories';
+import Episodes from './view/episodes';
+import Favorites from './view/favorites';
 
 window.addEventListener('load', () => {
   registerSW();
@@ -45,6 +48,9 @@ function App() {
           <Route path="/Notification" component={Notification} />
           <Route path="/Profile" component={Profile} />
           <Route path="/Konto" component={Konto} />
+          <Route path="/Categories" component={Categories} />
+          <Route path="/Episodes" component={Episodes} />
+          <Route path="/Favorites" component={Favorites} />
         </div>
 
 

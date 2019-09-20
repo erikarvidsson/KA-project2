@@ -12,6 +12,7 @@ const Div = styled.div`
     justify-content: flex-start;
     align-items: center;
     line-height: 20px;
+    text-decoration: none;
   }
 
   li {
@@ -22,6 +23,8 @@ const Div = styled.div`
     /* height: 30px; */
 
     justify-content: space-between;
+    list-style: none;
+    /* text-decoration: none; */
   }
 
   img {

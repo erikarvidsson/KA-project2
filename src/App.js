@@ -37,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+
         <div history={history}>
           <Route path="/" exact component={Home} />
           <Route path="/About" component={About} />

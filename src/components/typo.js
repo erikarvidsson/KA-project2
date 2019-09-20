@@ -8,13 +8,13 @@ const HeaderStyle = styled.h1`
     font-family: Grand-Hotel;
     src: url(${"fonts/GrandHotel-Regular.otf"}) format("opentype");
   }; */
-  font-size: 22px;
-  font-weight: ${props => props.fontWeight || "bold"};
-  margin-top: ${props => props.top || "300px"};
+  font-size: 48px;
+  font-weight: ${props => props.fontWeight || "normal"};
+  margin-top: ${props => props.top || "12px"};
   margin-left: 12px;
   margin-right: 12px;
   color: white;
-  text-align: left;
+  text-align: ${props => props.textAlign || 'center'};
   width: 90%;  
 `;
 
@@ -25,7 +25,7 @@ const H2Style = styled.h2`
   margin-left: 12px;
   margin-right: 12px;
   color: white;
-  text-align: left;
+  text-align: ${props => props.textAlign || 'left'};
   width: 90%; 
 `
 
@@ -36,7 +36,7 @@ const H3Style = styled.h3 `
   margin-left: 12px;
   margin-right: 12px;
   color: white;
-  text-align: center;
+  text-align: ${props => props.textAlign || 'left'};
   width: 90%; 
 `
 
@@ -47,7 +47,7 @@ const PStyle = styled.p`
   width: 90%;
   font-size: 20px;
   color: white;
-  text-align: left;
+  text-align: ${props => props.textAlign || 'left'};
 `;
 
 

@@ -29,6 +29,17 @@ const H2Style = styled.h2`
   width: 90%; 
 `
 
+const H3Style = styled.h3 `
+  font-size: 22px;
+  font-weight: ${props => props.fontWeight || "normal"};
+  margin-top: ${props => props.top || "12px"};
+  margin-left: 12px;
+  margin-right: 12px;
+  color: white;
+  text-align: center;
+  width: 90%; 
+`
+
 const PStyle = styled.p`
   top: ${props => props.top};
   margin-left: 12px;
@@ -46,6 +57,10 @@ export const Header = props => {
 
 export const H2 = props => {
   return <H2Style {...props}>{props.text}</H2Style>
+} 
+
+export const H3 = props => {
+  return <H3Style {...props}>{props.text}</H3Style>
 } 
 
 export const P = props => {

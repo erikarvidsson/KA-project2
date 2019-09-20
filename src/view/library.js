@@ -14,10 +14,10 @@ const DivStyled = styled.div`
     margin: 0;
 `
 
-const BackIcon = styled.img `
+const BackIconStyled = styled.img `
     height: 30px;
     width: 30px;
-    margin-left: 20px;
+    margin-left: 10px;
 `
 const StyledLink = styled(Link)`
     text-decoration: none;
@@ -32,7 +32,7 @@ const Library = (props) => {
     return(    
         <Layout>
             < DivStyled >
-                <BackIcon src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
+                <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
                 <ProfileIcon />
             </DivStyled>
             {/* top sätter margin-top värdet */}

@@ -8,13 +8,13 @@ const HeaderStyle = styled.h1`
            font-family: Grand-Hotel;
            src: url(${"fonts/GrandHotel-Regular.otf"}) format("opentype");
          }; */
-         font-size: 22px;
+         font-size: ${props => props.fontSize || "48px"};
          font-weight: ${props => props.fontWeight || "bold"};
-         margin-top: ${props => props.top || "300px"};
+         margin-top: ${props => props.top || "12px"};
          margin-left: 12px;
          margin-right: 12px;
          color: white;
-         text-align: left;
+         text-align: left;  
          width: 90%;  
        `;
 

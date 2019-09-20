@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import { Header, P, H2, H3 } from '../components/typo';
 import ProfileIcon from '../components/ProfileIcon';
+import NavigationButton from '../components/NavigationButton';
+import Category from '../components/Category';
+import Line from '../components/Line';
 
 const DivStyled = styled.div `
     width: 100vw;
@@ -19,6 +22,13 @@ const BackIconStyled = styled.img `
     margin-left: 10px;
 `
 
+const CategoryDivStyled = styled.div`
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
 const Categories = (props) => {
     return(
         <div>
@@ -28,6 +38,17 @@ const Categories = (props) => {
                     <H3 text='Kategorier' textAlign='center'/>
                     <ProfileIcon />
                 </DivStyled>
+                <CategoryDivStyled>
+                    <Category text='Dans' img='assets/icons/cancel-1.svg'/>
+                    <Line />
+                    <Category text='Musik' img='assets/icons/cancel-1.svg'/>
+                    <Line />
+                    <Category text='Kroki' img='assets/icons/cancel-1.svg'/>
+                    <Line />
+                    <Category text='Teater' img='assets/icons/cancel-1.svg'/>
+                    <Line />
+                    <Category text='Scenografi' img='assets/icons/cancel-1.svg'/>
+                </CategoryDivStyled>
             </Layout>
         </div>
     )

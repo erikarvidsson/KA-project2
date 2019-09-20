@@ -44,8 +44,6 @@ align-items:center;
 position:fixed;
 top:30px;
 left:30px;
-
-
 `;
 
 const Div = styled.div`

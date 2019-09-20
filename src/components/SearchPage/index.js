@@ -20,8 +20,6 @@ align-items:center;
 img {
 width:20px;
 height:auto;
-transform:rotate(180deg);
-filter:invert(1);
 }
 `;
 
@@ -42,13 +40,13 @@ align-items:center;
 img {
 width:20px;
 height:auto;
-
 margin-right: 20px;
 }
 `;
 
 const Section = styled.section `
 height: 100vh;
+margin-top: 93px;
 
 input {
 width: 332px;
@@ -72,19 +70,17 @@ margin-left: 40px;
 }
 `;
 
-const SearchPage = () => {
+
+const SearchPage = (props) => {
     return (
       <div>
-        <Icon>
-          <Link to='/'><img src='assets/icons/right-arrow.svg'/></Link>
-        </Icon>
 
         <Profile>
           <Link to='/Profile'><ProfileIcon/></Link>
         </Profile>
 
         <Section>
-          <label for="fname">Sök</label>
+          <h3 for="fname">Sök</h3>
           <input type="search" id="site-search" pattern="[A-z][0-9]" placeholder="Sök i Kplay...">
           </input>
 

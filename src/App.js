@@ -21,9 +21,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to="/">Home</Link>
-        <Link to="/About">About Page</Link>
-        <Link to="/Login">Login page</Link>
 
         <div history={history}>
           <Route path="/" exact component={Home} />

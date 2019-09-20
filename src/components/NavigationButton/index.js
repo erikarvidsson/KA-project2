@@ -1,37 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
-const Div = styled.div`
-  /* height: 40vh; */
-  width: 100vw;
-  ul {
+const DivStyled = styled.div`
+    height: 51px;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    line-height: 20px;
-  }
-  li {
+    justify-content: center;
+`;
+const UlStyled = styled.ul`
+    height: 100%;
+    width: 86vw;
     display: flex;
-    border-bottom: 1px solid white;
-    padding-bottom: 25px;
-    width: 90vw;
-    /* height: 30px; */
     justify-content: space-between;
-  }
-  img {
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+`;
+const LiStyled = styled.li`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+`;
+const ImgStyled = styled.img `
     height: 25px;
-    margin-right: 20px;
-  }
 `;
 const NavigationButton = (props) => {
     return(
-        <div>
-        <Div>
-          <ul>
-            <li>{props.goTo}<img src={props.img} alt=''></img></li>
-          </ul>
-          </Div>
-        </div>
+        <DivStyled>
+          <UlStyled>
+            <LiStyled>{props.goTo}<ImgStyled src={props.img} alt=''></ImgStyled></LiStyled>
+          </UlStyled>
+        </DivStyled>
     )
 }
 export default NavigationButton;

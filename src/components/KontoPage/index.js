@@ -47,10 +47,55 @@ left:30px;
 const Div = styled.div`
 height: 40vh;
 width: 100vw;
+display: flex;
+flex-direction: column;
+
+form{
+  display: flex;
+  border-bottom: 1px solid white;
+  padding-bottom: 25px;
+  width: 90vw;
+
+  justify-content: space-between;
+  list-style: none;
+}
+
+input {
+height: 55px;
+background-color: black;
+border: none;
+
+}
+
+input[type=text]
+{
+color: #fff;
+font-size: 20px;
+padding-left: 10px;
+text-decoration: none;
+border: 0;
+}
+
+button {
+height: 20px;
+width: 20px;
+background-color: red;
+display: none;
+}
 
 `;
 
 const KontoPage = (props) => {
+  const [namn, setNamn] = useState('');
+  const [yrke, setYrke] = useState('');
+  const [mailadress, setMailadress] = useState('');
+  const [telefon, setTelefon] = useState('');
+
+  const showButton = () => {
+    document.getElementById("button").style.display='block';
+      console.log('showButton')
+  }
+
     return (
     <div>
     <Section>
@@ -60,10 +105,50 @@ const KontoPage = (props) => {
       <h3>Ändra Profilbild</h3>
     </Profile>
         <Div>
-        <Form goTo="Namn"/>
-        <Form goTo="Yrke"/>
-        <Form goTo="Mailadress"/>
-        <Form goTo="Telefon"/>
+        <form>
+          <label>
+            Namn:
+          <input
+            value={namn}
+            onChange={e => setNamn(e.target.value)}
+            handleChange={showButton}
+            type="text"
+            id="userText"/>
+          </label>
+        </form>
+
+        <form>
+          <label>
+            Yrke:
+          <input
+            value={yrke}
+            onChange={e => setYrke(e.target.value)}
+            type="text"
+            id="userText"/>
+            </label>
+          </form>
+        <form>
+          <label>
+            Mailadress:
+          <input
+            value={mailadress}
+            onChange={e => setMailadress(e.target.value)}
+            type="text"
+            id="userText"/>
+          </label>
+        </form>
+        <form>
+          <label>
+            Telefon:
+          <input
+            value={telefon}
+            onChange={e => setTelefon(e.target.value)}
+            type="text"
+            id="userText"/>
+            <button id="button" type="submit">Submit</button>
+            </label>
+          </form>
+
       </Div>
     </Section>
   </div>

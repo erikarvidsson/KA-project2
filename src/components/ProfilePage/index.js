@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
+
 const Section = styled.section`
   height: 100vh;
   width: 100vw;
@@ -49,19 +50,23 @@ const Div = styled.div`
     line-height: 0;
   }
 `;
-const ProfilePage = () => {
+
+const BackIcon = styled.img `
+    height: 20px;
+    width: 20px;
+`;
+
+const ProfilePage = (props) => {
     return (
     <div>
       <Section>
-      <Icon>
-        <Link to='/'><img src='assets/icons/left-arrow.svg'/></Link>
-      </Icon>
+      <BackIcon src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
         <img className='profilePicture'src='assets/icons/Profilbild.svg' alt=''></img>
         <Div>
           <h3>Namn Efternamn</h3>
           <h5>Kulturförvaltare</h5>
           <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
-          <Link to='/Konto'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
+          <Link to='/Settings'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
           <Link to='/Konto'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
           <Link to='/Konto'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
           </Div>

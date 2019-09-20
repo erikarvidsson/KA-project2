@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import React from 'react';
 import styled from 'styled-components';
 const Div = styled.div`
   /* height: 40vh; */
@@ -29,7 +28,7 @@ const NavigationButton = (props) => {
         <div>
         <Div>
           <ul>
-            <li>{props.goTo}<img src={props.img}></img></li>
+            <li>{props.goTo}<img src={props.img} alt=''></img></li>
           </ul>
           </Div>
         </div>

@@ -12,6 +12,7 @@ import Search from './view/search';
 import Notification from './view/notification';
 import Profile from './view/profile';
 import Konto from './view/konto';
+import Settings from './view/settings';
 
 const history = createBrowserHistory()
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/Notification" component={Notification} />
           <Route path="/Profile" component={Profile} />
           <Route path="/Konto" component={Konto} />
+          <Route path="/Settings" component={Settings} />
         </div>
 
 

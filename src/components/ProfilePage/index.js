@@ -1,5 +1,5 @@
-import React,{ useState } from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
 const Section = styled.section`
@@ -56,7 +56,7 @@ const ProfilePage = () => {
       <Icon>
         <Link to='/'><img src='assets/icons/left-arrow.svg'/></Link>
       </Icon>
-        <img className='profilePicture'src='assets/icons/Profilbild.svg'></img>
+        <img className='profilePicture'src='assets/icons/Profilbild.svg' alt=''></img>
         <Div>
           <h3>Namn Efternamn</h3>
           <h5>Kulturförvaltare</h5>

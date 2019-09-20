@@ -4,12 +4,12 @@ import VideoData from "../data/youtube.json"
 import { MediaBox } from "../components/MediaBox";
 
 const Index = () => {
-  // console.log(VideoData[0]);
+  console.log(VideoData[0]);
   return (
     <div>
       <Layout>
         <MediaBox
-          url={VideoData[0].url}
+          src={VideoData[0].thumbnail}
           title={VideoData[0].title}
           description={VideoData[0].description}
         />

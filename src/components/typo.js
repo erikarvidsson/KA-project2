@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
-
 const HeaderStyle = styled.h1`
   /* @font-face {
     font-family: Grand-Hotel;
@@ -49,6 +47,8 @@ const PStyle = styled.p`
   color: white;
   text-align: ${props => props.textAlign || 'left'};
   width: 90%;
+  z-index: ${props => props.zIndex};
+  position: ${props => props.zIndex};
 `;
 
 

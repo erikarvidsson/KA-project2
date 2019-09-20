@@ -45,9 +45,11 @@ const PStyle = styled.p`
   margin-left: 12px;
   margin-right: 12px;
   width: 90%;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   text-align: ${props => props.textAlign || 'left'};
+  z-index: ${props => props.zIndex};
+  position: ${props => props.zIndex};
 `;
 
 

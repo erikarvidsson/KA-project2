@@ -20,7 +20,7 @@ const H2Style = styled.h2`
   font-size: 38px;
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
-  margin-left: ${props => props.marginLeft || "12px"}
+  margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
   color: white;
   text-align: ${props => props.textAlign || 'left'};
@@ -31,7 +31,7 @@ const H3Style = styled.h3 `
   font-size: 22px;
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
-  margin-left: ${props => props.marginLeft || "12px"}
+  margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
   color: white;
   text-align: ${props => props.textAlign || 'left'};
@@ -44,7 +44,7 @@ const PStyle = styled.p`
   font-size: 16px;
   font-weight: ${props => props.fontWeight || "normal"};
   top: ${props => props.top};
-  margin-left: ${props => props.marginLeft || "12px"}
+  margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
   color: white;
   text-align: ${props => props.textAlign || 'left'};

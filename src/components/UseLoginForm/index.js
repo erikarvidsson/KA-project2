@@ -11,7 +11,7 @@ const UseLoginForm = (callback) => {
         callback();
 
         if (values.email === 'test@test.se' && values.password === 'asd') {
-            console.log('yess')
+            console.log('yess2')
             sessionStorage.setItem("loggedIn", 'yes')
             window.location = "/categories";
             

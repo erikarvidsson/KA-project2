@@ -43,6 +43,7 @@ const SearchPage = (props) => {
   useEffect(() => {
     setSearchValue(filterIt(VideoData, searchKey));
   }, []);
+
   // console.log(searchValue)
   
 
@@ -60,7 +61,7 @@ const SearchPage = (props) => {
               onChange={e => setSearchKey(e.target.value)}
               value={searchKey}
             />
-            <button>test</button>
+            <button>Search</button>
           </form>
         </div>
         <ResultWrapper>

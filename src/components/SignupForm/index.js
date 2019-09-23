@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import styled from 'styled-components';
 import { Header, P, H2, H3 } from '../typo';
 import Line from '../Line';
@@ -78,29 +78,66 @@ const ImgStyled = styled.img `
 `
 
 const SignupForm = () => {
-    return(
-        <div>
-            <FormStyled>
-                <DivStyled>
-                    <InputStyled type='email' placeholder='E-mail' name='email'></InputStyled>
-                </DivStyled>
-                <Line />
-                <DivPasswordStyled>
-                    <PasswordStyled type='password' placeholder='Välj lösenord' name='password'></PasswordStyled>
-                    <ImgStyled  src='assets/icons/visible.svg'/>
-                </DivPasswordStyled>
-                <Line />
-                <DivStyled>
-                    <InputStyled type='name' placeholder='Namn' name='name'></InputStyled>
-                </DivStyled>
-                <Line />
-                <DivStyled>
-                    <InputStyled type='email' placeholder='Efternamn' name='lastname'></InputStyled>
-                </DivStyled>
-                <ButtonStyled type='submit'><P text='Fortsätt' textAlign='center'/></ButtonStyled>
-            </FormStyled>
-        </div>
-    )
+    const [showPassword, setShowPassword] = useState('password')
+
+    const nextPage = () => {
+        window.location = "/categories";
+        window.open();
+    }
+
+    const showPasswordOnClick = () => {
+        if(showPassword === 'password'){
+            setShowPassword('text')
+        }else{
+            setShowPassword('password')
+        }
+    }
+
+    return (
+      <div>
+        <FormStyled onSubmit={nextPage}>
+          <DivStyled>
+            <InputStyled
+              type="email"
+              placeholder="E-mail"
+              name="email"
+            ></InputStyled>
+          </DivStyled>
+          <Line />
+          <DivPasswordStyled>
+            <PasswordStyled
+              type={showPassword}
+              placeholder="Välj lösenord"
+              name="password"
+            ></PasswordStyled>
+            <ImgStyled
+              src="assets/icons/visible.svg"
+              onClick={showPasswordOnClick}
+            />
+          </DivPasswordStyled>
+          <Line />
+          <DivStyled>
+            <InputStyled
+              type="name"
+              placeholder="Namn"
+              name="name"
+            ></InputStyled>
+          </DivStyled>
+          <Line />
+          <DivStyled>
+            <InputStyled
+              type="text"
+              placeholder="Efternamn"
+              name="lastname"
+            ></InputStyled>
+          </DivStyled>
+          <ButtonStyled type="submit">
+            <P text="Fortsätt" textAlign="center" />
+          </ButtonStyled>
+          <input type="hidden" name="redirect" value="/categories" />
+        </FormStyled>
+      </div>
+    );
 }
 
 export default SignupForm;

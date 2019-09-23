@@ -16,25 +16,45 @@ width: 100vw;
 display: flex;
 border-bottom: 1px solid white;
 padding-bottom: 25px;
-height: 35px;
+height: 51px;
 width: 90vw;
 list-style: none;
 `;
 
-const Input = styled.input`
-height: 55px;
+const InputStyled = styled.input`
+height: 60px;
+width: 100vw;
 background-color: black;
 border: none;
 color: #fff;
 font-size: 20px;
 padding-left: 10px;
 text-decoration: none;
-border: 0;
+outline: none;
+display: flex;
 
+::placeholder {
+color: #fff;
+width: 100vw;
+text-align: center;
+}
+`;
+
+const ButtonStyled = styled.button`
+height: 53px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+
+img{
+  width: 30px;
+  height: 30px;
+}
 `;
 
 const Label = styled.label`
-
+color: #fff;
+width: 100px;
 `;
 
 const Form = (props) => {
@@ -47,45 +67,47 @@ const Form = (props) => {
     return (
       <DivStyled>
         <FormStyled>
-          <Label>
-            Namn
-          <Input
+          <Label>hej</Label>
+          <InputStyled
+            placeholder="Namn"
             value={namn}
             onChange={e => setNamn(e.target.value)}
             type="text"
             id="userText"/>
-          </Label>
-        </FormStyled>
-        <FormStyled>
-          <Label>
-            Yrke
-          <Input
-            value={yrke}
-            onChange={e => setYrke(e.target.value)}
-            type="text"
-            id="userText"/>
-            </Label>
+            <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
           </FormStyled>
+
+          <FormStyled>
+            <Label>hej</Label>
+            <InputStyled
+              placeholder="Yrke"
+              value={yrke}
+              onChange={e => setYrke(e.target.value)}
+              type="text"
+              id="userText"/>
+            <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
+          </FormStyled>
+
         <FormStyled>
-          <Label>
-            Mailadress
-          <Input
+          <Label>hej</Label>
+          <InputStyled
+            placeholder="Mailadress"
             value={mailadress}
             onChange={e => setMailadress(e.target.value)}
             type="text"
             id="userText"/>
-          </Label>
+          <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
         </FormStyled>
+
         <FormStyled>
-          <Label>
-            Telefon
-          <Input
-            value={telefon}
+          <Label>hej</Label>
+          <InputStyled
+            placeholder="Telefon"
             onChange={e => setTelefon(e.target.value)}
             type="text"
             id="userText"/>
-            </Label>
-          </FormStyled>
+          <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
+        </FormStyled>
       </DivStyled>
   )}
 

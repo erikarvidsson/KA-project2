@@ -40,7 +40,6 @@ export const MediaBox = (props) => {
   console.log(props)
          return (
            <Container {...props}>
-            
              <Img src={props.src} />
              <MaxChar top="208px" height="60px">
                <P
@@ -48,13 +47,21 @@ export const MediaBox = (props) => {
                  zIndex="999"
                  fontWeight="thin"
                  text="Dans"
+                 width="90%"
                ></P>
              </MaxChar>
              <MaxChar height="38px">
-               <H3 top="0px" fontWeight="bold" fontSize text={props.title} zIndex='999'></H3>
+               <H3
+                 top="0px"
+                 width="90%"
+                 fontWeight="bold"
+                 fontSize
+                 text={props.title}
+                 zIndex="999"
+               ></H3>
              </MaxChar>
              <MaxChar height="69px" top="280px">
-               <P top="300px" text={props.description}></P>
+               <P top="300px" width="90%" text={props.description}></P>
              </MaxChar>
            </Container>
          );

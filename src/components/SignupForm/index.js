@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import UseLoginForm from '../UseLoginForm';
 import { Header, P, H2, H3 } from '../typo';
 import Line from '../Line';
 
-const FormStyled = styled.form `
+const FormStyled = styled.form`
     width: 100vw;
     display: flex;
     /* justify-content: center; */
@@ -13,7 +12,7 @@ const FormStyled = styled.form `
     margin-top: 121px;
 `
 
-const DivStyled = styled.div `
+const DivStyled = styled.div`
     height: 51px;
     width: 100vw;
     display: flex;
@@ -28,7 +27,7 @@ const DivPasswordStyled = styled.div `
     align-items: center;
 `
 
-const InputStyled = styled.input `
+const InputStyled = styled.input`
     height: 100%;
     width: 90vw;
     background-color: #101010;
@@ -59,7 +58,7 @@ const PasswordStyled = styled.input `
     }
 `
 
-const ButtonStyled = styled.button `
+const ButtonStyled = styled.button`
     height: 35px;
     width: 211px;
     background-color: #69DF75;
@@ -78,29 +77,30 @@ const ImgStyled = styled.img `
     margin: 0;
 `
 
-const LoginForm = (props) => {
-    const { values, handleChange, handleSubmit } = UseLoginForm(login);
-    function login() {
-    }
-
-    console.log(handleChange);
-    console.log(values);
-
-    return (
-        <FormStyled onSubmit={handleSubmit}>
-            <DivStyled>
-                <InputStyled type='email' name='email' placeholder='E-mail' onChange={handleChange} value={values.email}></InputStyled>
-            </DivStyled>
-            <Line />
-            <DivPasswordStyled>
-                <PasswordStyled type='password' name='password' placeholder='Lösenord' onChange={handleChange} value={values.password}></PasswordStyled>
-                <ImgStyled  src='assets/icons/visible.svg'/>
-            </DivPasswordStyled>
-            <ButtonStyled  type='submit'><P text='Fortsätt' textAlign='center'/></ButtonStyled >
-        </FormStyled>
+const SignupForm = () => {
+    return(
+        <div>
+            <FormStyled>
+                <DivStyled>
+                    <InputStyled type='email' placeholder='E-mail' name='email'></InputStyled>
+                </DivStyled>
+                <Line />
+                <DivPasswordStyled>
+                    <PasswordStyled type='password' placeholder='Välj lösenord' name='password'></PasswordStyled>
+                    <ImgStyled  src='assets/icons/visible.svg'/>
+                </DivPasswordStyled>
+                <Line />
+                <DivStyled>
+                    <InputStyled type='name' placeholder='Namn' name='name'></InputStyled>
+                </DivStyled>
+                <Line />
+                <DivStyled>
+                    <InputStyled type='email' placeholder='Efternamn' name='lastname'></InputStyled>
+                </DivStyled>
+                <ButtonStyled type='submit'><P text='Fortsätt' textAlign='center'/></ButtonStyled>
+            </FormStyled>
+        </div>
     )
-};
-export default LoginForm;
+}
 
-
-
+export default SignupForm;

@@ -13,7 +13,7 @@ const HeaderStyle = styled.h1`
   margin-right: ${props => props.marginRight || "12px"};
   color: ${props => props.color || '#FFFFFF'};
   text-align: ${props => props.textAlign || 'center'};
-  width: ${props => props.width || '90%'};
+  width: ${props => props.width || '100%'};
 `;
 
 const H2Style = styled.h2`
@@ -24,7 +24,7 @@ const H2Style = styled.h2`
   margin-right: ${props => props.marginRight || "12px"};
   color: ${props => props.color || '#FFFFFF'};
   text-align: ${props => props.textAlign || 'left'};
-  width: ${props => props.width || '90%'};
+  width: ${props => props.width || '100%'};
 `;
 
 const H3Style = styled.h3 `
@@ -35,7 +35,7 @@ const H3Style = styled.h3 `
   margin-right: ${props => props.marginRight || "12px"};
   color: ${props => props.color || '#FFFFFF'};
   text-align: ${props => props.textAlign || 'left'};
-  width: ${props => props.width || '90%'}; 
+  width: ${props => props.width || '100%'}; 
   z-index: ${props => props.zIndex};
   position: ${props => props.zIndex};
 `;
@@ -49,7 +49,7 @@ const PStyle = styled.p`
   margin-top: ${props => props.marginTop || "12px"};
   color: ${props => props.color || '#FFFFFF'};
   text-align: ${props => props.textAlign || 'left'};
-  width: ${props => props.width || '90%'};
+  width: ${props => props.width || '100%'};
   z-index: ${props => props.zIndex};
   position: ${props => props.zIndex};
 `;

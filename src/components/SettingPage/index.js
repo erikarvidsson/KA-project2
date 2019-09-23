@@ -13,14 +13,8 @@ display: flex;
 flex-direction: row;
 justify-content: flex-end;
 align-items: center;
-
 `;
 
-const BackIconStyled = styled.img `
-height: 30px;
-width: 30px;
-margin-left: 10px;
-`;
 
 const Icon = styled.div`
 color: #fff;
@@ -80,7 +74,6 @@ input {
 const SettingPage = (props) => {
     return (
     <div>
-        <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
           <H3 text='Inställningar' textAlign="center" marginTop="0;"/>
             <NavigationButton goTo="Uppspelning"/>
               <Line />

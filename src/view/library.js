@@ -8,6 +8,7 @@ import { Header, P, H2 } from '../components/typo';
 import VideoData from '../data/youtube.json';
 import { MediaBox } from '../components/MediaBox';
 import Line from '../components/Line';
+import MenuTop from '../components/MenuTop';
 
 const DivStyled = styled.div`
     width: 100vw;
@@ -39,12 +40,13 @@ const NavigationDivStyled = styled.div `
 `
 
 const Library = (props) => {
-    return(    
+    return(
         <Layout>
-            < DivStyled >
-                <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                <ProfileIcon />
-            </DivStyled>
+          <MenuTop text="Mitt bibliotek"/>
+            // < DivStyled >
+            //     <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
+            //     <ProfileIcon />
+            // </DivStyled>
             {/* top sätter margin-top värdet */}
             <Header text='Mitt bibliotek' top='12px'/>
             <NavigationDivStyled>
@@ -60,7 +62,7 @@ const Library = (props) => {
                 title={VideoData[0].title}
                 description={VideoData[0].description}
             />
-        </Layout>    
+        </Layout>
     )
 };
 

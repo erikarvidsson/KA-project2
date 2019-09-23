@@ -20,7 +20,7 @@ margin-left: 20px;
 const SearchPage = (props) => {
     return (
       <div>
-        <MenuTop/>
+        <MenuTop text="Sök"/>
           <div>
             <InputStyled type="search" id="site-search" pattern="[A-z][0-9]" placeholder="Sök i Kplay..." />
 

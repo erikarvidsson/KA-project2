@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
-
 const Section = styled.section`
   height: 100vh;
   width: 100vw;
@@ -20,7 +19,6 @@ const Icon = styled.div`
   position:fixed;
   top:30px;
   left:30px;
-
   a {
     display:flex;
     align-items:center;
@@ -31,11 +29,9 @@ const Icon = styled.div`
     height:auto;
   }
 `;
-
 const Div = styled.div`
   /* height: 40vh; */
   width: 100vw;
-
   a {
     color: #fff;
     text-decoration: none;
@@ -48,7 +44,6 @@ const Div = styled.div`
     width: 100vw;
     padding: 20px;
   }
-
   h5 {
     display: flex;
     flex-direction: row;
@@ -66,7 +61,7 @@ const ProfilePage = () => {
       <Icon>
         <Link to='/'><img src='assets/icons/left-arrow.svg'/></Link>
       </Icon>
-        <img className='profilePicture'src='assets/icons/Profilbild.svg' alt=''></img>
+        <img className='profilePicture'src='assets/icons/Profilbild.svg' alt=""></img>
         <Div>
           <h3>Namn Efternamn</h3>
           <h5>Kulturförvaltare</h5>
@@ -78,5 +73,4 @@ const ProfilePage = () => {
       </Section>
     </div>
 )}
-
 export default ProfilePage;

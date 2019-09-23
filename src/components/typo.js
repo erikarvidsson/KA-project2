@@ -47,6 +47,7 @@ const PStyle = styled.p`
   margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight};
   margin-top: ${props => props.marginTop || "12px"};
+  margin-bottom: ${props => props.marginBottom || "12px"};
   color: ${props => props.color || '#FFFFFF'};
   text-align: ${props => props.textAlign || 'left'};
   width: ${props => props.width || '100%'};

@@ -27,7 +27,7 @@ const GreenButtonStyled = styled.button `
     flex-direction: column;
     align-items: center;
     margin-top: 93px;
-    margin-bottom: 6px;
+    margin-bottom: 22px;
 `;
 
 const WhiteButtonStyled = styled.button `
@@ -40,7 +40,7 @@ const WhiteButtonStyled = styled.button `
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 6px;
+    margin-top: 22px;
     margin-bottom: 213px;
 `;
 
@@ -56,13 +56,13 @@ const StyledLink = styled(Link)`
 const DivLineStyled = styled.div`
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 `;
 
 const LineStyled = styled.div `
     height: 0;
-    width: 36vw;
+    width: 35vw;
     border-bottom: 1px solid #323232;
 `;
 
@@ -84,7 +84,7 @@ const Index = () => {
           <GreenButtonStyled onClick={handleCreateAccount}><P text='Skaffa Kplay-konto'/></GreenButtonStyled>
           <DivLineStyled>
             <LineStyled></LineStyled>
-            <P text='eller' width='auto' marginTop='0px'/>
+            <P text='eller' width='auto' marginTop='0px' marginLeft='0px' marginBottom='0px'/>
             <LineStyled></LineStyled>
           </DivLineStyled>
           <WhiteButtonStyled onClick={handleLogin}><P text='Logga in' color='#000000'/></WhiteButtonStyled>

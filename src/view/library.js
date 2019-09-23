@@ -40,30 +40,48 @@ const NavigationDivStyled = styled.div `
 `
 
 const Library = (props) => {
-    return(
-        <Layout>
-          <MenuTop text="Mitt bibliotek"/>
-            <DivStyled>
-            <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-              <ProfileIcon />
-            </DivStyled>
-            {/* top sätter margin-top värdet */}
-            <Header width="90%" text='Mitt bibliotek' top='12px'/>
-            <NavigationDivStyled>
-                <StyledLink to='/Categories'><NavigationButton goTo='Kategorier' img='assets/icons/right-arrow.svg'/></StyledLink>
-                <Line/>
-                <StyledLink to='/Episodes'><NavigationButton goTo='Avsnitt' img='assets/icons/right-arrow.svg'/></StyledLink>
-                <Line/>
-                <StyledLink to='/Favorites'><NavigationButton goTo='Favoriter' img='assets/icons/right-arrow.svg'/></StyledLink>
-            </NavigationDivStyled>
-            <H2 width="90%" text='Senaste avsnitt'/>
-            <MediaBox
-                src={VideoData[0].thumbnail}
-                title={VideoData[0].title}
-                description={VideoData[0].description}
+    return (
+      <Layout>
+        <MenuTop text="Mitt bibliotek" />
+        <DivStyled>
+          <BackIconStyled
+            src="assets/icons/left-arrow.svg"
+            onClick={() => props.history.goBack(props)}
+          />
+          <ProfileIcon />
+        </DivStyled>
+        {/* top sätter margin-top värdet */}
+        <Header text="Mitt bibliotek" width="90%" top="12px" />
+        <NavigationDivStyled>
+          <StyledLink to="/Categories">
+            <NavigationButton
+              goTo="Kategorier"
+              img="assets/icons/right-arrow.svg"
             />
-        </Layout>
-    )
+          </StyledLink>
+          <Line />
+          <StyledLink to="/Episodes">
+            <NavigationButton
+              goTo="Avsnitt"
+              img="assets/icons/right-arrow.svg"
+            />
+          </StyledLink>
+          <Line />
+          <StyledLink to="/Favorites">
+            <NavigationButton
+              goTo="Favoriter"
+              img="assets/icons/right-arrow.svg"
+            />
+          </StyledLink>
+        </NavigationDivStyled>
+        <H2 text="Senaste avsnitt" width="90%" />
+        <MediaBox
+          src={VideoData[0].thumbnail}
+          title={VideoData[0].title}
+          description={VideoData[0].description}
+        />
+      </Layout>
+    );
 };
 
 export default Library;

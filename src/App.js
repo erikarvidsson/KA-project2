@@ -15,6 +15,7 @@ import Konto from './view/konto';
 import Categories from './view/categories';
 import Episodes from './view/episodes';
 import Favorites from './view/favorites';
+import ChoseCategry from "./view/choseCategry";
 
 window.addEventListener('load', () => {
   registerSW();
@@ -37,7 +38,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-
         <div history={history}>
           <Route path="/" exact component={Home} />
           <Route path="/About" component={About} />
@@ -49,11 +49,10 @@ function App() {
           <Route path="/Profile" component={Profile} />
           <Route path="/Konto" component={Konto} />
           <Route path="/Categories" component={Categories} />
+          <Route path="/ChoseCategry" component={ChoseCategry} />
           <Route path="/Episodes" component={Episodes} />
           <Route path="/Favorites" component={Favorites} />
         </div>
-
-
       </header>
     </div>
   );

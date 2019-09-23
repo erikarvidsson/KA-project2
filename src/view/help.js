@@ -5,13 +5,13 @@ import { Header, P, H2, H3 } from '../components/typo';
 
 
 const DivStyled = styled.div `
-    width: 100vw;
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-`
+width: 100vw;
+height: 56px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0;
+`;
 
 const Div = styled.div`
 width: 100vw;
@@ -35,9 +35,9 @@ const Help = (props) => {
             <Layout>
             <DivStyled>
                 <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                <H3 text='Hjälp' textAlign='center'/>
+                <H3 text='Hjälp' textAlign='center' marginLeft="0px"/>
                 </DivStyled>
-                <Div>
+                  <Div>
                     <H3 text="Har du bekymmer eller vill fråga något?"/>
                       <P text="Maila oss så hjälper vi gärna till!"/>
                     <P text="info@kulturakademin.com" fontWeight="Bold"/>

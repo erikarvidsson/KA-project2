@@ -22,13 +22,12 @@ list-style: none;
 `;
 
 const InputStyled = styled.input`
-height: 60px;
+height: 70px;
 width: 100vw;
-background-color: black;
+background-color: #101010;
 border: none;
 color: #fff;
-font-size: 20px;
-padding-left: 10px;
+font-size: 16px;
 text-decoration: none;
 outline: none;
 display: flex;
@@ -55,7 +54,11 @@ img{
 
 const Label = styled.label`
 color: #fff;
-width: 100px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 80px;
+
 `;
 
 const Form = (props) => {
@@ -87,8 +90,8 @@ const Form = (props) => {
     const inputValue3 = document.getElementById("userText3");
     const inputValue4 = document.getElementById("userText4");
 
-    useEffect(() => {  
-                
+    useEffect(() => {
+
     if (!inputValue) {
     } else {
       hideButton(inputValue, setShowNamn);
@@ -116,16 +119,16 @@ const Form = (props) => {
       }
     }
 
- 
+
 
 
 
     return (
       <DivStyled>
         <FormStyled>
-          <Label>hej</Label>
+          <Label><P text="Namn"/></Label>
           <InputStyled
-            placeholder="Namn"
+            placeholder="Erik Bergstrand"
             value={namn}
             onChange={e => setNamn(e.target.value)}
             type="text"
@@ -137,9 +140,9 @@ const Form = (props) => {
         </FormStyled>
 
         <FormStyled>
-          <Label>hej</Label>
+          <Label><P text="Yrke"/></Label>
           <InputStyled
-            placeholder="Yrke"
+            placeholder="Kulturakademin"
             value={yrke}
             onChange={e => setYrke(e.target.value)}
             type="text"
@@ -151,9 +154,9 @@ const Form = (props) => {
         </FormStyled>
 
         <FormStyled>
-          <Label>hej</Label>
+          <Label><P text="Mailadress"/></Label>
           <InputStyled
-            placeholder="Mailadress"
+            placeholder="erik@kulturakademin.se"
             value={mailadress}
             onChange={e => setMailadress(e.target.value)}
             type="text"
@@ -165,9 +168,9 @@ const Form = (props) => {
         </FormStyled>
 
         <FormStyled>
-          <Label>hej</Label>
+          <Label><P text="Telefon"/></Label>
           <InputStyled
-            placeholder="Telefon"
+            placeholder="0739-461928"
             value={telefon}
             onChange={e => setTelefon(e.target.value)}
             type="text"

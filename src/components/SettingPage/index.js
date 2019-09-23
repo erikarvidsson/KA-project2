@@ -59,7 +59,6 @@ input {
  display : none;
 }
 
-
 `;
 
 const SettingPage = (props) => {
@@ -76,9 +75,8 @@ const SettingPage = (props) => {
                               <input type="checkbox" id="toggle" />
                               <label for="toggle"></label>
                             </CategoryDivStyled>
-                          <Line />
-                        <Link to='/Konto'><NavigationButton goTo="Videokvalitet" img="assets/icons/right-arrow.svg"/></Link>
-                    <Link to='/Konto'><NavigationButton goTo="Ta bort allt sparat" img="assets/icons/garbage.svg"/></Link>
+                        <NavigationButton goTo="Videokvalitet" img="assets/icons/right-arrow.svg"/>
+                    <NavigationButton goTo="Ta bort allt sparat" img="assets/icons/garbage.svg"/>
                   <Line />
             </DivStyled>
   </div>

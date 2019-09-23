@@ -13,7 +13,7 @@ const HeaderStyle = styled.h1`
   margin-right: 12px;
   color: white;
   text-align: ${props => props.textAlign || 'center'};
-  width: 90%;  
+  width: 90%;
 `;
 
 const H2Style = styled.h2`
@@ -24,7 +24,7 @@ const H2Style = styled.h2`
   margin-right: 12px;
   color: white;
   text-align: ${props => props.textAlign || 'left'};
-  width: 90%; 
+  width: 90%;
 `
 
 const H3Style = styled.h3 `
@@ -35,7 +35,7 @@ const H3Style = styled.h3 `
   margin-right: 12px;
   color: white;
   text-align: ${props => props.textAlign || 'left'};
-  width: 90%; 
+  width: 90%;
 `
 
 const PStyle = styled.p`
@@ -54,18 +54,16 @@ const PStyle = styled.p`
 
 export const Header = props => {
   return <HeaderStyle {...props}>{props.text}</HeaderStyle>
-} 
+}
 
 export const H2 = props => {
   return <H2Style {...props}>{props.text}</H2Style>
-} 
+}
 
 export const H3 = props => {
   return <H3Style {...props}>{props.text}</H3Style>
-} 
+}
 
 export const P = props => {
   return <PStyle {...props}>{props.text}</PStyle>
-} 
-
-
+}

@@ -1,67 +1,114 @@
-import React, { Component } from 'react';
+import React,{ useState } from 'react';
 import { Route, Switch, Link } from "react-router-dom";
-import styled from 'styled-components';
+import styled from "styled-components";
+import {Header, H2, H3, P} from '../typo';
 
+const DivStyled = styled.div`
+width: 100vw;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+`;
 
-const Div = styled.div`
-  /* height: 40vh; */
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-
-  form {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 1px solid white;
-  height: 60px;
-  width: 90vw;
-}
-
-
-input {
+const FormStyled = styled.form`
+width: 100vw;
+display: flex;
+border-bottom: 1px solid white;
+padding-bottom: 25px;
+height: 51px;
 width: 90vw;
-height: 45px;
+list-style: none;
+`;
+
+const InputStyled = styled.input`
+height: 60px;
+width: 100vw;
 background-color: black;
-border: 0;
-
-}
-
-input[type=text]
-{
+border: none;
 color: #fff;
 font-size: 20px;
-height: 58px;
 padding-left: 10px;
 text-decoration: none;
-border: 0;
+outline: none;
+display: flex;
+
+::placeholder {
+color: #fff;
+width: 100vw;
+text-align: center;
 }
-  /* ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  line-height: 20px;
-  } */
+`;
 
-  /* li {
-  display: flex;
-  border-bottom: 1px solid white;
-  padding-bottom: 25px;
-  width: 90vw;
-  justify-content: space-between;
-  } */
+const ButtonStyled = styled.button`
+height: 53px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
 
+img{
+  width: 30px;
+  height: 30px;
+}
+`;
 
-}`;
+const Label = styled.label`
+color: #fff;
+width: 100px;
+`;
 
 const Form = (props) => {
-    return(
-      <div>
-        <Div>
-          <form>{props.goTo}<input type="text" name="firstname"></input></form>
-        </Div>
-      </div>
-    )
-}
+  const [namn, setNamn] = useState('');
+  const [yrke, setYrke] = useState('');
+  const [mailadress, setMailadress] = useState('');
+  const [telefon, setTelefon] = useState('');
+
+
+    return (
+      <DivStyled>
+        <FormStyled>
+          <Label>hej</Label>
+          <InputStyled
+            placeholder="Namn"
+            value={namn}
+            onChange={e => setNamn(e.target.value)}
+            type="text"
+            id="userText"/>
+            <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
+          </FormStyled>
+
+          <FormStyled>
+            <Label>hej</Label>
+            <InputStyled
+              placeholder="Yrke"
+              value={yrke}
+              onChange={e => setYrke(e.target.value)}
+              type="text"
+              id="userText"/>
+            <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
+          </FormStyled>
+
+        <FormStyled>
+          <Label>hej</Label>
+          <InputStyled
+            placeholder="Mailadress"
+            value={mailadress}
+            onChange={e => setMailadress(e.target.value)}
+            type="text"
+            id="userText"/>
+          <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
+        </FormStyled>
+
+        <FormStyled>
+          <Label>hej</Label>
+          <InputStyled
+            placeholder="Telefon"
+            onChange={e => setTelefon(e.target.value)}
+            type="text"
+            id="userText"/>
+          <ButtonStyled><img src="assets/icons/cancel-1.svg"></img></ButtonStyled>
+        </FormStyled>
+      </DivStyled>
+  )}
+
 export default Form;

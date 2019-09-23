@@ -47,7 +47,7 @@ const ProfilePage = (props) => {
           <P text="Kulturakademin"/>
             <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
             <Link to='/Settings'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
-            <Link to='/Konto'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
+            <Link to='/Help'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
             <Link to='/Konto'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
         </DivStyled>
     </div>

@@ -13,18 +13,9 @@ display: flex;
 flex-direction: row;
 justify-content: flex-end;
 align-items: center;
+
 `;
 
-
-const Icon = styled.div`
-color: #fff;
-display: flex;
-justify-content:center;
-align-items:center;
-position:fixed;
-top:30px;
-left:30px;
-`;
 
 const DivStyled = styled.div`
 height: 40vh;
@@ -73,8 +64,7 @@ input {
 
 const SettingPage = (props) => {
     return (
-    <div>
-          <H3 text='Inställningar' textAlign="center" marginTop="0;"/>
+        <div>
             <NavigationButton goTo="Uppspelning"/>
               <Line />
                 <DivStyled>

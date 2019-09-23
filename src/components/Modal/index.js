@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -20,6 +20,7 @@ const Img = styled.img`
   min-width: 200px;
   margin: 5px;
 `;
+
 const Title = styled.h3`
   font-size: 12px;
   position: absolute;

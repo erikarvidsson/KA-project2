@@ -6,14 +6,15 @@ import screenfull from "screenfull";
 
 const PlayerWrapper = styled.div`
   position: absolute;
-  z-index: -2;
+  z-index: ${props => props.zIndex || -2};
   height: 100vh;
   width: 100%;
   height: ${props => props.height || "100%"};
   top: ${props => props.top || "58vh"};
-  
+
   /* padding-top: 56.25%; 720 / 1280 = 0.5625 */
 `;
+
 const PlayerOverlay = styled.div`
   position: absolute;
   /* background-color: ${props => (props.primary ? "" : "")}; */

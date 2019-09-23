@@ -20,15 +20,10 @@ const Explore = () => {
               return (
                 <Modal url={video.thumbnail} title={video.title}>
                   <LikeButton />
-                  <YPlayer
-                    width="90%"
-                    link={video.url}
-                    height="270px"
-                    top="120px"
-                  />
-                  <Header width="90%" text={video.title}></Header>
-                  <P width="90%" top="300px" text={video.description}></P>
-                </Modal>
+                  <YPlayer link={video.url} height="270px" top="120px" />
+                  <Header text={video.title}></Header>
+                  <P top="300px" text={video.description}></P>
+                  </Modal>
               );
             })}
             <Modal>

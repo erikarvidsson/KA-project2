@@ -14,7 +14,7 @@ const DivStyled = styled.div`
 
 const ChoseCategory = () => {
   const categories2 = ({name: ["Dans", "Musik", "Kroki", "Teater", "Scenografi"]})
-  const [chosen, setChosen] = useState({name: ''});
+  const [dans, setDanse] = useState(false);
 
   console.log(categories2)
 
@@ -29,7 +29,7 @@ const ChoseCategory = () => {
           {categories2.name.map(category => {
             return (
               <CategoryBox title={category} 
-               
+              
               />
             );
           })}

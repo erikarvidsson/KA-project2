@@ -6,6 +6,7 @@ const Icon = styled.img`
   height: 30px;
   width: 30px;
   margin-right: 20px;
+  margin-top: 40px;
 `
 
 const ProfileIcon = () => {

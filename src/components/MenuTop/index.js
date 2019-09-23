@@ -5,26 +5,27 @@ import ProfileIcon from '../ProfileIcon'
 import {Header, H2, H3, P} from '../typo';
 
 const MenuDivStyled = styled.div`
-height: 150px;
+height: 200px;
+top: 0;
+left: 0;
+margin: 0;
 width: 100vw;
 background-color: blue;
 position: fixed;
-
 `;
 
 const DivStyled = styled.div`
 display: flex;
 justify-content: space-between;
-background-color: red;
-height: 50px;
+height: 80px;
 width: 100vw;
 `;
 
 const LogoStyled = styled.img `
 width: 25px;
 height: 29px;
+margin-top: 40px;
 margin-left: 21px;
-
 `;
 
 

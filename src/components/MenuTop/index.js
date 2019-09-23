@@ -29,14 +29,14 @@ margin-left: 21px;
 `;
 
 
-const MenuTop = () => {
+const MenuTop = (props) => {
     return(
         <MenuDivStyled>
           <DivStyled>
             <Link to='/'><LogoStyled src='assets/icons/logo_temporary.svg'/></Link>
               <ProfileIcon />
             </DivStyled>
-        <Header text="Sök"/>
+        <Header text={props.text}/>
       </MenuDivStyled>
   )
 }

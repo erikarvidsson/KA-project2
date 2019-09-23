@@ -1,8 +1,10 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
 import MenuTop from '../MenuTop';
 import {Header, H2, H3, P} from '../typo';
+import VideoData from "../../data/youtube.json"
+import Layout from '../Layout';
 
 const InputStyled = styled.input`
 width: 332px;
@@ -16,16 +18,64 @@ margin-top: 100px;
 margin-left: 20px;
 
 `;
+const ResultWrapper = styled.div`
+margin-top: 150px;
+margin-left: 20px;
+`;
+const Img = styled.img`
+width: 30vw;
+margin-top: 150px;
+margin-left: 20px;
+`;
 
 const SearchPage = (props) => {
-    return (
-      <div>
-        <MenuTop text="Sök"/>
-          <div>
-            <InputStyled type="search" id="site-search" pattern="[A-z][0-9]" placeholder="Sök i Kplay..." />
+  const [searchValue, setSearchValue] = useState([''])
+  const [searchKey, setSearchKey] = useState('')
 
+  function filterIt(arr, searchKey) {
+    return arr.filter(function(obj) {
+      return Object.keys(obj).some(function(key) {
+        return obj[key].includes(searchKey);
+      });
+    });
+  }
+  
+  useEffect(() => {
+    setSearchValue(filterIt(VideoData, searchKey));
+  }, []);
+  // console.log(searchValue)
+  
+
+
+    return (
+      <Layout>
+        <MenuTop text="Sök" />
+        <div>
+          <form>
+            <InputStyled
+              type="search"
+              id="site-search"
+              pattern="[A-z][0-9]"
+              placeholder="Sök i Kplay..."
+              onChange={e => setSearchKey(e.target.value)}
+              value={searchKey}
+            />
+            <button>test</button>
+          </form>
         </div>
-      </div>
-  )}
+        <ResultWrapper>
+          {searchValue.map(name => {
+            console.log(name);
+            return (
+              <div>
+                <Img src={name.thumbnail} alt="" />
+                <H3 text={name.title} />
+                <P text={name.description} />
+              </div>
+            );
+          })}
+        </ResultWrapper>
+      </Layout>
+    );}
 
 export default SearchPage;

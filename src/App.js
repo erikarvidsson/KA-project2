@@ -18,7 +18,7 @@ import Favorites from './view/favorites';
 import ChoseCategry from "./view/choseCategry";
 import Signup from './view/signup';
 import Settings from './view/settings';
-
+import Help from './view/help';
 
 window.addEventListener('load', () => {
   registerSW();
@@ -57,7 +57,7 @@ function App() {
           <Route path="/Favorites" component={Favorites} />
           <Route path="/Signup" component={Signup} />
           <Route path="/Settings" component={Settings} />
-
+          <Route path="/Help" component={Help} />
         </div>
       </header>
     </div>

@@ -5,6 +5,7 @@ import MenuTop from '../MenuTop';
 import {Header, H2, H3, P} from '../typo';
 import VideoData from "../../data/youtube.json"
 import Layout from '../Layout';
+import { SmallMediaBox } from '../SmallMediaBox';
 
 const InputStyled = styled.input`
 width: 332px;
@@ -66,13 +67,12 @@ const SearchPage = (props) => {
         </div>
         <ResultWrapper>
           {searchValue.map(name => {
-            console.log(name);
             return (
-              <div>
-                <Img src={name.thumbnail} alt="" />
-                <H3 text={name.title} />
-                <P text={name.description} />
-              </div>
+              <SmallMediaBox
+                src={name.thumbnail}
+                title={name.title}
+                description={name.description}
+              />
             );
           })}
         </ResultWrapper>

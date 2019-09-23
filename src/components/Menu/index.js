@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const MenuDiv = styled.div`
-    height: 56px;
-    width: 100%;
-    background-color: aqua;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left:0;
-    margin: 0;
-     z-index: 1000;
+  height: 56px;
+  width: 100%;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
 `;
 
 const Icons = styled.img`

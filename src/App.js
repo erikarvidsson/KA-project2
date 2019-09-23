@@ -16,6 +16,8 @@ import Categories from './view/categories';
 import Episodes from './view/episodes';
 import Favorites from './view/favorites';
 import Signup from './view/signup';
+import Settings from './view/settings';
+
 
 window.addEventListener('load', () => {
   registerSW();
@@ -53,6 +55,8 @@ function App() {
           <Route path="/Episodes" component={Episodes} />
           <Route path="/Favorites" component={Favorites} />
           <Route path="/Signup" component={Signup} />
+          <Route path="/Settings" component={Settings} />
+
         </div>
 
 

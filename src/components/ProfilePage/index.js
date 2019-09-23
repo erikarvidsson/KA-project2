@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
+import {Header, H2, H3, P} from '../typo';
 
-const Section = styled.section`
-  height: 100vh;
-  width: 100vw;
+const ImgStyled = styled.img`
+height: 300px;
+display: flex;
+width: 100vw;
+justify-content: center;
 
-  .profilePicture {
-    height: 200px;
-  }
 `;
 
-const Icon = styled.div`
+const IconStyled = styled.div`
   color: #fff;
   display: flex;
   justify-content:center;
@@ -21,62 +21,35 @@ const Icon = styled.div`
   top:30px;
   left:30px;
 
-  a {
-    display:flex;
-    align-items:center;
-  }
-
   img {
     width:20px;
     height:auto;
   }
 `;
-
-const Div = styled.div`
-  /* height: 40vh; */
+const DivStyled = styled.div`
   width: 100vw;
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  h3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100vw;
-    padding: 20px;
-  }
-
-  h5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100vw;
-    padding-left: 20px;
-    line-height: 0;
-  }
 `;
 
-const ProfilePage = () => {
+const ProfilePage = (props) => {
     return (
     <div>
-      <Section>
-      <Icon>
+      <IconStyled>
         <Link to='/'><img src='assets/icons/left-arrow.svg'/></Link>
-      </Icon>
-        <img className='profilePicture'src='assets/icons/Profilbild.svg' alt=''></img>
-        <Div>
-          <h3>Namn Efternamn</h3>
-          <h5>Kulturförvaltare</h5>
-          <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
-          <Link to='/Konto'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
-          <Link to='/Konto'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
-          <Link to='/Konto'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
-          </Div>
-      </Section>
+        </IconStyled>
+          <ImgStyled src='assets/icons/Profilbild.svg' alt=''></ImgStyled>
+        <DivStyled>
+          <H3 text="Namn Efternamn"/>
+          <P text="Kulturakademin"/>
+            <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
+            <Link to='/Settings'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
+            <Link to='/Konto'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
+            <Link to='/Konto'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
+        </DivStyled>
     </div>
 )}
-
 export default ProfilePage;

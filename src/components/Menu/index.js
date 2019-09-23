@@ -13,6 +13,7 @@ const MenuDiv = styled.div`
     bottom: 0;
     left:0;
     margin: 0;
+     z-index: 1000;
 `;
 
 const Icons = styled.img`

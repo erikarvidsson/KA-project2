@@ -6,7 +6,7 @@ import { Route, Switch, Link } from "react-router-dom";
 const Wrapper = styled.div`
   margin: 0 auto;
   text-align: ${props => props.textAlign || 'left'};
-  background-color: black;
+  background-color: #101010;
   margin-bottom: 68px;
 `;
 

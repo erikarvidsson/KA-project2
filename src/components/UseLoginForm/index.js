@@ -5,14 +5,16 @@ const UseLoginForm = (callback) => {
         email: '',
         password: ''
     });
+
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
         callback();
 
         if (values.email === 'test@test.se' && values.password === 'asd') {
-
-            console.log('yess')
-            sessionStorage.setItem('email', values.email)
+            console.log('yess2')
+            sessionStorage.setItem("loggedIn", 'yes')
+            window.location = "/categories";
+            
         } else {
             console.log('nej :(')
         }

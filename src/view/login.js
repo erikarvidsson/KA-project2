@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div>
       <Layout>
-        <h1> This is the Login page! </h1>
+        <h1> Logga in </h1>
         <LoginForm />
       </Layout> 
     </div>

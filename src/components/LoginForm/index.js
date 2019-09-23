@@ -7,6 +7,9 @@ const LoginForm = (props) => {
     function login() {
     }
 
+    console.log(handleChange);
+    console.log(values);
+
     return (
         <form onSubmit={handleSubmit}>
             <div>

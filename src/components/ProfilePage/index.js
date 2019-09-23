@@ -13,24 +13,24 @@ justify-content: center;
 `;
 
 const IconStyled = styled.div`
-  color: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  position:fixed;
-  top:30px;
-  left:30px;
+color: #fff;
+display: flex;
+justify-content:center;
+align-items:center;
+position:fixed;
+top:30px;
+left:30px;
 
-  img {
-    width:20px;
-    height:auto;
-  }
+img {
+  width:20px;
+  height:auto;
+}
 `;
 const DivStyled = styled.div`
-  width: 100vw;
+width: 100vw;
 a {
-  color: #fff;
-  text-decoration: none;
+color: #fff;
+text-decoration: none;
 }
 
 `;
@@ -48,7 +48,7 @@ const ProfilePage = (props) => {
             <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
             <Link to='/Settings'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
             <Link to='/Help'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
-            <Link to='/Konto'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
+            <Link to='/'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
         </DivStyled>
     </div>
 )}

@@ -83,6 +83,9 @@ const LoginForm = (props) => {
     function login() {
     }
 
+    console.log(handleChange);
+    console.log(values);
+
     return (
         <FormStyled onSubmit={handleSubmit}>
             <DivStyled>

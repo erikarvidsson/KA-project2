@@ -6,6 +6,7 @@ import VideoData from "../data/youtube.json";
 import SoundData from "../data/playlists.json";
 import SideScroll from "../components/SideScroll";
 import AudioPlayer from "../components/AudioPlayer";
+import MenuTop from "../components/MenuTop";
 import LikeButton from "../components/LikeButton";
 import { P, Header } from "../components/typo";
 
@@ -13,7 +14,7 @@ const Explore = () => {
     return (
       <div>
         <Layout>
-          <h1> This is the Index page! </h1>
+          <MenuTop/>
           <SideScroll>
             {VideoData.map(video => {
               return (

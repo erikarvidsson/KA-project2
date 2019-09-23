@@ -25,7 +25,7 @@ const H2Style = styled.h2`
   color: white;
   text-align: ${props => props.textAlign || 'left'};
   width: 90%;
-`
+`;
 
 const H3Style = styled.h3 `
   font-size: 22px;
@@ -35,8 +35,10 @@ const H3Style = styled.h3 `
   margin-right: 12px;
   color: white;
   text-align: ${props => props.textAlign || 'left'};
-  width: 90%;
-`
+  width: 90%; 
+  z-index: ${props => props.zIndex};
+  position: ${props => props.zIndex};
+`;
 
 const PStyle = styled.p`
   font-size: 16px;

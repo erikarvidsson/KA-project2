@@ -23,7 +23,7 @@ const Explore = () => {
                   <YPlayer link={video.url} height="270px" top="120px" />
                   <Header text={video.title}></Header>
                   <P top="300px" text={video.description}></P>
-                </Modal>
+                  </Modal>
               );
             })}
             <Modal>

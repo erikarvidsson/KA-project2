@@ -5,7 +5,7 @@ import NavigationButton from '../NavigationButton';
 import {Header, H2, H3, P} from '../typo';
 
 const ImgStyled = styled.img`
-height: 300px;
+height: 200px;
 display: flex;
 width: 100vw;
 justify-content: center;
@@ -38,9 +38,6 @@ text-decoration: none;
 const ProfilePage = (props) => {
     return (
     <div>
-      <IconStyled>
-        <Link to='/'><img src='assets/icons/left-arrow.svg'/></Link>
-        </IconStyled>
           <ImgStyled src='assets/icons/Profilbild.svg' alt=''></ImgStyled>
         <DivStyled>
           <H3 text="Namn Efternamn"/>

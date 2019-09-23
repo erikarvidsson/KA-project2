@@ -33,7 +33,7 @@ const MenuTop = (props) => {
     return(
         <MenuDivStyled>
           <DivStyled>
-            <Link to='/'><LogoStyled src='assets/icons/logo_temporary.svg'/></Link>
+            <Link to='/'><LogoStyled src='assets/icons/kplay-logotyp-elva.svg'/></Link>
               <ProfileIcon />
             </DivStyled>
         <Header text={props.text}/>

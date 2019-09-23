@@ -11,12 +11,14 @@ const FormStyled = styled.form`
     align-items: center;
     margin-top: 121px;
 `
+
 const DivStyled = styled.div`
     height: 51px;
     width: 100vw;
     display: flex;
     justify-content: center;
 `
+
 const DivPasswordStyled = styled.div `
     height: 51px;
     width: 100vw;
@@ -39,6 +41,7 @@ const InputStyled = styled.input`
         color: #FFF;
     }
 `
+
 const PasswordStyled = styled.input `
     height: 100%;
     width: 78.5vw;
@@ -47,6 +50,7 @@ const PasswordStyled = styled.input `
     outline: none;
     font-size: 22px;
     color: #FFF;
+    margin-top: 1px;
     ::placeholder{
         padding-left: 12px;
         font-size: 22px;

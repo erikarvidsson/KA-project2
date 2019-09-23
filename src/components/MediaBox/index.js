@@ -4,14 +4,14 @@ import YPlayer from '../YPlayer'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  position: absolute;
+  position: relative;
   text-align: center;
   color: white;
   width: 100vw;
   /* padding-left: 12px;
   padding-right: 12px; */
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
 `;
 
 const Img = styled.img`
@@ -28,7 +28,7 @@ const MaxChar = styled.div`
   height: ${props => props.height};
   overflow: hidden;
   top: ${props => props.top || '250px'};
-  z-index: 999;
+  z-index: 800;
 `;
 const Overlay = styled.div`
   
@@ -50,10 +50,10 @@ export const MediaBox = (props) => {
                  text="Dans"
                ></P>
              </MaxChar>
-             <MaxChar height="30px">
-               <H3 top="0px" fontWeight="bold" fontSize text={props.title}></H3>
+             <MaxChar height="38px">
+               <H3 top="0px" fontWeight="bold" fontSize text={props.title} zIndex='999'></H3>
              </MaxChar>
-             <MaxChar height="69px" top="270px">
+             <MaxChar height="69px" top="280px">
                <P top="300px" text={props.description}></P>
              </MaxChar>
            </Container>

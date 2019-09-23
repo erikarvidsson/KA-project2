@@ -36,6 +36,8 @@ const H3Style = styled.h3 `
   color: white;
   text-align: ${props => props.textAlign || 'left'};
   width: 90%; 
+  z-index: ${props => props.zIndex};
+  position: ${props => props.zIndex};
 `
 
 const PStyle = styled.p`

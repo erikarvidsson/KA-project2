@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
 import {Header, H2, H3, P} from '../typo';
+import Line from '../Line';
 
 const DivStyled = styled.div`
 width: 100vw;
@@ -14,7 +15,6 @@ align-items: center;
 const FormStyled = styled.form`
 width: 100vw;
 display: flex;
-border-bottom: 1px solid white;
 padding-bottom: 25px;
 height: 51px;
 width: 90vw;
@@ -23,19 +23,18 @@ list-style: none;
 
 const InputStyled = styled.input`
 height: 70px;
-width: 100vw;
+width: 60vw;
 background-color: #101010;
 border: none;
 color: #fff;
 font-size: 16px;
 text-decoration: none;
 outline: none;
-display: flex;
 
 ::placeholder {
 color: #fff;
-width: 100vw;
-text-align: center;
+/* width: 100vw; */
+
 }
 `;
 
@@ -58,6 +57,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 height: 80px;
+width: 40vw;
 
 `;
 
@@ -138,7 +138,7 @@ const Form = (props) => {
             <img src="assets/icons/cancel-1.svg"></img>
           </ButtonStyled>
         </FormStyled>
-
+      <Line />
         <FormStyled>
           <Label><P text="Yrke"/></Label>
           <InputStyled
@@ -152,7 +152,7 @@ const Form = (props) => {
             <img src="assets/icons/cancel-1.svg"></img>
           </ButtonStyled>
         </FormStyled>
-
+      <Line />
         <FormStyled>
           <Label><P text="Mailadress"/></Label>
           <InputStyled
@@ -166,7 +166,7 @@ const Form = (props) => {
             <img src="assets/icons/cancel-1.svg"></img>
           </ButtonStyled>
         </FormStyled>
-
+      <Line />
         <FormStyled>
           <Label><P text="Telefon"/></Label>
           <InputStyled
@@ -180,6 +180,7 @@ const Form = (props) => {
             <img src="assets/icons/cancel-1.svg"></img>
           </ButtonStyled>
         </FormStyled>
+      <Line />
       </DivStyled>
     );}
 

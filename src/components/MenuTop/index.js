@@ -5,13 +5,14 @@ import ProfileIcon from '../ProfileIcon'
 import {Header, H2, H3, P} from '../typo';
 
 const MenuDivStyled = styled.div`
-height: 200px;
+height: 190px;
 top: 0;
 left: 0;
 margin: 0;
 width: 100vw;
-background-color: blue;
+background-color: #101010;
 position: fixed;
+z-index: 900;
 `;
 
 const DivStyled = styled.div`

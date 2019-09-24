@@ -42,13 +42,13 @@ const NavigationDivStyled = styled.div `
 const Library = (props) => {
     return(
         <Layout>
-          <MenuTop text="Mitt bibliotek"/>
+          <MenuTop text="Mitt bibliotek" top='12px'/>
             // < DivStyled >
             //     <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
             //     <ProfileIcon />
             // </DivStyled>
             {/* top sätter margin-top värdet */}
-            <Header text='Mitt bibliotek' top='12px'/>
+        
             <NavigationDivStyled>
                 <StyledLink to='/Categories'><NavigationButton goTo='Kategorier' img='assets/icons/right-arrow.svg'/></StyledLink>
                 <Line/>

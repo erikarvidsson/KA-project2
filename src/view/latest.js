@@ -9,7 +9,7 @@ import { P, Header, H3 } from "../components/typo";
 
 
 const LayoutStyled = styled.div`
-height: 400vw;
+height: 350vw;
 
 `;
 
@@ -53,8 +53,9 @@ const Latest = (props) => {
                 position="relative"
                 ZIndex="-1"
                 />
-              </SectionDivStyled>
 
+              </SectionDivStyled>
+        
               <SectionDivStyled>
                 <MediaBox
                   src={VideoData[1].thumbnail}

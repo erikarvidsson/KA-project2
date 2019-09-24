@@ -54,7 +54,7 @@ const Explore = () => {
               />
 
             <SectionDivStyled>
-              <H3 text='Populärt' marginTop="400px"/>
+              <H3 text='Populärt' marginLeft="12px" marginTop="400px"/>
 
               <SideScroll>
             {VideoData.map(video => {
@@ -79,7 +79,7 @@ const Explore = () => {
             </Modal>
             </SideScroll>
 
-              <H3 text='Rekommenderade' marginTop="40px" />
+              <H3 text='Rekommenderade' marginLeft="12px" marginTop="40px" />
 
             <SideScroll>
               {SoundData.map(sound => {
@@ -98,7 +98,7 @@ const Explore = () => {
             </Modal>
               </SideScroll>
 
-            <H3 text="Kategorier" marginTop="40px"/>
+            <H3 text="Kategorier" marginLeft="12px" marginTop="40px"/>
           <DivStyled>
             {categories2.name.map(category => {
               return (

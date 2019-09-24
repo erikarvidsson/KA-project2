@@ -13,15 +13,16 @@ display: flex;
 flex-direction: row;
 justify-content: flex-end;
 align-items: center;
+margin-right: 0;
 
 `;
 
 const Div = styled.div`
 display: flex;
-height: 50px;
+/* height: 50px; */
 flex-direction: row;
 color: #fff;
-margin-left: 28px;
+/* margin-left: 28px; */
 `;
 
 const DivStyledUppspelning = styled.div`
@@ -81,22 +82,33 @@ const SettingPage = (props) => {
                 </DivStyledUppspelning>
                   <Line2 />
                     <DivStyled>
-                      <NavigationButton goTo="Mobildataanvändning" img="assets/icons/right-arrow.svg"/>
-                          <NavigationButton goTo="Nedladdningar"/>
-
-                          <Line2 />
-                            <CategoryDivStyled>
-                              <Category text='Endast Wifi'/>
-                                  <input type="checkbox" id="toggle" />
-                                  <label for="toggle"></label>
+                      <CategoryDivStyled>
+                        <Category text='Mobildataanvändning' img="assets/icons/right-arrow.svg"/>
+                          </CategoryDivStyled>
+                            <P text="Automatiskt" fontSize="12px" marginLeft="26px" marginTop="0"/>
+                              <NavigationButton goTo="Nedladdningar"/>
+                                <Line2 />
+                                  <CategoryDivStyled>
+                                    <Category text='Endast Wifi'/>
+                                        <input type="checkbox" id="toggle" />
+                                        <label for="toggle"></label>
+                                        </CategoryDivStyled>
+                                      <Line2 />
+                                    <CategoryDivStyled>
+                                  <Category text='Videokvalitet' img="assets/icons/right-arrow.svg"/>
                                 </CategoryDivStyled>
-                              <Line2 />
-                            <NavigationButton goTo="Videokvalitet" img="assets/icons/right-arrow.svg"/>
-                          <NavigationButton goTo="Textstorlek"/>
-                        <Line2 />
-                      <Div><p>AA</p><p>AA</p><p>AA</p></Div>
-                    <NavigationButton goTo="Ta bort allt sparat" img="assets/icons/garbage.svg"/>
-                  <Line2 />
+                              <P text="Standard" fontSize="12px" marginLeft="26px" marginTop="0"/>
+                            <NavigationButton goTo="Textstorlek"/>
+                          <Line2 />
+                        <Div>
+                        <P text="Aa" fontWeight="Bold" marginLeft="26px" width="6%"/>
+                        <P text="Aa" fontWeight="Bold" marginLeft="0" width="6%"/>
+                        <P text="Aa" fontWeight="Bold" marginLeft="0" width="6%"/>
+                        </Div>
+                      <CategoryDivStyled>
+                    <Category text='Ta bort allt sparat' img="assets/icons/garbage.svg"/>
+                  </CategoryDivStyled>
+                <Line2 />
             </DivStyled>
   </div>
 )}

@@ -6,7 +6,7 @@ const HeaderStyle = styled.h1`
     font-family: Grand-Hotel;
     src: url(${"fonts/GrandHotel-Regular.otf"}) format("opentype");
   }; */
-  font-size: 48px;
+  font-size: ${props => props.fontSize || "48px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};
@@ -18,7 +18,7 @@ const HeaderStyle = styled.h1`
 `;
 
 const H2Style = styled.h2`
-  font-size: 38px;
+  font-size: ${props => props.fontSize || "38px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};
@@ -30,7 +30,7 @@ const H2Style = styled.h2`
 `;
 
 const H3Style = styled.h3 `
-  font-size: 22px;
+  font-size: ${props => props.fontSize || "22px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};
@@ -38,13 +38,13 @@ const H3Style = styled.h3 `
   margin-right: ${props => props.marginRight || "12px"};
   color: ${props => props.color || '#FFFFFF'};
   text-align: ${props => props.textAlign || 'left'};
-  width: ${props => props.width || '100%'}; 
+  width: ${props => props.width || '100%'};
   z-index: ${props => props.zIndex};
   position: ${props => props.zIndex};
 `;
 
 const PStyle = styled.p`
-  font-size: 16px;
+  font-size: ${props => props.fontSize || "16px"};
   font-weight: ${props => props.fontWeight || "normal"};
   top: ${props => props.top};
   margin-left: ${props => props.marginLeft || "12px"};
@@ -57,6 +57,8 @@ const PStyle = styled.p`
   z-index: ${props => props.zIndex};
   position: ${props => props.zIndex};
 `;
+
+
 
 
 export const Header = props => {

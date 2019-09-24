@@ -37,7 +37,7 @@ const MenuTop = (props) => {
             <Link to='/'><LogoStyled src='assets/icons/kplay-logotyp-elva.svg'/></Link>
               <ProfileIcon2 />
             </DivStyled>
-        <Header text={props.text}/>
+        <Header text={props.text} marginLeft='0'/>
       </MenuDivStyled>
   )
 }

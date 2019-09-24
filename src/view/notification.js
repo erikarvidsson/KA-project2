@@ -1,15 +1,44 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import { P, H2 } from '../components/typo';
+import { P } from '../components/typo';
 import styled from 'styled-components'
+import MenuTop from '../components/MenuTop';
+import Line from '../components/Line';
+
+const DivStyled = styled.div`
+    margin-top: 135px;
+    width: 100vw;
+`;
+
+const DivOutput = styled.div`
+    width: 90vw;
+    margin-left: 5vw;
+`;
+
+const DivOutputStyled = styled.div`
+    height: 163px;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+`;
+
+const DivPStyled = styled.div`
+    height: 100%;
+    width: 173px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
 
 const Img = styled.img`
   object-fit: cover;
-  width: 34vw;
-  height: 34vw;
-  /* margin-top: 150px; */
-  /* margin-left: 20px; */
-  border-radius: 5px;
+  width: 28vw;
+  height: 28vw;
+  border-radius: 50%;
 `;
 
 const Notification = () => {
@@ -18,36 +47,83 @@ const Notification = () => {
       {
         name: "Camille Jadermark",
         img: "assets/imgs/Camille.jpg",
-        text: "Grunden i koordinerade kropprörelser. i sina favoriter."
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
       },
       {
         name: "Freja Candell",
         img: "assets/imgs/Freja.jpg",
-        text: "Grunden i koordinerade kropprörelser. i sina favoriter."
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
       },
       {
-        name: "Otto Bäckström lade",
+        name: "Otto Bäckström",
         img: "assets/imgs/Otto.jpg",
-        text: "Grunden i koordinerade kropprörelser. i sina favoriter."
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
       },
       {
         name: "Hanna Ell",
         img: "assets/imgs/Hanna.jpg",
-        text: "Grunden i koordinerade kropprörelser. i sina favoriter."
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
+      },
+      {
+        name: "Mauro Cilli",
+        img: "assets/imgs/Mauro.jpg",
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
+      },
+      {
+        name: "Rebecca Klaening",
+        img: "assets/imgs/Rebecca.jpeg",
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
+      },
+      {
+        name: "Karin Holmquist",
+        img: "assets/imgs/Erik.jpg",
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
+      },
+      {
+        name: "Erik Arvidsson",
+        img: "assets/imgs/Erik.jpg",
+        text: "lade till",
+        title: 'Grunden i koordinerade kropprörelser.',
+        text2: 'i sina favoriter.'
       }
     ]);
+
     return(
         <div>
             <Layout>
-                {friends.map(friend => {
-                    return (
-                        <>
-                            <Img src={friend.img} alt="" />
-                            <H2 text={friend.name}></H2>
-                            <P text={friend.text}></P>
-                        </>
-                    )
-                })}
+                <MenuTop text='Händelser'/>
+                <DivStyled>
+                    {friends.map(friend => {
+                        return (
+                            <DivOutput>
+                                <DivOutputStyled>
+                                    <Img src={friend.img} alt="" />
+                                    <DivPStyled>
+                                        <P text={friend.name} fontWeight='bold' marginTop='0' marginBottom='0'></P>
+                                        <P text={friend.text} marginTop='0' marginBottom='0'></P>
+                                        <P text={friend.title} fontWeight='bold' marginTop='0' marginBottom='0'/>
+                                        <P text={friend.text2} marginTop='0' marginBottom='0'/>
+                                    </DivPStyled>
+                                </DivOutputStyled>
+                                <Line />
+                            </DivOutput>
+                        )
+                    })}
+                </DivStyled>
             </Layout>
         </div>
     )

@@ -4,12 +4,14 @@ import styled from "styled-components";
 const Button = styled.button`
   position: absolute;
   top: 50px;
-  width: 28px;
-  height: 28px;
+  width: 50px;
+  height: 50px;
   left: 0;
-  background: white;
-  color: white;
-  background-image: url("assets/icons/left-arrow.svg");
+`;
+
+const IconImgStyled = styled.img`
+  height: 100%;
+  width: 100%;
 `;
 
 const Img = styled.img`
@@ -48,13 +50,19 @@ const Window = styled.div`
   left: 0;
   top: 0;
   z-index: 3;
+  pointer-events: none;
 `;
 
 const Modal = (props) => {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => {
+    console.log('closed')
+    setShow(false);}
+  const handleShow = () => {
+    console.log('clicked')
+    console.log(show)
+    setShow(true);}
   
 
   return (
@@ -68,7 +76,7 @@ const Modal = (props) => {
 
       {show && (
         <Window show={show} >
-          <Button onClick={handleClose}></Button>
+          <Button onClick={handleClose}><IconImgStyled src='assets/icons/left-arrow.svg' /></Button>
           <div closeButton>
             {props.children}
           </div>

@@ -39,7 +39,7 @@ const Explore = () => {
                     thumbnail={sound.thumbnail}
                     src="/audio/audiofile1.mp3"
                   ></AudioPlayer>
-                  <LikeButton id={sound.id} />
+                  {/* <LikeButton id={sound.id} /> */}
                 </Modal>
               );
             })}

@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Modal from "../components/Modal";
 import styled from 'styled-components';
@@ -11,12 +12,13 @@ import MenuTop from "../components/MenuTop";
 import { MediaBox } from '../components/MediaBox';
 import LikeButton from "../components/LikeButton";
 import Category from "../components/Category";
+import {SmallMediaBox} from "../components/SmallMediaBox";
 import CategoryBoxSmall from "../components/CategoryBoxSmall";
 import { P, Header, H3 } from "../components/typo";
 
 const CategoryDivStyled = styled.div`
 margin-top: 170px;
-`
+`;
 
 const SectionDivStyled = styled.div`
 height: 100vh;
@@ -38,7 +40,7 @@ const Explore = () => {
       <div>
         <Layout>
           <CategoryDivStyled>
-            <Category text='Senast tillagda' img='assets/icons/right-arrow.svg'/>
+            <Link to='/Latest'><Category text='Senast tillagda' img='assets/icons/right-arrow.svg'/></Link>
           </CategoryDivStyled>
 
             <MenuTop text="Utforska"/>
@@ -58,29 +60,36 @@ const Explore = () => {
             {VideoData.map(video => {
               return (
                 <Modal url={video.thumbnail} title={video.title}>
-                  <LikeButton />
-                  <YPlayer link={video.url} height="270px" top="120px" />
-                  <Header text={video.title}></Header>
-                  <P top="300px" text={video.description}></P>
-                  </Modal>
+
+                  <SmallMediaBox
+                  src={VideoData[0].thumbnail}
+                  title={VideoData[0].title}
+                  description={VideoData[0].description}
+                    />
+                </Modal>
                 );
               })}
+
             <Modal>
-              <YPlayer link={VideoData[0].url} />
+              <SmallMediaBox
+              src={VideoData[0].thumbnail}
+              title={VideoData[0].title}
+              description={VideoData[0].description}
               />
             </Modal>
             </SideScroll>
+
               <H3 text='Rekommenderade' marginTop="40px" />
 
             <SideScroll>
               {SoundData.map(sound => {
                 return (
                   <Modal url={sound.thumbnail} title={sound.title}>
-                    <AudioPlayer
-                      thumbnail={sound.thumbnail}
-                      src="/audio/audiofile1.mp3"
-                    ></AudioPlayer>
-                    <LikeButton id={sound.id} />
+                  <SmallMediaBox
+                  src={VideoData[0].thumbnail}
+                  title={VideoData[0].title}
+                  description={VideoData[0].description}
+                  />
                   </Modal>
                 );
               })}
@@ -88,6 +97,7 @@ const Explore = () => {
               <YPlayer link={VideoData[0].url} />
             </Modal>
               </SideScroll>
+
             <H3 text="Kategorier" marginTop="40px"/>
           <DivStyled>
             {categories2.name.map(category => {

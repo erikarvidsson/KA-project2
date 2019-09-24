@@ -19,6 +19,7 @@ import ChoseCategry from "./view/choseCategry";
 import Signup from './view/signup';
 import Settings from './view/settings';
 import Help from './view/help';
+import Latest from './view/latest';
 
 window.addEventListener('load', () => {
   registerSW();
@@ -58,6 +59,7 @@ function App() {
           <Route path="/Signup" component={Signup} />
           <Route path="/Settings" component={Settings} />
           <Route path="/Help" component={Help} />
+          <Route path="/Latest" component={Latest} />
         </div>
       </header>
     </div>

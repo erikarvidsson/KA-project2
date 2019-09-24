@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch, Link } from "react-router-dom";
-import ProfileIcon from '../ProfileIcon'
+import ProfileIcon2 from '../ProfileIcon2'
 import {Header, H2, H3, P} from '../typo';
 
 const MenuDivStyled = styled.div`
@@ -35,7 +35,7 @@ const MenuTop = (props) => {
         <MenuDivStyled>
           <DivStyled>
             <Link to='/'><LogoStyled src='assets/icons/kplay-logotyp-elva.svg'/></Link>
-              <ProfileIcon />
+              <ProfileIcon2 />
             </DivStyled>
         <Header text={props.text}/>
       </MenuDivStyled>

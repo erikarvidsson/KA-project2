@@ -24,7 +24,7 @@ z-index: 9999;
 `;
 
 const ResultWrapper = styled.div`
-margin-top: 150px;
+/* margin-top: 150px; */
 margin-left: 20px;
 `;
 
@@ -53,13 +53,8 @@ const SearchPage = (props) => {
   function checkSubmit(e) {
     if (e && e.keyCode == 13) {
       setSearchValue(filterIt(VideoData, searchKey));
+      }
     }
-  }
-
-
-  // console.log(searchValue)
-  
-
 
     return (
       <Layout>
@@ -75,7 +70,6 @@ const SearchPage = (props) => {
               onChange={e => setSearchKey(e.target.value)}
               value={searchKey}
             />
-            <button>Search</button>
           </Form>
         </div>
         <ResultWrapper>

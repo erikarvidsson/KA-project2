@@ -4,7 +4,7 @@ import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
 import Category from '../Category';
 import {Header, H2, H3, P} from '../typo';
-import Line from '../Line'
+import Line2 from '../Line2'
 
 const CategoryDivStyled = styled.div`
 height: 56px;
@@ -16,10 +16,22 @@ align-items: center;
 
 `;
 
+const Div = styled.div`
+display: flex;
+height: 50px;
+flex-direction: row;
+color: #fff;
+margin-left: 28px;
+`;
+
+const DivStyledUppspelning = styled.div`
+margin-left: 14px;
+`;
 
 const DivStyled = styled.div`
 height: 40vh;
 width: 100vw;
+margin-left: 10px;
 
 a {
   color: #fff;
@@ -31,7 +43,7 @@ label{
   /* display: inline-block; */
   width: 40px;
   height: 20px;
-  background-color: rgba(255,255,255, 0.3);
+  background-color: #69df75;
   border-radius: 20px;
   transition: all 0.3s;
 }
@@ -44,42 +56,47 @@ label::after {
   border-radius:50%;
   background-color: white;
   top: 1px;
-  left: 1px;
+  right: 1px;
   transition: all 0.3s;
 
 }
 
 input:checked + label::after {
-  left : 20px;
+right : 20px;
 }
 input:checked + label {
- background-color: #69df75;
+background-color: rgba(255,255,255, 0.3);
 }
 input {
  display : none;
 }
-
 
 `;
 
 const SettingPage = (props) => {
     return (
         <div>
-            <NavigationButton goTo="Uppspelning"/>
-              <Line />
-                <DivStyled>
-                  <NavigationButton goTo="Mobildataanvändning" img="assets/icons/right-arrow.svg"/>
-                      <NavigationButton goTo="Nedladdningar"/>
-                        <Line />
-                          <CategoryDivStyled>
-                            <Category text='Endast Wifi'/>
-                              <input type="checkbox" id="toggle" />
-                              <label for="toggle"></label>
-                            </CategoryDivStyled>
-                          <Line />
-                        <Link to='/Konto'><NavigationButton goTo="Videokvalitet" img="assets/icons/right-arrow.svg"/></Link>
-                    <Link to='/Konto'><NavigationButton goTo="Ta bort allt sparat" img="assets/icons/garbage.svg"/></Link>
-                  <Line />
+            <DivStyledUppspelning>
+              <NavigationButton goTo="Uppspelning"/>
+                </DivStyledUppspelning>
+                  <Line2 />
+                    <DivStyled>
+                      <NavigationButton goTo="Mobildataanvändning" img="assets/icons/right-arrow.svg"/>
+                          <NavigationButton goTo="Nedladdningar"/>
+
+                          <Line2 />
+                            <CategoryDivStyled>
+                              <Category text='Endast Wifi'/>
+                                  <input type="checkbox" id="toggle" />
+                                  <label for="toggle"></label>
+                                </CategoryDivStyled>
+                              <Line2 />
+                            <NavigationButton goTo="Videokvalitet" img="assets/icons/right-arrow.svg"/>
+                          <NavigationButton goTo="Textstorlek"/>
+                        <Line2 />
+                      <Div><p>AA</p><p>AA</p><p>AA</p></Div>
+                    <NavigationButton goTo="Ta bort allt sparat" img="assets/icons/garbage.svg"/>
+                  <Line2 />
             </DivStyled>
   </div>
 )}

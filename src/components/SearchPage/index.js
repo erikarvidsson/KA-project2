@@ -17,12 +17,17 @@ position: fixed;
 justify-content: center;
 margin-top: 100px;
 margin-left: 20px;
-
 `;
+const Form = styled.form`
+position: relative;
+z-index: 9999;  
+`;
+
 const ResultWrapper = styled.div`
 margin-top: 150px;
 margin-left: 20px;
 `;
+
 const Img = styled.img`
 width: 30vw;
 margin-top: 150px;
@@ -45,6 +50,8 @@ const SearchPage = (props) => {
     setSearchValue(filterIt(VideoData, searchKey));
   }, []);
 
+
+
   // console.log(searchValue)
   
 
@@ -53,7 +60,7 @@ const SearchPage = (props) => {
       <Layout>
         <MenuTop text="Sök" />
         <div>
-          <form>
+          <Form>
             <InputStyled
               type="search"
               id="site-search"
@@ -63,7 +70,7 @@ const SearchPage = (props) => {
               value={searchKey}
             />
             <button>Search</button>
-          </form>
+          </Form>
         </div>
         <ResultWrapper>
           {searchValue.map(name => {

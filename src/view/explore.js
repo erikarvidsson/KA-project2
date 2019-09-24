@@ -32,7 +32,14 @@ const DivStyled = styled.div`
 `;
 
 const Explore = () => {
-  const categories2 = ({name: ["DANS", "HANTVERK", "MUSIK", "TEATER", "SCENOGRAFI"]})
+  const categories2 = [
+    { name: "DANS", src: "assets/imgs/DANS-kategori.jpg" },
+    { name: "MUSIK", src: "assets/imgs/MUSIK-kategori.jpg" },
+    { name: "HANTVERK", src: "assets/imgs/KROKI-kategori.jpg" },
+    { name: "SÅNG", src: "assets/imgs/KROKI-kategori.jpg" },
+    { name: "SCENKONST", src: "assets/imgs/SCENKONST-kategori.jpg" },
+    { name: "FÄRGLÄRA", src: "assets/imgs/FARGLARA-kategori.jpg" }
+  ];
   const [dans, setDanse] = useState(false);
 
   console.log(categories2)
@@ -100,9 +107,9 @@ const Explore = () => {
 
             <H3 text="Kategorier" marginLeft="12px" marginTop="40px"/>
           <DivStyled>
-            {categories2.name.map(category => {
+            {categories2.map(category => {
               return (
-                <CategoryBoxSmall title={category}
+                <CategoryBoxSmall title={category.name} src={category.src}
                 />
               );
             })}

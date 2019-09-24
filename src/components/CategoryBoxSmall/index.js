@@ -3,36 +3,39 @@ import { H3,P } from "../typo";
 import styled from "styled-components";
 
 const Container = styled.div`
-
+position: relative;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   background-color: grey;
-  width: 48vw;
-  height: 130px;
-  margin-left: 1vw;
+  height: 153px;
+  width: 170px;
   border-radius: 5px;
-  top: 0;
-  left: 0;
+  object-fit: cover;
+
 `;
 
 const Img = styled.img`
-  text-align: center;
-  font-size: 22px;
-  margin: 5px;
-  width: 45vw;
-  left: 0;
-  top: auto;
-  z-index: 2;
+position:relative;
+object-fit: cover;
+height: 183px;
+width: 190px;
+left: 0;
+top: auto;
+z-index: 2;
 `;
 
+
   const CategoryBoxSmall = props => {
+
          return (
            <Container {...props} onClick={props.name}>
+
              <P top="0px" textAlign="center" marginLeft="55px" fontSize text={props.title}></P>
              <Img src={props.src} />
+
            </Container>
          );
        };

@@ -102,13 +102,8 @@ const Explore = () => {
           <DivStyled>
             {categories2.name.map(category => {
               return (
-                <Modal url={sound.thumbnail} title={sound.title}>
-                  <AudioPlayer
-                    thumbnail={sound.thumbnail}
-                    src="/audio/audiofile1.mp3"
-                  ></AudioPlayer>
-                  {/* <LikeButton id={sound.id} /> */}
-                </Modal>
+                <CategoryBoxSmall title={category}
+                />
               );
             })}
           </DivStyled>

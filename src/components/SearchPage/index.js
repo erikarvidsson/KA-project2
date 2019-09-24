@@ -46,10 +46,15 @@ const SearchPage = (props) => {
     });
   }
   
-  useEffect(() => {
-    setSearchValue(filterIt(VideoData, searchKey));
-  }, []);
+  // useEffect(() => {
+  //   setSearchValue(filterIt(VideoData, searchKey));
+  // }, []);
 
+  function checkSubmit(e) {
+    if (e && e.keyCode == 13) {
+      setSearchValue(filterIt(VideoData, searchKey));
+    }
+  }
 
 
   // console.log(searchValue)
@@ -62,10 +67,11 @@ const SearchPage = (props) => {
         <div>
           <Form>
             <InputStyled
-              type="search"
+              type="text"
               id="site-search"
-              pattern="[A-z][0-9]"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
               placeholder="Sök i Kplay..."
+              onKeyDown={checkSubmit}
               onChange={e => setSearchKey(e.target.value)}
               value={searchKey}
             />

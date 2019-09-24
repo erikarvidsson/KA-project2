@@ -5,7 +5,9 @@ import NavigationButton from '../NavigationButton';
 import {Header, H2, H3, P} from '../typo';
 
 const ImgStyled = styled.img`
-height: 200px;
+height: 250px;
+top: 0;
+left:0;
 display: flex;
 width: 100vw;
 justify-content: center;
@@ -38,10 +40,10 @@ text-decoration: none;
 const ProfilePage = (props) => {
     return (
     <div>
-          <ImgStyled src='assets/icons/Profilbild.svg' alt=''></ImgStyled>
+        <ImgStyled src='assets/icons/Profilbild.svg' alt=''></ImgStyled>
         <DivStyled>
-          <H3 text="Namn Efternamn"/>
-          <P text="Kulturakademin"/>
+          <H3 text="Namn Efternamn" marginLeft="20px"/>
+          <P text="Kulturakademin" marginLeft="20px"/>
             <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
             <Link to='/Settings'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
             <Link to='/Help'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>

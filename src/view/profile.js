@@ -6,7 +6,6 @@ import { Header, P, H2 } from '../components/typo';
 
 const DivStyled = styled.div`
     width: 100vw;
-    height: 56px;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -16,6 +15,8 @@ const BackIconStyled = styled.img `
     height: 30px;
     width: 30px;
     margin-left: 10px;
+    z-index: 1;
+    position: absolute;
 `
 
 const Profile = (props) => {

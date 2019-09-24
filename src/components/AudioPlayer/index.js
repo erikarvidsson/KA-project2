@@ -3,28 +3,59 @@ import styled from "styled-components";
 
 const PlayerWrapper = styled.div`
     position: relative;
+    height: 93vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+`;
+
+const ThumbnailStyled = styled.img`
+    position: absolute;
+    object-fit: cover;
     height: 100%;
+    z-index: -2;
+`;
+
+const ButtonDivStyled = styled.div`
+    height: 66px;
+    width: 236px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
 `;
 
 const PlayBttn = styled.button`
-    height: 150px;
-    width: 150px;
-    color: white;
-    background-color: blue;
+    height: 66px;
+    width: 66px;
+    color: white;    
     top: 0;
     left: 0;
 `
+
+const RewindBttn = styled.button `
+    height: 66px;
+    width: 66px;
+    color: white;    
+    top: 0;
+    left: 0;
+`
+
 const Progress = styled.progress`
-  height: 150px;
-  width: 150px;
+  height: 3px;
+  width: 310px;
   color: white;
   background-color: blue;
   top: 0;
   left: 0;
+  margin-top: 80vh;
 `;
 
 
 const AudioPlayer = (props) => {
+
   const [percent, setPercent] = useState('')
 
   function seek(e) {
@@ -33,6 +64,7 @@ const AudioPlayer = (props) => {
     e.currentTime = percent * e.duration;
     setPercent('100')
   }
+
   const play = () => {
     var progressBar = document.getElementById("progress");
     const play = document.getElementById("player").play();
@@ -42,10 +74,12 @@ const AudioPlayer = (props) => {
       
       return play
   }
+
   const pause = () => {
       const play = document.getElementById("player").pause();
       return play
   }
+
   const forward = () => {
       const forward = document.getElementById("player");
       forward.currentTime += 5.0;
@@ -53,6 +87,7 @@ const AudioPlayer = (props) => {
       console.log(forward.duration);
       return forward;
   }
+
   const backwards = () => {
       const backwards = document.getElementById("player");
       backwards.currentTime -= 5.0;
@@ -63,16 +98,12 @@ const AudioPlayer = (props) => {
   const testTimer = () => {
     const player = document.getElementById("player");
           console.log(player.currentTime);
-          console.log(player.duration);
-    
+          console.log(player.duration);  
   }
-
-
-
 
   return (
     <PlayerWrapper>
-      <img src={props.thumbnail} alt="" />
+      <ThumbnailStyled src={props.thumbnail} alt="" />
       {/* <audio id="player" controls autoPlay> */}
       <audio
         id="player"
@@ -82,14 +113,15 @@ const AudioPlayer = (props) => {
         type="audio/mpeg"
         codecs="mp3"
       ></audio>
-      <div>
-        <PlayBttn onClick={backwards}>Backwards</PlayBttn>
-        <PlayBttn onClick={forward}>Forward</PlayBttn>
-      </div>
-      <PlayBttn onClick={play}>Play</PlayBttn>
-      <PlayBttn onClick={pause}>Pause</PlayBttn>
       <Progress id="progress" min="0" max="100" value="0"></Progress>
+      <ButtonDivStyled >
+        <RewindBttn onClick={backwards}><img src='assets/icons/rewind.svg'/></RewindBttn>
+        <PlayBttn onClick={play}><img src='assets/icons/play-button.svg'/></PlayBttn>
+        {/* <PlayBttn onClick={pause}>Pause<img src='assets/icons/rewind.svg'/></PlayBttn> */}
+        <RewindBttn onClick={forward}><img src='assets/icons/forward.svg'/></RewindBttn>
+      </ButtonDivStyled >
     </PlayerWrapper>
-  );}
+  );
+}
 
 export default AudioPlayer

@@ -29,7 +29,7 @@ const ChoseCategory = () => {
           {categories2.name.map(category => {
             return (
               <CategoryBox title={category} 
-              
+               
               />
             );
           })}

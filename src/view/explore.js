@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Modal from "../components/Modal";
 import styled from 'styled-components';
@@ -17,7 +18,7 @@ import { P, Header, H3 } from "../components/typo";
 
 const CategoryDivStyled = styled.div`
 margin-top: 170px;
-`
+`;
 
 const SectionDivStyled = styled.div`
 height: 100vh;
@@ -39,7 +40,7 @@ const Explore = () => {
       <div>
         <Layout>
           <CategoryDivStyled>
-            <Category text='Senast tillagda' img='assets/icons/right-arrow.svg'/>
+            <Link to='/Latest'><Category text='Senast tillagda' img='assets/icons/right-arrow.svg'/></Link>
           </CategoryDivStyled>
 
             <MenuTop text="Utforska"/>
@@ -65,7 +66,7 @@ const Explore = () => {
                   title={VideoData[0].title}
                   description={VideoData[0].description}
                     />
-                  </Modal>
+                </Modal>
                 );
               })}
 

@@ -22,6 +22,7 @@ const Img = styled.img`
   left: 0;
   top: auto;
   z-index: ${props => props.ZIndex || 1};
+  border-radius: 5px;
 `;
 const MaxChar = styled.div`
   position: ${props => props.position || 'absolute'} ;

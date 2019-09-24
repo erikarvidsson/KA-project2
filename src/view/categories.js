@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
+import { Link } from "react-router-dom";
 import { Header, P, H2, H3 } from '../components/typo';
 import ProfileIcon from '../components/ProfileIcon';
 import NavigationButton from '../components/NavigationButton';
@@ -29,6 +30,20 @@ const CategoryDivStyled = styled.div`
     align-items: center;
 `
 
+const LinkStyled = styled(Link)`
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 60px;
+justify-content: space-between;
+height: 22px;
+text-decoration: none;
+`;
+
+const ImgStyled = styled.img`
+height: 22px;
+
+`;
 const Categories = (props) => {
     return(
         <div>
@@ -48,6 +63,9 @@ const Categories = (props) => {
                     <Category text='Teater' img='assets/icons/cancel-1.svg'/>
                     <Line />
                     <Category text='Scenografi' img='assets/icons/cancel-1.svg'/>
+                    <LinkStyled to="/ChoseCategry"><H3 text="Add" />
+                      <ImgStyled src='assets/icons/add.svg'></ImgStyled>
+                    </LinkStyled>
                 </CategoryDivStyled>
             </Layout>
         </div>

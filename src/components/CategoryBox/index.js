@@ -57,7 +57,7 @@ export const CategoryBox = props => {
     //     setValue(props.value, false);
     //   }
     // };
-        
+
     return (
       <Container {...props} onClick={chosenCategory}>
         <Box>

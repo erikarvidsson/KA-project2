@@ -15,23 +15,23 @@ const Container = styled.div`
 `;
 
 const Img = styled.img`
-  position:absolute;
+  position: ${props => props.position || 'absolute'} ;
   font-size: 22px;
   height: 270px;
   width: 100%;
   left: 0;
   top: auto;
-  z-index: 2;
+  z-index: ${props => props.ZIndex || 1};
 `;
 const MaxChar = styled.div`
-  position: absolute;
+  position: ${props => props.position || 'absolute'} ;
   height: ${props => props.height};
   overflow: hidden;
   top: ${props => props.top || '250px'};
-  z-index: 800;
+  z-index: ${props => props.ZIndex || 800};
 `;
 const Overlay = styled.div`
-  
+
 `;
 
 
@@ -66,4 +66,3 @@ export const MediaBox = (props) => {
            </Container>
          );
        };
-   

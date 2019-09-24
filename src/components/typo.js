@@ -9,6 +9,7 @@ const HeaderStyle = styled.h1`
   font-size: 48px;
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
+  margin-bottom: ${props => props.marginBottom || "12px"};
   margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
   color: ${props => props.color || '#FFFFFF'};
@@ -20,6 +21,7 @@ const H2Style = styled.h2`
   font-size: 38px;
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
+  margin-bottom: ${props => props.marginBottom || "12px"};
   margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
   color: ${props => props.color || '#FFFFFF'};
@@ -31,6 +33,7 @@ const H3Style = styled.h3 `
   font-size: 22px;
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
+  margin-bottom: ${props => props.marginBottom || "12px"};
   margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
   color: ${props => props.color || '#FFFFFF'};

@@ -41,7 +41,14 @@ const StyledLink = styled(Link)`
 
 
 const ChoseCategory = () => {
-  const categories2 = ({name: ["DANS", "MUSIK", "HANTVERK", "SÅNG", "SCENKONST", 'FÄRGLÄRA']})
+  const categories2 = [
+    { name: "DANS", src: "assets/imgs/DANS-kategori.jpg" },
+    { name: "MUSIK", src: "assets/imgs/MUSIK-kategori.jpg" },
+    { name: "HANTVERK", src: "assets/imgs/KROKI-kategori.jpg" },
+    { name: "SÅNG", src: "assets/imgs/KROKI-kategori.jpg" },
+    { name: "SCENKONST", src: "assets/imgs/SCENKONST-kategori.jpg" },
+    { name: "FÄRGLÄRA", src: "assets/imgs/FARGLARA-kategori.jpg" }
+  ];
   const [dans, setDanse] = useState(false);
 
   console.log(categories2)
@@ -65,10 +72,12 @@ const ChoseCategory = () => {
           <NavigationButton goTo='Gå vidare' img='assets/icons/right-arrow.svg' />
         </StyledLink>
         <DivStyled>
-          {categories2.name.map(category => {
+          {categories2.map(category => {
             return (
-              <CategoryBox title={category} 
-               
+              <CategoryBox
+                title={category.name}
+                value={category.name}
+                src={category.src}
               />
             );
           })}

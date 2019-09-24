@@ -43,10 +43,10 @@ const Library = (props) => {
     return(
         <Layout>
           <MenuTop text="Mitt bibliotek"/>
-            // < DivStyled >
-            //     <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-            //     <ProfileIcon />
-            // </DivStyled>
+            < DivStyled >
+                <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
+                <ProfileIcon />
+            </DivStyled>
             {/* top sätter margin-top värdet */}
             <Header text='Mitt bibliotek' top='12px'/>
             <NavigationDivStyled>

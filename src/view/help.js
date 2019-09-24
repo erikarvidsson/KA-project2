@@ -14,10 +14,11 @@ margin: 0;
 `;
 
 const Div = styled.div`
-width: 100vw;
 height: 100px;
+width: 220px;
 display: flex;
 flex-direction: column;
+margin-top: 20px;
 margin-left: 20px;
 `;
 

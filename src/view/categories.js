@@ -44,6 +44,16 @@ const ImgStyled = styled.img`
 height: 22px;
 
 `;
+
+const categories = () => [
+  { name: "Dans" },
+  { name: "Musik" },
+  { name: "Kroki" },
+  { name: "Teater" }, 
+  { name: "Scenografi" }
+];
+
+console.log(categories.map);
 const Categories = (props) => {
     return(
         <div>

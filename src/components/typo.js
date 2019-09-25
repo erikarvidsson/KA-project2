@@ -2,34 +2,33 @@ import React from "react";
 import styled from "styled-components";
 
 const HeaderStyle = styled.h1`
-  /* @font-face {
-    font-family: Grand-Hotel;
-    src: url(${"fonts/GrandHotel-Regular.otf"}) format("opentype");
-  }; */
+  font-family: "Cabin";
   font-size: ${props => props.fontSize || "48px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};
   margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
-  color: ${props => props.color || '#FFFFFF'};
-  text-align: ${props => props.textAlign || 'center'};
-  width: ${props => props.width || '100%'};
+  color: ${props => props.color || "#FFFFFF"};
+  text-align: ${props => props.textAlign || "center"};
+  width: ${props => props.width || "100%"};
 `;
 
 const H2Style = styled.h2`
+  font-family: "Cabin";
   font-size: ${props => props.fontSize || "38px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};
   margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
-  color: ${props => props.color || '#FFFFFF'};
-  text-align: ${props => props.textAlign || 'left'};
-  width: ${props => props.width || '100%'};
+  color: ${props => props.color || "#FFFFFF"};
+  text-align: ${props => props.textAlign || "left"};
+  width: ${props => props.width || "100%"};
 `;
 
 const H3Style = styled.h3`
+  font-family: "Cabin";
   font-size: ${props => props.fontSize || "22px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
@@ -46,6 +45,7 @@ const H3Style = styled.h3`
 `;
 
 const PStyle = styled.p`
+  font-family: 'Cabin';
   font-size: ${props => props.fontSize || "16px"};
   font-weight: ${props => props.fontWeight || "normal"};
   top: ${props => props.top};
@@ -57,7 +57,7 @@ const PStyle = styled.p`
   text-align: ${props => props.textAlign || "left"};
   width: ${props => props.width || "100%"};
   z-index: ${props => props.zIndex};
-  overflow: ${props => props.overflow || ''};
+  overflow: ${props => props.overflow || ""};
   position: ${props => props.position || "relative"};
 `;
 

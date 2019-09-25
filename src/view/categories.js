@@ -50,7 +50,7 @@ const Categories = (props) => {
             <Layout>
                 <DivStyled>
                     <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                    <H3 text='Kategorier' textAlign='center'/>
+                    <H3 text='Kategorier' textAlign='center' marginRight='0px'/>
                     <ProfileIcon />
                 </DivStyled>
                 <CategoryDivStyled>

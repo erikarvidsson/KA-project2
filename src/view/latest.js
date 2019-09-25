@@ -7,7 +7,7 @@ import ProfileIcon from "../components/ProfileIcon";
 import { H3 } from "../components/typo";
 
 const LayoutStyled = styled.div`
-    height: 350vw;
+    height: 400vw;
 `;
 
 const DivStyled = styled.div `
@@ -24,10 +24,8 @@ const BackIconStyled = styled.img`
     margin-left: 10px;
 `;
 
-
 const SectionDivStyled = styled.div`
     height: 300px;
-    margin-top: 40px;
 `;
 
 const Latest = (props) => {

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
 import { CategoryBox } from "../components/CategoryBox";
 import { Header, H2, H3, P} from '../components/typo';
 import NavigationButton from "../components/NavigationButton";
+
 
 const TopDivStyled = styled.div`
     height: 189px;
@@ -21,6 +22,10 @@ const DivStyled = styled.div`
 const LogoDivStyled = styled.div`
     height: 29px;
     width: 100vw;
+`;
+const Select = styled.select`
+  height: 29px;
+  width: 100vw;
 `;
 
 const LogoStyled = styled.img`
@@ -49,13 +54,39 @@ const ChoseCategory = () => {
     { name: "SCENKONST", src: "assets/imgs/SCENKONST-kategori.jpg" },
     { name: "FÄRGLÄRA", src: "assets/imgs/FARGLARA-kategori.jpg" }
   ];
-  const [dans, setDanse] = useState(false);
 
-  console.log(categories2)
+  //   const [myChosenCategories, setMyChosenCategories] = useState([]);
+  //   let test2 = []
+    
+  //   const getID = () => {
+  //     categories2.map(category => {
+  //       test2.concat(test, category.name);
+        
+  //     })
+  //   }
+  //   getID()
+  // console.log(test); 
 
-  // newChosen = () => {
-  //   setChosen(categories2.name);
-  // }
+    // useEffect(
+    //   a => {
+    //     test(a);
+    //   },
+    //   []
+    // );
+
+  // const list = useCallback((a) => {
+  //   const newlist = test2.concat([...myChosenCategories, a])
+  //   setMyChosenCategories(newlist);
+  // }, []);
+
+    // const test = (a) => {
+    //     const list = test2.concat([...myChosenCategories, a]);
+    //     setMyChosenCategories(list);
+    //     // console.log(list);
+    //   }
+
+
+    // console.log(myChosenCategories);
   
   return (
     <div>
@@ -72,15 +103,20 @@ const ChoseCategory = () => {
           <NavigationButton goTo='Gå vidare' img='assets/icons/right-arrow.svg' />
         </StyledLink>
         <DivStyled>
+          {/* <Select> */}
+
           {categories2.map(category => {
             return (
               <CategoryBox
+                // onClick={test}
                 title={category.name}
                 value={category.name}
                 src={category.src}
               />
             );
-          })}
+          })} 
+
+          {/* </Select> */}
         </DivStyled>
 
 

@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 import styled from "styled-components";
 import ReactDOM, { findDOMNode } from "react-dom";
 import screenfull from "screenfull";
-import { Header, P } from '../typo';
+import { Header, P, H3 } from '../typo';
 
 const PlayerWrapper = styled.div`
   position: absolute;
@@ -11,7 +11,7 @@ const PlayerWrapper = styled.div`
   height: 100vh;
   width: 100%;
   height: ${props => props.height || "100%"};
-  top: ${props => props.top || "58vh"};
+  top: ${props => props.top  || '0px'};
 
   /* padding-top: 56.25%; 720 / 1280 = 0.5625 */
 `;
@@ -21,7 +21,7 @@ const PlayerOverlay = styled.div`
   /* background-color: ${props => (props.primary ? "" : "")}; */
   background-color: rgba(39,62,84,0.82);
   height: ${props => props.height || "100%"};
-  top: ${props => props.top || "58vh"};
+  top: ${props => props.top};
   z-index: 2;
   pointer-events: none;
   `
@@ -40,7 +40,7 @@ const YPlayer = (props) => {
   }
   return (
     <PlayerWrapper {...props}>
-      <PlayerOverlay />
+      {/* <PlayerOverlay /> */}
       <ReactPlayer
         url={props.link}
         className="react-player"
@@ -51,8 +51,8 @@ const YPlayer = (props) => {
         onClick={playFullscreen}
       />
 
-      <Header text={props.hText}></Header>
-      <P text={props.pText} top="300px"></P>
+      <H3 text={props.hText}></H3>
+      <P text={props.pText} ></P>
 
     </PlayerWrapper>
   );

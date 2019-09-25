@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { P, H3 } from "../typo";
 import YPlayer from "../YPlayer";
+
 const Button = styled.div`
   position: absolute;
   top: 50px;
@@ -33,10 +34,10 @@ const Window = styled.div`
 `;
 const Img = styled.img`
   position: ${props => props.position || "relative"};
-  width: ${props => props.imgWidth || "34vw"};
+  width: ${props => props.imgWidth || "199px"};
   margin-left: ${props => props.imgMarginLeft || "12px"};
   object-fit: cover;
-  height: auto;
+  height: 127px;
   border-radius: 5px;
 `;
 const Box = styled.div`
@@ -47,7 +48,25 @@ const Box = styled.div`
   top: 200px;
   z-index: 9999;
 `;
-const Modal = (props) => {
+
+const TextContainer = styled.div`
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* position: absolute; */
+  width: 100%;
+  /* height: 54vw; */
+  /* margin-top: 150px; */
+`;
+const MaxChar = styled.div`
+  height: ${props => props.height};
+  margin-left: 12px;
+  overflow: hidden;
+  width: 100%;
+
+`;
+const ModalMediaBox = (props) => {
   const [show, setShow] = useState(false);
 
 
@@ -62,24 +81,19 @@ const Modal = (props) => {
   return (
     <>
       <Container onClick={handleShow} {...props}>
-        <Img src={props.url} />
-        <H3
-          top="0px"
-          width="90%"
-          fontWeight="bold"
-          fontSize
-          text={props.title}
-          zIndex="999"
-          marginLeft="23px"
-        ></H3>
-        <P
-          top="300px"
-          width="90%"
-          text={props.description}
-          marginLeft="23px"
-          marginBottom="52px"
-          marginTop="22px"
-        ></P>
+
+      <Img src={props.url} alt="" />
+      <TextContainer>
+        <MaxChar height="30px">
+          <P marginLeft="0px" width="0" fontSize="13px" fontWeight="Bold" text={props.title} />
+
+          </MaxChar>
+
+        <MaxChar height="33px">
+          <P marginTop="0px" marginLeft="0px" fontSize="12px" text={props.description} />
+        </MaxChar>
+      </TextContainer>
+
       </Container>
       {show && (
         <Window show={show}  >
@@ -90,4 +104,4 @@ const Modal = (props) => {
     </>
   );
 };
-export default Modal;
+export default ModalMediaBox;

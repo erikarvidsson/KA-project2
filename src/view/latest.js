@@ -45,38 +45,38 @@ const Latest = (props) => {
                 <ProfileIcon />
                 </DivStyled>
 
-            <SectionDivStyled>
-              <MediaBox
-                src={VideoData[0].thumbnail}
-                title={VideoData[0].title}
-                description={VideoData[0].description}
-                position="relative"
-                ZIndex="-1"
-                />
-
-              </SectionDivStyled>
-
-              <SectionDivStyled>
-                <MediaBox
-                  src={VideoData[1].thumbnail}
-                  title={VideoData[1].title}
-                  description={VideoData[1].description}
-                  position="relative"
-                  ZIndex="-1"
-                  />
-                </SectionDivStyled>
-
-              <SectionDivStyled>
+                <SectionDivStyled>
                   <MediaBox
-                    src={VideoData[2].thumbnail}
-                    title={VideoData[2].title}
-                    description={VideoData[2].description}
+                    src={VideoData[0].thumbnail}
+                    title={VideoData[0].title}
+                    description={VideoData[0].description}
                     position="relative"
                     ZIndex="-1"
                     />
-            </SectionDivStyled>
-          </LayoutStyled>
-        </Layout>
+
+                  </SectionDivStyled>
+
+                  <SectionDivStyled>
+                    <MediaBox
+                      src={VideoData[1].thumbnail}
+                      title={VideoData[1].title}
+                      description={VideoData[1].description}
+                      position="relative"
+                      ZIndex="-1"
+                      />
+                  </SectionDivStyled>
+
+                  <SectionDivStyled>
+                      <MediaBox
+                        src={VideoData[2].thumbnail}
+                        title={VideoData[2].title}
+                        description={VideoData[2].description}
+                        position="relative"
+                        ZIndex="-1"
+                        />
+                  </SectionDivStyled>
+              </LayoutStyled>
+          </Layout>
       </div>
     );
 };

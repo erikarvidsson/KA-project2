@@ -121,7 +121,7 @@ const Index = () => {
         <WhiteButtonStyled onClick={handleLogin}><P text='Logga in' color='#000000'/></WhiteButtonStyled>
         <StyledLink to='/ChoseCategry'><P text='Skip'/></StyledLink>
         <Box/>
-        <ImgStyled src='assets/imgs/MUSIK-kategori.jpg'/>
+        <ImgStyled src='assets/imgs/Cello.jpg'/>
     </DivStyled>  
   );
 }

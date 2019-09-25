@@ -20,6 +20,7 @@ import Signup from './view/signup';
 import Settings from './view/settings';
 import Help from './view/help';
 import Latest from './view/latest';
+import Test from './view/test';
 
 window.addEventListener('load', () => {
   registerSW();
@@ -60,6 +61,7 @@ function App() {
           <Route path="/Settings" component={Settings} />
           <Route path="/Help" component={Help} />
           <Route path="/Latest" component={Latest} />
+          <Route path="/Test" component={Test} />
         </div>
       </header>
     </div>

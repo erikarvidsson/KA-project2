@@ -29,18 +29,20 @@ const H2Style = styled.h2`
   width: ${props => props.width || '100%'};
 `;
 
-const H3Style = styled.h3 `
+const H3Style = styled.h3`
   font-size: ${props => props.fontSize || "22px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};
   margin-left: ${props => props.marginLeft || "12px"};
   margin-right: ${props => props.marginRight || "12px"};
-  color: ${props => props.color || '#FFFFFF'};
-  text-align: ${props => props.textAlign || 'left'};
-  width: ${props => props.width || '100%'};
+  color: ${props => props.color || "#FFFFFF"};
+  text-align: ${props => props.textAlign || "left"};
+  width: ${props => props.width || "100%"};
+  height: ${props => props.height || ""};
+  overflow: ${props => props.overflow || ""};
   z-index: ${props => props.zIndex};
-  position: ${props => props.zIndex};
+  position: ${props => props.position || "relative"};
 `;
 
 const PStyle = styled.p`
@@ -51,11 +53,12 @@ const PStyle = styled.p`
   margin-right: ${props => props.marginRight};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};
-  color: ${props => props.color || '#FFFFFF'};
-  text-align: ${props => props.textAlign || 'left'};
-  width: ${props => props.width || '100%'};
+  color: ${props => props.color || "#FFFFFF"};
+  text-align: ${props => props.textAlign || "left"};
+  width: ${props => props.width || "100%"};
   z-index: ${props => props.zIndex};
-  position: ${props => props.zIndex};
+  overflow: ${props => props.overflow || ''};
+  position: ${props => props.position || "relative"};
 `;
 
 

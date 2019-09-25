@@ -47,76 +47,104 @@ const Explore = () => {
       <div>
         <Layout>
           <CategoryDivStyled>
-            <Link to='/Latest'><Category text='Senast tillagda' img='assets/icons/right-arrow.svg'/></Link>
-            </CategoryDivStyled>
+            <Link to="/Latest">
+              <Category
+                text="Senast tillagda"
+                img="assets/icons/right-arrow.svg"
+              />
+            </Link>
+          </CategoryDivStyled>
 
-            <MenuTop text="Utforska"/>
+          <MenuTop text="Utforska" />
 
-              <Modal src={VideoData[0].thumbnail}>
-                <MediaBox
-                  src={VideoData[0].thumbnail}
-                  title={VideoData[0].title}
-                  description={VideoData[0].description}
-                  position="relative"
-                  ZIndex="-1"
-                  />
-            </Modal>
-            <SectionDivStyled>
-              <H3 text='Populärt' marginLeft="23px" width="90%" marginTop="130px"/>
+          <Modal
+            url={VideoData[0].thumbnail}
+            title={VideoData[0].title}
+            description={VideoData[0].description}
+            height="400px"
+            imgWidth="100%"
+            imgMarginLeft="0px"
+          >
+            <YPlayer
+              link={VideoData[0].url}
+              hText={VideoData[0].title}
+              pText={VideoData[0].description}
+              height="270px"
+              top="120px"
+            />
+          </Modal>
+          <SectionDivStyled>
+            <H3
+              text="Populärt"
+              marginLeft="23px"
+              width="90%"
+              height="auto"
+              marginTop="25px"
+              marginBottom="25px"
+            />
 
             <SideScroll>
               {VideoData.map(video => {
                 return (
                   <Modal url={video.thumbnail} title={video.title}>
-
+                    <YPlayer></YPlayer>
                     <SmallMediaBox
-                    src={VideoData[0].thumbnail}
-                    title={VideoData[0].title}
-                    description={VideoData[0].description}
-                      />
+                      src={VideoData[0].thumbnail}
+                      title={VideoData[0].title}
+                      description={VideoData[0].description}
+                    />
                   </Modal>
                 );
               })}
 
-            <Modal>
-              <SmallMediaBox
-              src={VideoData[0].thumbnail}
-              title={VideoData[0].title}
-              description={VideoData[0].description}
-              />
-            </Modal>
             </SideScroll>
 
-              <H3 text='Rekommenderade' marginLeft="23px" width="90%" marginTop="40px" />
+            <H3
+              text="Rekommenderade"
+              marginLeft="23px"
+              marginTop="25px"
+              width="90%"
+              // marginTop="40px"
+            />
 
             <SideScroll>
               {SoundData.map(sound => {
                 return (
-                  <Modal url={sound.thumbnail} title={sound.title}>
-                  <SmallMediaBox
-                  src={SoundData[0].thumbnail}
-                  title={SoundData[0].title}
-                  description={SoundData[0].description}
-                  />
+                  <Modal
+                    width="100%"
+                    marginLeft="12px"
+                    textAlign="left"
+                    title={sound.title}
+                    description={sound.description}
+                    url={sound.thumbnail}
+                  >
+                    <AudioPlayer
+                      thumbnail={sound.thumbnail}
+                      src="/audio/audiofile1.mp3"
+                    ></AudioPlayer>
+                    <LikeButton id={sound.id} />
                   </Modal>
                 );
               })}
-            <Modal>
-              <YPlayer link={VideoData[0].url} />
-            </Modal>
-              </SideScroll>
+              <Modal>
+                <YPlayer link={VideoData[0].url} />
+              </Modal>
+            </SideScroll>
 
-            <H3 text="Kategorier" marginLeft="23px" width="90%" marginTop="40px"/>
-          <DivStyled>
-            {categories2.map(category => {
-              return (
-                <CategoryBoxSmall title={category.name} src={category.src}
-                />
-              );
-            })}
-          </DivStyled>
+            <H3
+              text="Kategorier"
+              marginLeft="23px"
+              width="90%"
+              marginTop="40px"
+            />
+            <DivStyled>
+              {categories2.map(category => {
+                return (
+                  <CategoryBoxSmall title={category.name} src={category.src} />
+                );
+              })}
+            </DivStyled>
           </SectionDivStyled>
-
         </Layout>
       </div>
     );

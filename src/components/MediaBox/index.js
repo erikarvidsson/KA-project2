@@ -20,13 +20,13 @@ const Img = styled.img`
   font-size: 22px;
   height: 270px;
   width: 100%;
-  margin: 5px;
+  /* margin: 5px; */
   /* left: 0;
   top: auto; */
   z-index: ${props => props.ZIndex || 1};
   /* margin-bottom: 60px; */
-
 `;
+
 const MaxChar = styled.div`
   position: ${props => props.position || 'absolute'} ;
   height: ${props => props.height};
@@ -54,7 +54,7 @@ export const MediaBox = (props) => {
                  fontWeight="thin"
                  text="DANS"
                  width="90%"
-                marginLeft="23px"
+                 marginLeft="23px"
                ></P>
              </MaxChar>
              <MaxChar height="38px">
@@ -68,7 +68,7 @@ export const MediaBox = (props) => {
                 marginLeft="23px"
                ></H3>
              </MaxChar>
-             <MaxChar height="60px" top="280px">
+             <MaxChar height={props => props.Height || "60px"} top="280px">
                <P
                 top="300px"
                 width="90%"

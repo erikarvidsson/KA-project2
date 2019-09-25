@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player'
 import styled from "styled-components";
 import ReactDOM, { findDOMNode } from "react-dom";
 import screenfull from "screenfull";
+import { Header, P } from '../typo';
 
 const PlayerWrapper = styled.div`
   position: absolute;
@@ -49,6 +50,10 @@ const YPlayer = (props) => {
         overlayZIndex="1"
         onClick={playFullscreen}
       />
+
+      <Header text={props.hText}></Header>
+      <P text={props.pText} top="300px"></P>
+
     </PlayerWrapper>
   );
   }

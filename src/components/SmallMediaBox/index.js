@@ -6,21 +6,17 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   margin-top: 10px;
-  /* margin-left: 20px; */
 `;
 const Img = styled.img`
   object-fit: cover;
-  width: 34vw;
-  height: 34vw;
-  /* margin-top: 150px; */
-  /* margin-left: 20px; */
+  width: ${props => props.width || "34vw"};
+  height: ${props => props.height || "34vw"};
   border-radius: 5px;
 `;
 const TextContainer = styled.div`
   object-fit: cover;
   width: 55vw;
-  height: 34vw;
-  /* margin-top: 150px; */
+  /* height: 34vw; */
 `;
 const MaxChar = styled.div`
   height: ${props => props.height};
@@ -37,7 +33,7 @@ export const SmallMediaBox = props => {
       <Img src={props.src} alt="" />
       <TextContainer>
         <MaxChar height="66px">
-          <H3 marginLeft="0px" width="100%" text={props.title} />
+          <H3 overflow="hidden" marginLeft="0px" width="100%" text={props.title} />
         </MaxChar>
         <MaxChar height="56px">
           <P marginTop="0px" marginLeft="0px" text={props.description} />

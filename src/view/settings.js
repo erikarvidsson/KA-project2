@@ -14,8 +14,8 @@ const DivStyled = styled.div `
 `;
 
 const BackIconStyled = styled.img`
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     margin-left: 10px;
 `;
 
@@ -24,11 +24,12 @@ const Settings = (props) => {
     return(
         <div>
             <Layout>
-              <DivStyled>
-                <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                <H3 text='Inställningar' textAlign='center'/>
+                <DivStyled>
+                    <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
+                    
+                    <H3 text='Inställningar' textAlign='center' marginLeft='-34px' marginRight='0px'/>
                 </DivStyled>
-              <SettingPage />
+                <SettingPage />
             </Layout>
         </div>
     )

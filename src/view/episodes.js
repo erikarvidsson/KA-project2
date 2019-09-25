@@ -5,7 +5,9 @@ import Layout from '../components/Layout';
 const Episodes = () => {
     return(
         <div>
-            <Layout></Layout>
+            <Layout>
+
+            </Layout>
         </div>
     )
 }

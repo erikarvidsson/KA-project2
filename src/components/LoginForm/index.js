@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import UseLoginForm from '../UseLoginForm';
-import { Header, P, H2, H3 } from '../typo';
+import { P } from '../typo';
 import Line from '../Line';
 
 const FormStyled = styled.form `
     width: 100vw;
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     margin-top: 121px;
-`
+`;
 
 const DivStyled = styled.div `
     height: 51px;
     width: 100vw;
     display: flex;
     justify-content: center;
-`
+`;
 
 const DivPasswordStyled = styled.div `
     height: 51px;
@@ -26,7 +25,7 @@ const DivPasswordStyled = styled.div `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-`
+`;
 
 const InputStyled = styled.input `
     height: 100%;
@@ -41,7 +40,7 @@ const InputStyled = styled.input `
         font-size: 22px;
         color: #FFF;
     }
-`
+`;
 
 const PasswordStyled = styled.input `
     height: 100%;
@@ -57,7 +56,7 @@ const PasswordStyled = styled.input `
         font-size: 22px;
         color: #FFF;
     }
-`
+`;
 
 const ButtonStyled = styled.button `
     height: 35px;
@@ -70,19 +69,20 @@ const ButtonStyled = styled.button `
     flex-direction: column;
     align-items: center;
     margin-top: 72px;
-`
+`;
 
 const ImgStyled = styled.img `
     height: 25px;
     width: 25px;
     margin: 0;
-`
+`;
 
-const LoginForm = (props) => {
-    const [showPassword, setShowPassword] = useState('password')
+const LoginForm = () => {
+    const [showPassword, setShowPassword] = useState('password');
+
     const { values, handleChange, handleSubmit } = UseLoginForm(login);
-    function login() {
-    }
+
+    function login() {}
 
     const showPasswordOnClick = () => {
         if(showPassword === 'password'){
@@ -92,40 +92,36 @@ const LoginForm = (props) => {
         }
     }
 
-    console.log(showPassword);
-
     return (
-      <FormStyled onSubmit={handleSubmit}>
-        <DivStyled>
-          <InputStyled
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            onChange={handleChange}
-            value={values.email}
-          ></InputStyled>
-        </DivStyled>
-        <Line />
-        <DivPasswordStyled>
-          <PasswordStyled
-            type={showPassword}
-            name="password"
-            placeholder="Lösenord"
-            onChange={handleChange}
-            value={values.password}
-          ></PasswordStyled>
-          <ImgStyled
-            onClick={showPasswordOnClick}
-            src="assets/icons/visible.svg"
-          />
-        </DivPasswordStyled>
-        <ButtonStyled type="submit">
-          <P text="Fortsätt" textAlign="center" />
-        </ButtonStyled>
-      </FormStyled>
+        <FormStyled onSubmit={handleSubmit}>
+            <DivStyled>
+                <InputStyled
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    onChange={handleChange}
+                    value={values.email}
+                />
+            </DivStyled>
+            <Line />
+            <DivPasswordStyled>
+                <PasswordStyled
+                    type={showPassword}
+                    name="password"
+                    placeholder="Lösenord"
+                    onChange={handleChange}
+                    value={values.password}
+                />
+                <ImgStyled
+                    onClick={showPasswordOnClick}
+                    src="assets/icons/visible.svg"
+                />
+            </DivPasswordStyled>
+            <ButtonStyled type="submit">
+                <P text="Fortsätt" textAlign="center" />
+            </ButtonStyled>
+        </FormStyled>
     );
-};
+}
+
 export default LoginForm;
-
-
-

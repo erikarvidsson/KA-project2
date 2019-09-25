@@ -81,7 +81,7 @@ const Notification = () => {
       },
       {
         name: "Rebecca Klaening",
-        img: "assets/imgs/Rebecca.jpeg",
+        img: "assets/imgs/Rebecca.jpg",
         text: "lade till",
         title: 'Grunden i koordinerade kropprörelser.',
         text2: 'i sina favoriter.'

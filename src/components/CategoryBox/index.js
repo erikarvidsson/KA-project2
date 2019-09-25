@@ -43,22 +43,29 @@ const Box = styled.div`
   width: 100%;
   padding-top: 67%;
   z-index: 6;
+  :active {
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.));
+  }
 `;
 
 
 export const CategoryBox = props => {
-
+  
+  const noFade = () => {
+    const newCss = document.getElementById(props.title);
+    console.log(newCss)
+    newCss.style.background = 'transparent'
+  }
+  const setFade = () => {
+    const newCss = document.getElementById(props.title);
+    newCss.style.background = 'rgba(0,0,0,0.3)'
+  }
 
   // SaveCategory(props.name)
 
     return (
-      <Container
-        id={props.title}
-        {...props}
-        value={props.title}
-        onClick={console.log('funkar inte :(')}
-      >
-        <Box>
+      <Container {...props} value={props.title} onClick={noFade}>
+        <Box id={props.title} onClick={setFade}>
           <P
             top="0px"
             position="relative"

@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Modal from "../components/Modal";
+import ModalMediaBox from "../components/ModalMediaBox";
 import styled from 'styled-components';
 import YPlayer from "../components/YPlayer";
 import VideoData from "../data/youtube.json";
@@ -70,7 +71,6 @@ const Explore = () => {
               hText={VideoData[0].title}
               pText={VideoData[0].description}
               height="270px"
-              top="120px"
             />
           </Modal>
           <SectionDivStyled>
@@ -86,15 +86,16 @@ const Explore = () => {
             <SideScroll>
               {VideoData.map(video => {
                 return (
-                  <Modal url={video.thumbnail} title={video.title}>
+                  <ModalMediaBox url={video.thumbnail} title={video.title} description={video.description}>
                     <YPlayer></YPlayer>
                     <SmallMediaBox
                       src={VideoData[0].thumbnail}
                       title={VideoData[0].title}
                       description={VideoData[0].description}
                     />
-                  </Modal>
+                  </ModalMediaBox >
                 );
+              })
               })}
 
             </SideScroll>
@@ -110,20 +111,16 @@ const Explore = () => {
             <SideScroll>
               {SoundData.map(sound => {
                 return (
-                  <Modal
-                    width="100%"
-                    marginLeft="12px"
-                    textAlign="left"
+                  <ModalMediaBox 
                     title={sound.title}
                     description={sound.description}
-                    url={sound.thumbnail}
-                  >
-                    <AudioPlayer
-                      thumbnail={sound.thumbnail}
-                      src="/audio/audiofile1.mp3"
-                    ></AudioPlayer>
-                    <LikeButton id={sound.id} />
-                  </Modal>
+                    url={sound.thumbnail}>
+                      <AudioPlayer
+                        thumbnail={sound.thumbnail}
+                        src="/audio/audiofile1.mp3"
+                      ></AudioPlayer>
+                      {/* <LikeButton id={sound.id} /> */}
+                  </ModalMediaBox >
                 );
               })}
               <Modal>

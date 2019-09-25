@@ -36,8 +36,8 @@ const Window = styled.div`
 
 const Img = styled.img`
   position: ${props => props.position || "relative"};
-  width: ${props => props.imgWidth || "34vw"};
-  margin-left: ${props => props.imgMarginLeft || "12px"};
+  width: ${props => props.imgWidth || "100%"};
+  margin-left: ${props => props.imgMarginLeft};
   object-fit: cover;
   height: auto;
   border-radius: 5px;
@@ -72,6 +72,7 @@ const Modal = (props) => {
           top="0px"
           width="90%"
           fontWeight="bold"
+          fontSize="22px;"
           text={props.title}
           zIndex="888"
           marginLeft="23px"

@@ -23,19 +23,10 @@ const ImgStyled = styled.img`
     margin-right: 12px;
 `;
 
-
-
-
-
 const Category = (props) => {
-    console.log(props)
-
-    const categories2 = ["Dans", "Musik", "Kroki", "Teater", "Scenografi"];
-
+    
     const remove = a => {
-        var removeItem = categories2.indexOf(a);
-        var item = document.getElementById(a).style.display = "none";
-        console.log(item);
+        document.getElementById(a).style.display = "none";
     };
 
     return (

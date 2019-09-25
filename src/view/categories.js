@@ -52,23 +52,7 @@ const categories2 = [
   "Teater",
   "Scenografi"
 ];
-// [
-//   { name: "Dans", img: "assets/icons/cancel-1.svg" },
-//   { name: "Musik", img: "assets/icons/cancel-1.svg" },
-//   { name: "Kroki", img: "assets/icons/cancel-1.svg" },
-//   { name: "Teater", img: "assets/icons/cancel-1.svg" },
-//   { name: "Scenografi", img: "assets/icons/cancel-1.svg" }
-// ];
 
-
-
-// const remove = (a) => {
-//         console.log(a)
-//         var removeItem = categories2.indexOf("Scenografi");
-//         var item = document.getElementById(a)
-// }
-
-// console.log(categories2);
 const Categories = (props) => {
     return (
       <div>

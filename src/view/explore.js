@@ -48,32 +48,33 @@ const Explore = () => {
         <Layout>
           <CategoryDivStyled>
             <Link to='/Latest'><Category text='Senast tillagda' img='assets/icons/right-arrow.svg'/></Link>
-          </CategoryDivStyled>
+            </CategoryDivStyled>
 
             <MenuTop text="Utforska"/>
 
-            <MediaBox
-              src={VideoData[0].thumbnail}
-              title={VideoData[0].title}
-              description={VideoData[0].description}
-              position="relative"
-              ZIndex="-1"
-              />
-
-            <SectionDivStyled>
-              <H3 text='Populärt' marginLeft="12px" marginTop="400px"/>
-
-              <SideScroll>
-            {VideoData.map(video => {
-              return (
-                <Modal url={video.thumbnail} title={video.title}>
-
-                  <SmallMediaBox
+              <Modal src={VideoData[0].thumbnail}>
+                <MediaBox
                   src={VideoData[0].thumbnail}
                   title={VideoData[0].title}
                   description={VideoData[0].description}
-                    />
-                </Modal>
+                  position="relative"
+                  ZIndex="-1"
+                  />
+            </Modal>
+            <SectionDivStyled>
+              <H3 text='Populärt' marginLeft="23px" width="90%" marginTop="130px"/>
+
+            <SideScroll>
+              {VideoData.map(video => {
+                return (
+                  <Modal url={video.thumbnail} title={video.title}>
+
+                    <SmallMediaBox
+                    src={VideoData[0].thumbnail}
+                    title={VideoData[0].title}
+                    description={VideoData[0].description}
+                      />
+                  </Modal>
                 );
               })}
 
@@ -86,16 +87,16 @@ const Explore = () => {
             </Modal>
             </SideScroll>
 
-              <H3 text='Rekommenderade' marginLeft="12px" marginTop="40px" />
+              <H3 text='Rekommenderade' marginLeft="23px" width="90%" marginTop="40px" />
 
             <SideScroll>
               {SoundData.map(sound => {
                 return (
                   <Modal url={sound.thumbnail} title={sound.title}>
                   <SmallMediaBox
-                  src={VideoData[0].thumbnail}
-                  title={VideoData[0].title}
-                  description={VideoData[0].description}
+                  src={SoundData[0].thumbnail}
+                  title={SoundData[0].title}
+                  description={SoundData[0].description}
                   />
                   </Modal>
                 );
@@ -105,7 +106,7 @@ const Explore = () => {
             </Modal>
               </SideScroll>
 
-            <H3 text="Kategorier" marginLeft="12px" marginTop="40px"/>
+            <H3 text="Kategorier" marginLeft="23px" width="90%" marginTop="40px"/>
           <DivStyled>
             {categories2.map(category => {
               return (

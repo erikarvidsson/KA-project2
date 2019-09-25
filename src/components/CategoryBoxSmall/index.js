@@ -11,32 +11,47 @@ justify-content: center;
 flex-direction: row;
 background-color: grey;
 height: 153px;
-width: 170px;
+width: 100vw;
+margin: 5px;
 border-radius: 5px;
 object-fit: cover;
-
+z-index: 2;
 `;
 
 const Img = styled.img`
 position: relative;
 object-fit: cover;
-height: 183px;
-width: 250px;
-left: 0;
-top: auto;
+height: 153px;
+width: 190px;
+object-fit: cover;
 `;
 
-
+const Box = styled.div`
+/* background: linear-gradient(transparent, #020202); */
+background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+position: absolute;
+height: 100%;
+width: 100%;
+padding-top: 67%;
+z-index: 6;
+`;
 
 
   const CategoryBoxSmall = props => {
          return (
            <Container {...props} onClick={props.name}>
-
-             <P top="0px" textAlign="center" marginLeft="55px" fontSize text={props.title}></P>
-             <Img src={props.src} />
-
+           <Box>
+             <P
+               top="0px"
+               position="relative"
+               textAlign="center"
+               marginLeft="0"
+               text={props.title}
+             />
+           </Box>
+           <Img src={props.src} />
            </Container>
+
          );
        };
 

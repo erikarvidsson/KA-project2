@@ -17,7 +17,6 @@ const IconImgStyled = styled.img`
 const Img = styled.img`
   width: 100px;
   height: 150px;
-  background: blue;
   color: white;
   min-width: 200px;
   margin: 5px;
@@ -35,6 +34,7 @@ const Container = styled.div`
   text-align: center;
   color: white;
 `;
+
 const Window = styled.div`
   scroll-snap-align: start;
   border-radius: 15px;
@@ -63,14 +63,13 @@ const Modal = (props) => {
     console.log('clicked')
     console.log(show)
     setShow(true);}
-  
+
 
   return (
     <>
-    
-      <Container>
-        <Img src={props.url} alt="" onClick={handleShow} />
-        <Title>{props.title}</Title>
+
+      <Container onClick={handleShow} {...props}>
+          {props.children}
       </Container>
 
 

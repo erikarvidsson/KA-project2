@@ -32,7 +32,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 position: absolute;
 height: 100%;
 width: 100%;
-padding-top: 67%;
+/* padding-top: 67%; */
 z-index: 6;
 `;
 
@@ -46,6 +46,7 @@ z-index: 6;
                position="relative"
                textAlign="center"
                marginLeft="0"
+               marginTop="70px"
                text={props.title}
              />
            </Box>

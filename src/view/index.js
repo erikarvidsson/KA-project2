@@ -85,7 +85,7 @@ const DivLineStyled = styled.div`
 const LineStyled = styled.div `
     height: 0;
     width: 35vw;
-    border-bottom: 1px solid #323232;
+    border-bottom: 1px solid #C4C4C4;
     z-index: 3;
 `;
 

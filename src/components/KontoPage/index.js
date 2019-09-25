@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
 import FormStyled from '../Form';
-import Line from '../Line';
+import Line2 from '../Line2';
 import {Header, H2, H3, P} from '../typo';
 
 
@@ -41,7 +41,7 @@ const KontoPage = (props) => {
               <H3 text="Ändra profilbild" fontWeight="Bold"  marginLeft="10px" marginTop="35px"/>
               </H3DivStyled>
             </ProfileStyled>
-          <Line />
+          <Line2 />
         <FormStyled/>
     </div>
 )}

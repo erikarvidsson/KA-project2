@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SettingPage from '../components/SettingPage';
 import styled from "styled-components";
-import { Header, P, H2, H3 } from '../components/typo';
+import { H3 } from '../components/typo';
 
 const DivStyled = styled.div `
     width: 100vw;
@@ -19,20 +19,16 @@ const BackIconStyled = styled.img`
     margin-left: 10px;
 `;
 
-
 const Settings = (props) => {
-    return(
-        <div>
-            <Layout>
-                <DivStyled>
-                    <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                    
-                    <H3 text='Inställningar' textAlign='center' marginLeft='-34px' marginRight='0px'/>
-                </DivStyled>
-                <SettingPage />
-            </Layout>
-        </div>
-    )
+    return (
+        <Layout>
+            <DivStyled>
+                <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>                   
+                <H3 text='Inställningar' textAlign='center' marginLeft='-34px' marginRight='0px'/>
+            </DivStyled>
+            <SettingPage />
+        </Layout>    
+    );
 }
 
 export default Settings;

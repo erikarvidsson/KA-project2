@@ -9,7 +9,7 @@ const Search = () => {
               <SearchPage />
             </Layout>
         </div>
-    )
+    );
 }
 
 export default Search;

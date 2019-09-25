@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../components/Layout';
-import { Header, P, H2, H3 } from '../components/typo';
-import ProfileIcon from '../components/ProfileIcon';
+import { H3 } from '../components/typo';
 import SignupForm from '../components/SignupForm';
 
 const DivStyled = styled.div `
@@ -23,15 +21,13 @@ const BackIconStyled = styled.img `
 const SignUp = (props) => {
     return(
         <div>
-            <Layout>
-                <DivStyled>
-                    <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                    <H3 text='Skapa konto' textAlign='center'/>
-                </DivStyled>
-                <SignupForm />
-            </Layout>
+            <DivStyled>
+                <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
+                <H3 text='Skapa konto' textAlign='center' marginLeft='-34px' marginRight='0px'/>
+            </DivStyled>
+            <SignupForm />    
         </div>
-    )
+    );
 }
 
 export default SignUp;

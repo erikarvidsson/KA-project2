@@ -1,8 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
-import Layout from "../components/Layout";
 import LoginForm from "../components/LoginForm";
-import { Header, P, H2, H3 } from '../components/typo';
+import { H3 } from '../components/typo';
 
 
 const DivStyled = styled.div `
@@ -23,13 +22,11 @@ const BackIconStyled = styled.img `
 const Login = (props) => {
   return (
     <div>
-      <Layout>
         <DivStyled>
             <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-            <H3 text='Logga in' textAlign='center'/>
+            <H3 text='Logga in' textAlign='center' marginLeft='-34px' marginRight='0px'/>
         </DivStyled>
         <LoginForm />
-      </Layout> 
     </div>
   );
 };

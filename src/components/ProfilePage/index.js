@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
 import {Header, H2, H3, P} from '../typo';
+import Line from '../Line';
 
 const ImgStyled = styled.img`
-height: 250px;
-top: 0;
-left:0;
+height: 372px;
 display: flex;
 width: 100vw;
+margin-top: -59px;
 justify-content: center;
-
+object-fit: cover;
+position: relative;
 `;
 
 const IconStyled = styled.div`
@@ -20,8 +21,8 @@ display: flex;
 justify-content:center;
 align-items:center;
 position:fixed;
-top:30px;
-left:30px;
+/* top:30px;
+left:30px; */
 
 img {
   width:20px;
@@ -30,6 +31,9 @@ img {
 `;
 const DivStyled = styled.div`
 width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
 a {
 color: #fff;
 text-decoration: none;
@@ -37,17 +41,42 @@ text-decoration: none;
 
 `;
 
+const Box = styled.div`
+  /* background: linear-gradient(transparent, #020202); */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  position: absolute;
+  height: 372px;
+  width: 100%;
+  z-index: 6;
+`;
+
+
+const H3Divstyled = styled.div`
+width: 90vw;
+`;
+
 const ProfilePage = (props) => {
     return (
     <div>
-        <ImgStyled src='assets/icons/Profilbild.svg' alt=''></ImgStyled>
+        <Box>
+
+        </Box>
+
+        <ImgStyled src='assets/imgs/Erik.jpg' alt=''></ImgStyled>
+
         <DivStyled>
-          <H3 text="Namn Efternamn" marginLeft="20px"/>
-          <P text="Kulturakademin" marginLeft="20px"/>
+          <H3Divstyled>
+          <H3 text="Namn Efternamn" marginLeft="6px"/>
+          <P text="Kulturakademin" marginLeft="6px"/>
+          </H3Divstyled>
             <Link to='/Konto'><NavigationButton goTo="Konto" img="assets/icons/right-arrow.svg"/></Link>
+              <Line />
             <Link to='/Settings'><NavigationButton goTo="Inställningar" img="assets/icons/right-arrow.svg"/></Link>
+              <Line />
             <Link to='/Help'><NavigationButton goTo="Hjälp" img="assets/icons/right-arrow.svg"/></Link>
+              <Line />
             <Link to='/'><NavigationButton goTo="Logga ut" img="assets/icons/logout.svg"/></Link>
+              <Line />
         </DivStyled>
     </div>
 )}

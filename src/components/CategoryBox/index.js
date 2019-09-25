@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { P } from "../typo";
 import styled from "styled-components";
 
+
+
+
 const Container = styled.div`
   position: relative;
   color: white;
@@ -26,6 +29,12 @@ const Img = styled.img`
   top: auto;
   z-index: 2;
 `;
+
+const TEST = styled.div`
+color: blue;
+  height: 183px;
+  width: 190px;
+`;
 const Box = styled.div`
   /* background: linear-gradient(transparent, #020202); */
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
@@ -36,30 +45,19 @@ const Box = styled.div`
   z-index: 6;
 `;
 
+
 export const CategoryBox = props => {
-  const [value, setValue] = useState({'' : Boolean})
 
-  const chosenCategory = () => {
-      if (window.localStorage.getItem(props.value) !== true) {
-        window.localStorage.setItem(props.value, true);
-      }
-      console.log(window.localStorage.getItem(props.value));
 
-      if (window.localStorage.getItem(props.value) === true) {
-        window.localStorage.removeItem(props.value);
-      }
-  }
-
-    // const chosenCategory = () => {
-    //   if (value == props.value) {
-    //     setValue(props.value, true);
-    //   } else {
-    //     setValue(props.value, false);
-    //   }
-    // };
+  // SaveCategory(props.name)
 
     return (
-      <Container {...props} onClick={chosenCategory}>
+      <Container
+        id={props.title}
+        {...props}
+        value={props.title}
+        onClick={console.log('funkar inte :(')}
+      >
         <Box>
           <P
             top="0px"
@@ -70,6 +68,9 @@ export const CategoryBox = props => {
           />
         </Box>
         <Img src={props.src} />
+        {/* <TEST onClick={save} /> */}
       </Container>
     );
+
+    
 };

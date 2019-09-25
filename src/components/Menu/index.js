@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const MenuDiv = styled.div`
   height: 56px;
-  width: 100%;
+  width: 100vw;
   background-color: #212121;
   display: flex;
   justify-content: space-evenly;

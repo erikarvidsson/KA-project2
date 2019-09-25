@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { P, H3 } from "../typo";
 import YPlayer from "../YPlayer";
+
 const Button = styled.div`
   position: absolute;
   top: 50px;
@@ -12,6 +13,7 @@ const Button = styled.div`
   background-color: #101010;
   background-image: url("assets/icons/left-arrow.svg");
 `;
+
 const Container = styled.div`
   position: relative;
   text-align: ${props => props.textAlign || 'center'};
@@ -31,6 +33,7 @@ const Window = styled.div`
   top: 0;
   z-index: 9999;
 `;
+
 const Img = styled.img`
   position: ${props => props.position || "relative"};
   width: ${props => props.imgWidth || "34vw"};
@@ -39,6 +42,7 @@ const Img = styled.img`
   height: auto;
   border-radius: 5px;
 `;
+
 const Box = styled.div`
   color: white;
   margin: 0 auto;
@@ -58,6 +62,7 @@ const Modal = (props) => {
     console.log('clicked')
     console.log(show)
     setShow(true);}
+
   console.log(props)
   return (
     <>
@@ -67,24 +72,22 @@ const Modal = (props) => {
           top="0px"
           width="90%"
           fontWeight="bold"
-          fontSize
           text={props.title}
-          zIndex="999"
+          zIndex="888"
           marginLeft="23px"
         ></H3>
         <P
-          top="300px"
-          width="90%"
           text={props.description}
+          width="90%"
           marginLeft="23px"
-          marginBottom="52px"
           marginTop="22px"
         ></P>
       </Container>
+
       {show && (
-        <Window show={show}  >
+        <Window show={show}>
           <Button onClick={handleClose}></Button>
-            {props.children}
+          {props.children}
         </Window>
       )}
     </>

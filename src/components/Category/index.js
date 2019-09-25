@@ -24,15 +24,28 @@ const ImgStyled = styled.img`
 `;
 
 
+
+
+
 const Category = (props) => {
-    return(
-        <DivStyled>
-            <CategoryDivStyled>
-                <P text={props.text} marginLeft="18px" fontWeight='Bold'/>
-                <ImgStyled src={props.img} alt=''></ImgStyled>
-            </CategoryDivStyled>
-        </DivStyled>
-    )
+    console.log(props)
+
+    const categories2 = ["Dans", "Musik", "Kroki", "Teater", "Scenografi"];
+
+    const remove = a => {
+        var removeItem = categories2.indexOf(a);
+        var item = document.getElementById(a).style.display = "none";
+        console.log(item);
+    };
+
+    return (
+      <DivStyled onClick={() => remove(props.text)} id={props.text}>
+        <CategoryDivStyled>
+          <P text={props.text} marginLeft="18px" fontWeight="Bold" />
+          <ImgStyled src={props.img} alt={props.title}></ImgStyled>
+        </CategoryDivStyled>
+      </DivStyled>
+    );
 }
 
 export default Category;

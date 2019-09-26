@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import NavigationButton from '../components/NavigationButton';
-import { H2 } from '../components/typo';
+import { H3 } from '../components/typo';
 import VideoData from '../data/youtube.json';
 import { MediaBox } from '../components/MediaBox';
 import Line from '../components/Line';
@@ -50,7 +50,7 @@ const Library = () => {
                     />
                 </StyledLink>
             </NavigationDivStyled>
-            <H2 text='Senaste avsnitt' width='90%' />
+            <H3 text='Senaste avsnitt' />
             <MediaBox
                 src={VideoData[0].thumbnail}
                 title={VideoData[0].title}

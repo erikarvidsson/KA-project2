@@ -73,7 +73,6 @@ const SearchPage = props => {
               src={name.thumbnail}
               title={name.title}
               description={name.description}
-              key={name.id}
             />
           );
         })}

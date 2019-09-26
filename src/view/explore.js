@@ -41,7 +41,6 @@ const Explore = () => {
     { name: "SCENKONST", src: "assets/imgs/SCENKONST-kategori.jpg" },
     { name: "FÄRGLÄRA", src: "assets/imgs/FARGLARA-kategori.jpg" }
   ];
-  const [dans, setDanse] = useState(false);
 
     return (
       <div>

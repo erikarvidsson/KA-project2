@@ -43,7 +43,6 @@ const Explore = () => {
   ];
   const [dans, setDanse] = useState(false);
 
-  // console.log(VideoData)
     return (
       <div>
         <Layout>
@@ -97,12 +96,6 @@ const Explore = () => {
                       pText={video.description}
                       height="270px"
                     />
-
-                    {/* <SmallMediaBox
-                      src={VideoData[0].thumbnail}
-                      title={VideoData[0].title}
-                      description={VideoData[0].description}
-                    /> */}
                   </ModalMediaBox>
                 );
               })
@@ -115,7 +108,6 @@ const Explore = () => {
               marginLeft="23px"
               marginTop="25px"
               width="90%"
-              // marginTop="40px"
             />
 
             <SideScroll>
@@ -129,7 +121,6 @@ const Explore = () => {
                         thumbnail={sound.thumbnail}
                         src="/audio/audiofile1.mp3"
                       ></AudioPlayer>
-                      {/* <LikeButton id={sound.id} /> */}
                   </ModalMediaBox >
                 );
               })}

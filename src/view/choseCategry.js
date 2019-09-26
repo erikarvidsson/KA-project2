@@ -96,12 +96,12 @@ const ChoseCategory = () => {
             <DivStyled>
                 {categories2.map(category => {
                     return (
-                        <CategoryBox
-                            // onClick={test}
-                            title={category.name}
-                            value={category.name}
-                            src={category.src}
-                        />
+                      <CategoryBox
+                        title={category.name}
+                        value={category.name}
+                        src={category.src}
+                        key={category.name}
+                      />
                     );
                 })}
             </DivStyled>

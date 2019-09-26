@@ -40,12 +40,14 @@ const Episodes = (props) => {
                   <ModalColumn
                     url={sound.thumbnail}
                     title={sound.title}
+                    key={sound.key}
                     description={sound.description}>
 
                   <AudioPlayer
                     pageName={Episodes}
                     text={sound.title}
                     thumbnail={sound.img}
+                    key={sound.key}
                     src='/audio/audiofile1.mp3'>
                   </AudioPlayer>
 

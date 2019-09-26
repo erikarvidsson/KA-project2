@@ -4,6 +4,9 @@ import Layout from '../components/Layout';
 import Category from '../components/Category';
 import ProfileIcon from '../components/ProfileIcon';
 import { Header, P, H2, H3 } from '../components/typo';
+import ModalColumn from "../components/ModalColumn";
+import SoundData from "../data/playlists.json";
+import VideoData from "../data/youtube.json";
 
 const DivStyled = styled.div `
     width: 100vw;
@@ -12,6 +15,7 @@ const DivStyled = styled.div `
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    margin-bottom: 20px;
 `
 
 const BackIconStyled = styled.img `
@@ -29,6 +33,14 @@ const Episodes = (props) => {
                 <H3 text='Avsnitt' textAlign='center' marginRight='0px'/>
                 <ProfileIcon />
             </DivStyled>
+
+            {SoundData.map(sound => {
+              return (
+                <ModalColumn url={sound.thumbnail} title={sound.title} description={sound.description}>
+
+                </ModalColumn >
+              );
+            })}
             </Layout>
         </div>
     )

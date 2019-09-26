@@ -1,6 +1,6 @@
 [{"id":807331995,"title":"SCENKONSTBIENNALEN 2019","description":null,"trackIds":[623488356,623544222,623625309,624108684,624192984,624709365,624721716,624743985,625777479,625897020,627255648,627263805,630776661,630802521,630847509,631319490,634412535,634494837,634969974,635456091,635532300,635533725,635535435,635538729,638463954,638471079,638476188,638490987,638502162,638544057],"duration":80602019,
 "img":"assets/imgs/stor1-min.png",
-"thumbnail":"assets/imgs/long_watermark.jpg",
+"thumbnail":"assets/imgs/small_watermark.jpg",
 "thumbnailLong": "assets/imgs/long_watermark.jpg",
 "type":"playlist"},
 
@@ -11,7 +11,7 @@
   "trackIds": [635532300, 635533725, 635535435, 635538729],
   "duration": 2659356,
   "img": "assets/imgs/stor12-min.png",
-  "thumbnail": "assets/imgs/small_watermark2.jpg",
+  "thumbnail": "assets/imgs/small_watermark3.png",
   "thumbnailLong": "assets/imgs/long_watermark2.jpg",
   "type": "playlist"
 },
@@ -31,8 +31,8 @@
   ],
   "duration": 6941118,
   "img": "assets/imgs/stor13-min.png",
-  "thumbnail": "assets/imgs/small_watermark3.jpg",
-  "thumbnailLong": "assets/imgs/long_watermark3.jpg",
+  "thumbnail": "assets/imgs/small_watermark2.png",
+  "thumbnailLong": "assets/imgs/long_watermark3.png",
   "type": "playlist"
 },
 
@@ -43,7 +43,7 @@
   "trackIds": [546182901, 547236144, 547288803],
   "duration": 3842055,
   "img": "assets/imgs/stor14-min.png",
-  "thumbnail": "assets/imgs/small_watermark4.jpg",
+  "thumbnail": "assets/imgs/small_watermark4.png",
   "thumbnailLong": "assets/imgs/long_watermark4.jpg",
   "type": "playlist"
 },
@@ -62,7 +62,7 @@
   ],
   "duration": 5032956,
   "img": "assets/imgs/stor10-min.png",
-  "thumbnail": "assets/imgs/small_watermark.jpg",
+  "thumbnail": "assets/imgs/small_watermark5.png",
   "thumbnailLong": "assets/imgs/long_watermark5.jpg",
   "type": "playlist"
 },
@@ -99,7 +99,7 @@
   ],
   "duration": 24435837,
   "img": "assets/imgs/stor12-min.png",
-  "thumbnail": "assets/imgs/small_watermark7.jpg",
+  "thumbnail": "assets/imgs/small_watermark7.png",
   "thumbnailLong": "assets/imgs/long_watermark2.jpg",
   "type": "playlist"
 },

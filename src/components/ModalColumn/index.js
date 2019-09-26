@@ -10,14 +10,16 @@ const Button = styled.div`
   height: 28px;
   left: 0;
   color: white;
-  /* background-color: #101010; */
+  background-color: #101010;
   background-image: url("assets/icons/left-arrow.svg");
-  z-index: 800;
 `;
 const Container = styled.div`
+  display: flex;
+  flex-direction: row;
   position: relative;
-  text-align: ${props => props.textAlign || 'center'};
+  text-align: ${props => props.textAlign || 'start'};
   color: white;
+
 `;
 const Window = styled.div`
   position: fixed;
@@ -35,38 +37,40 @@ const Window = styled.div`
 `;
 const Img = styled.img`
   position: ${props => props.position || "relative"};
-  width: ${props => props.imgWidth || "200px"};
-  margin-left: ${props => props.imgMarginLeft || "12px"};
+  width: ${props => props.imgWidth || "150px"};
+  margin: ${props => props.imgMarginLeft || "15px"};
   object-fit: cover;
   border-radius: 5px;
 `;
-const Box = styled.div`
-  color: white;
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  top: 200px;
-  z-index: 9999;
-`;
+// const Box = styled.div`
+//   color: white;
+//   margin: 0 auto;
+//   position: absolute;
+//   left: 0;
+//   top: 200px;
+//   z-index: 9999;
+// `;
 
 const TextContainer = styled.div`
   object-fit: cover;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: center;
   /* position: absolute; */
-  width: 100%;
+  width: 80%;
   /* height: 54vw; */
   /* margin-top: 150px; */
 `;
 const MaxChar = styled.div`
   height: ${props => props.height};
-  margin-left: 12px;
+  margin-left: 19px;
   overflow: hidden;
-  width: 100%;
+  margin: 5px;
+  width: 90%;
 
 `;
-const ModalMediaBox = (props) => {
+const ModalColumn = (props) => {
   const [show, setShow] = useState(false);
 
 
@@ -84,13 +88,13 @@ const ModalMediaBox = (props) => {
 
       <Img src={props.url} alt="" />
       <TextContainer>
-        <MaxChar height="30px">
-          <P marginLeft="0px" width="0" fontSize="13px" fontWeight="Bold" text={props.title} />
+        <MaxChar height="52px">
+          <P marginLeft="0px" width="0" fontSize="18px" fontWeight="Bold" text={props.title} />
 
           </MaxChar>
 
-        <MaxChar height="33px">
-          <P marginTop="0px" marginLeft="0px" fontSize="12px" text={props.description} />
+        <MaxChar height="83px">
+          <P marginTop="0px" marginLeft="0px" fontSize="13px" text={props.description} />
         </MaxChar>
       </TextContainer>
 
@@ -104,4 +108,4 @@ const ModalMediaBox = (props) => {
     </>
   );
 };
-export default ModalMediaBox;
+export default ModalColumn;

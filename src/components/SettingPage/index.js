@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{ useState } from 'react';
+import { Route, Switch, Link } from "react-router-dom";
 import styled from "styled-components";
 import NavigationButton from '../NavigationButton';
 import Category2 from '../Category2';
@@ -103,8 +104,7 @@ const SettingPage = () => {
                 </CategoryDivStyled>
                 <Line2 />
             </DivStyled>
-        </div>
-    );
-}
+  </div>
+)}
 
 export default SettingPage;

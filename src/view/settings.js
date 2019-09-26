@@ -17,6 +17,7 @@ const DivStyled = styled.div `
 const BackIconStyled = styled.img`
     width: 25px;
     margin-left: 21px;
+    z-index: 800;
 `;
 
 const Settings = (props) => {

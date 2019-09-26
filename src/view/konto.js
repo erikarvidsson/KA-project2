@@ -14,6 +14,7 @@ const DivStyled = styled.div`
     margin-top: 59px;
 `;
 
+
 const BackIconStyled = styled.img`
     width: 25px;
     margin-left: 21px;

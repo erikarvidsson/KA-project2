@@ -66,6 +66,7 @@ width: 100vw;
 height: 40px;
 display: flex;
 flex-direction: row;
+align-items: center;
 justify-content: flex-end;
 
 `;
@@ -75,10 +76,11 @@ const ButtonDown = styled.img`
 `;
 
 const MenuIcon = styled.img`
-margin-top: 20px;
-margin-right: 25px;
-height: 5px;
+  margin-right: 33px;
+  height: 5px;
+
 `;
+
 
 const AudioPlayer = (props) => {
 
@@ -126,16 +128,19 @@ const AudioPlayer = (props) => {
       alert(backwards.currentTime);
       return backwards;
   }
-  
+
   return (
     <PlayerWrapper {...props}>
 
     <DivPlacement>
       <DivStyled>
-        <P text={props.text} fontWeight="Bold" overflow="hidden" width="49%" marginRight="35px" height="20px"/>
+        <P text={props.text} fontWeight="Bold" overflow="hidden" width="49%" marginRight="25px" height="20px"/>
         <MenuIcon src="assets/icons/Meny.svg"></MenuIcon>
       </DivStyled>
+    
   </DivPlacement>
+
+
 
       <ThumbnailStyled src={props.thumbnail} alt="" />
       {/* <audio id="player" controls autoPlay> */}

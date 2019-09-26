@@ -47,13 +47,12 @@ export const MediaBox = props => {
           top='0px'
           width='90%'
           fontWeight='bold'
-          fontSize
           text={props.title}
           zIndex='999'
           marginLeft='23px'
         ></H3>
       </MaxChar>
-      <MaxChar height={props => props.maxHeight || '60px'} top='280px'>
+      <MaxChar top='280px'>
         <P
           top='300px'
           width='90%'

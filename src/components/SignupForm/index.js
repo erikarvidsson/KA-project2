@@ -77,10 +77,11 @@ const ImgStyled = styled.img`
 const SignupForm = () => {
     const [showPassword, setShowPassword] = useState('password')
 
-    const nextPage = () => {
-        window.location = '/categories';
-        window.open();
-    }
+    const nextPage = event => {
+      event.preventDefault();
+      window.location = "/ChoseCategry";
+      // window.open();
+    };
 
     const showPasswordOnClick = () => {
         if(showPassword === 'password'){
@@ -91,49 +92,49 @@ const SignupForm = () => {
     }
 
     return (
-        <div>
-            <FormStyled onSubmit={nextPage}>
-                <DivStyled>
-                    <InputStyled
-                        type='email'
-                        placeholder='E-mail'
-                        name='email'
-                    ></InputStyled>
-                </DivStyled>
-                <Line />
-                <DivPasswordStyled>
-                    <PasswordStyled
-                        type={showPassword}
-                        placeholder='Välj lösenord'
-                        name='password'
-                    ></PasswordStyled>
-                    <ImgStyled
-                        src='assets/icons/visible.svg'
-                        onClick={showPasswordOnClick}
-                    />
-                </DivPasswordStyled>
-                <Line />
-                <DivStyled>
-                    <InputStyled
-                        type='name'
-                        placeholder='Namn'
-                        name='name'
-                    ></InputStyled>
-                </DivStyled>
-                <Line />
-                <DivStyled>
-                    <InputStyled
-                        type='text'
-                        placeholder='Efternamn'
-                        name='lastname'
-                    ></InputStyled>
-                </DivStyled>
-                <ButtonStyled type='submit'>
-                    <P text='Fortsätt' textAlign='center' />
-                </ButtonStyled>
-                <input type='hidden' name='redirect' value='/categories' />
-            </FormStyled>
-        </div>
+      <div>
+        <FormStyled action="/ChoseCategry" method="post" onSubmit={nextPage}>
+          <DivStyled>
+            <InputStyled
+              type="email"
+              placeholder="E-mail"
+              name="email"
+            ></InputStyled>
+          </DivStyled>
+          <Line />
+          <DivPasswordStyled>
+            <PasswordStyled
+              readonly
+              type={showPassword}
+              placeholder="Välj lösenord"
+              name="password"
+            ></PasswordStyled>
+            <ImgStyled
+              src="assets/icons/visible.svg"
+              onClick={showPasswordOnClick}
+            />
+          </DivPasswordStyled>
+          <Line />
+          <DivStyled>
+            <InputStyled
+              type="name"
+              placeholder="Namn"
+              name="name"
+            ></InputStyled>
+          </DivStyled>
+          <Line />
+          <DivStyled>
+            <InputStyled
+              type="text"
+              placeholder="Efternamn"
+              name="lastname"
+            ></InputStyled>
+          </DivStyled>
+          <ButtonStyled type="submit" onClick={nextPage}>
+            <P text="Fortsätt" textAlign="center" marginLeft="0px" />
+          </ButtonStyled>
+        </FormStyled>
+      </div>
     );
 }
 

@@ -39,7 +39,6 @@ const Box = styled.div`
 export const CategoryBox = props => {
   const noFade = () => {
     const newCss = document.getElementById(props.title);
-    console.log(newCss);
     newCss.style.background = 'transparent';
   };
   const setFade = () => {

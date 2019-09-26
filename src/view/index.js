@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { H3, P } from '../components/typo';
 import { Link } from 'react-router-dom';
 
-
 const DivStyled = styled.div`
     position: absolute;
     width: 100vw;
@@ -15,8 +14,7 @@ const DivStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 3;
-    
+    z-index: 3;    
 `;
 
 const ImgStyled = styled.img`

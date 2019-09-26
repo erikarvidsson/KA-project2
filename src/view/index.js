@@ -44,7 +44,7 @@ const GreenButtonStyled = styled.button`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 93px;
+    margin-top: 50px;
     margin-bottom: 22px;
     z-index: 3;
 `;
@@ -111,7 +111,7 @@ const Index = () => {
     return (  
         <DivStyled>
             <LogoStyled src='assets/icons/kplay-logotyp-elva.svg' alt='' />
-            <H3 text='Någon catchig text om Kplay.' textAlign='center' marginTop='38px' zIndex='3' />
+            <H3 text='Center för kultur och passion' textAlign='center' marginTop='38px' zIndex='3' />
             <GreenButtonStyled onClick={handleCreateAccount}><P text='Skaffa Kplay-konto' /></GreenButtonStyled>
             <DivLineStyled>
                 <LineStyled />
@@ -119,7 +119,7 @@ const Index = () => {
                 <LineStyled />
             </DivLineStyled>
             <WhiteButtonStyled onClick={handleLogin}><P text='Logga in' color='#000000' /></WhiteButtonStyled>
-            <StyledLink to='/ChoseCategry'><P text='Skip' /></StyledLink>
+            <StyledLink to='/ChoseCategry'><P text='Skip' marginLeft='0px'/></StyledLink>
             <Box />
             <ImgStyled src='assets/imgs/Cello.jpg' />
         </DivStyled>  

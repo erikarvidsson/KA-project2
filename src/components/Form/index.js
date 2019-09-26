@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import { P } from '../typo';
 import Line from '../Line';
 
@@ -12,16 +12,15 @@ const DivStyled = styled.div`
 `;
 
 const FormStyled = styled.form`
-    width: 100vw;
-    display: flex;
-    padding-bottom: 25px;
     height: 51px;
     width: 90vw;
+    display: flex;
+    align-items: center;
     list-style: none;
 `;
 
 const InputStyled = styled.input`
-    height: 70px;
+    height: 50px;
     width: 60vw;
     background-color: #101010;
     border: none;
@@ -29,22 +28,23 @@ const InputStyled = styled.input`
     font-size: 16px;
     text-decoration: none;
     outline: none;
-
     ::placeholder {
-    color: #fff;
+        color: #fff;
     }
 `;
 
 const ButtonStyled = styled.div`
-    height: 53px;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     img{
-      display: ${props => props.display || 'none' };
-      width: 30px;
-      height: 30px;
+        display: ${props => props.display || 'none'};
+        width: 20px;
+        margin-right: 10px;
     }
 `;
 
@@ -53,11 +53,12 @@ const Label = styled.label`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80px;
+    height: 51px;
     width: 40vw;
 `;
 
 const Form = () => {
+
     const [namn, setNamn] = useState('');
     const [showNamn, setShowNamn] = useState('');
     const [yrke, setYrke] = useState('');
@@ -69,7 +70,8 @@ const Form = () => {
 
     const setNames = () => {
       setNamn('')
-    }
+    };
+
     const setYrkes = () => {
       setYrke('');
     };
@@ -80,14 +82,12 @@ const Form = () => {
       setTelefon('');
     };
 
-
     const inputValue = document.getElementById('userText1');
     const inputValue2 = document.getElementById('userText2');
     const inputValue3 = document.getElementById('userText3');
     const inputValue4 = document.getElementById('userText4');
 
     useEffect(() => {
-
         if (!inputValue) {
         } else {
             hideButton(inputValue, setShowNamn);
@@ -104,7 +104,6 @@ const Form = () => {
         } else {
             hideButton(inputValue4, setShowTelefon);
         }
-
     })
 
     const hideButton = (a, b) => {
@@ -118,58 +117,58 @@ const Form = () => {
     return (
         <DivStyled>
               <FormStyled>
-                  <Label><P text='Namn'/></Label>
+                  <Label><P text='Namn' fontWeight='bold' /></Label>
                   <InputStyled
-                      placeholder='Erik Bergstrand'
-                      value={namn}
-                      onChange={e => setNamn(e.target.value)}
-                      type='text'
-                      id='userText1'
+                        placeholder='Erik Bergstrand'
+                        value={namn}
+                        onChange={e => setNamn(e.target.value)}
+                        type='text'
+                        id='userText1'
                   />
                   <ButtonStyled onClick={setNames} display={showNamn}>
-                      <img src='assets/icons/cancel-1.svg'></img>
+                        <img src='assets/icons/cancel-1.svg' />
                   </ButtonStyled>
               </FormStyled>
               <Line />
               <FormStyled>
-                  <Label><P text='Yrke'/></Label>
+                  <Label><P text='Yrke' fontWeight='bold' /></Label>
                   <InputStyled
-                      placeholder='Kulturakademin'
-                      value={yrke}
-                      onChange={e => setYrke(e.target.value)}
-                      type='text'
-                      id='userText2'
+                        placeholder='Kulturakademin'
+                        value={yrke}
+                        onChange={e => setYrke(e.target.value)}
+                        type='text'
+                        id='userText2'
                   />
                   <ButtonStyled onClick={setYrkes} display={showYrke}>
-                      <img src='assets/icons/cancel-1.svg'></img>
+                        <img src='assets/icons/cancel-1.svg' />
                   </ButtonStyled>
               </FormStyled>
               <Line />
               <FormStyled>
-                  <Label><P text='Mailadress'/></Label>
+                  <Label><P text='Mailadress' fontWeight='bold' /></Label>
                   <InputStyled
-                      placeholder='erik@kulturakademin.se'
-                      value={mailadress}
-                      onChange={e => setMailadress(e.target.value)}
-                      type='text'
-                      id='userText3'
+                        placeholder='erik@kulturakademin.se'
+                        value={mailadress}
+                        onChange={e => setMailadress(e.target.value)}
+                        type='text'
+                        id='userText3'
                   />
                   <ButtonStyled onClick={setMailadresss} display={showMailadress}>
-                      <img src='assets/icons/cancel-1.svg'></img>
+                      <img src='assets/icons/cancel-1.svg' />
                   </ButtonStyled>
               </FormStyled>
               <Line />
               <FormStyled>
-                  <Label><P text='Telefon'/></Label>
+                  <Label><P text='Telefon' fontWeight='bold' /></Label>
                   <InputStyled
-                      placeholder='0739-461928'
-                      value={telefon}
-                      onChange={e => setTelefon(e.target.value)}
-                      type='text'
-                      id='userText4'
+                        placeholder='0739-461928'
+                        value={telefon}
+                        onChange={e => setTelefon(e.target.value)}
+                        type='text'
+                        id='userText4'
                   />
                   <ButtonStyled onClick={setTelefons} display={showTelefon}>
-                      <img src='assets/icons/cancel-1.svg'></img>
+                      <img src='assets/icons/cancel-1.svg' />
                   </ButtonStyled>
               </FormStyled>
               <Line />

@@ -23,43 +23,43 @@ const LabelDiv = styled.label`
     width: 40px;
     height: 20px;
 
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
+  a {
+      color: #fff;
+      text-decoration: none;
+  }
 
-    label {
-        position: absolute;
-        width: 40px;
-        height: 20px;
-        background-color: #69df75;
-        border-radius: 20px;
-        transition: all 0.3s;
-    }
+  label {
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      background-color: #69df75;
+      border-radius: 20px;
+      transition: all 0.3s;
+  }
 
-    label::after {
-        content: '';
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        border-radius:50%;
-        background-color: white;
-        top: 1px;
-        right: 1px;
-        transition: all 0.3s;
-    }
+  label::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius:50%;
+      background-color: white;
+      top: 1px;
+      right: 1px;
+      transition: all 0.3s;
+  }
 
-    input:checked + label::after {
-        right: 20px;
-    }
+  input:checked + label::after {
+      right: 20px;
+  }
 
-    input:checked + label {
-        background-color: rgba(255,255,255, 0.3);
-    }
+  input:checked + label {
+      background-color: rgba(255,255,255, 0.3);
+  }
 
-    input {
-        display: none;
-    }
+  input {
+      display: none;
+  }
 `;
 
 const ToggleComponent = (props) => {

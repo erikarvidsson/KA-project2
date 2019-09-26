@@ -5,9 +5,9 @@ const TestComponent = () => {
     return <div>
 
 
-        </div>;
+        </div>
 
 
-}
+};
 
 export default TestComponent;

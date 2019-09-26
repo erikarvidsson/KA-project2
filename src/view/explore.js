@@ -43,7 +43,7 @@ const Explore = () => {
   ];
   const [dans, setDanse] = useState(false);
 
-  console.log(categories2)
+  // console.log(VideoData)
     return (
       <div>
         <Layout>
@@ -86,14 +86,24 @@ const Explore = () => {
             <SideScroll>
               {VideoData.map(video => {
                 return (
-                  <ModalMediaBox url={video.thumbnail} title={video.title} description={video.description}>
-                    <YPlayer></YPlayer>
-                    <SmallMediaBox
+                  <ModalMediaBox
+                    url={video.thumbnail}
+                    title={video.title}
+                    description={video.description}
+                  >
+                    <YPlayer
+                      link={video.url}
+                      hText={video.title}
+                      pText={video.description}
+                      height="270px"
+                    />
+
+                    {/* <SmallMediaBox
                       src={VideoData[0].thumbnail}
                       title={VideoData[0].title}
                       description={VideoData[0].description}
-                    />
-                  </ModalMediaBox >
+                    /> */}
+                  </ModalMediaBox>
                 );
               })
               })}

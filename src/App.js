@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import './App.css';
 import { createBrowserHistory } from 'history';
 
@@ -43,23 +43,25 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div history={history}>
-          <Route path="/" exact component={Home} />
-          <Route path="/Login" component={LogIn} />
-          <Route path="/Library" component={Library} />
-          <Route path="/Explore" component={Explore} />
-          <Route path="/Search" component={Search} />
-          <Route path="/Notification" component={Notification} />
-          <Route path="/Profile" component={Profile} />
-          <Route path="/Konto" component={Konto} />
-          <Route path="/Categories" component={Categories} />
-          <Route path="/ChoseCategry" component={ChoseCategry} />
-          <Route path="/Episodes" component={Episodes} />
-          <Route path="/Favorites" component={Favorites} />
-          <Route path="/Signup" component={Signup} />
-          <Route path="/Settings" component={Settings} />
-          <Route path="/Help" component={Help} />
-          <Route path="/Latest" component={Latest} />
-          <Route path="/Test" component={Test} />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/Login" component={LogIn} />
+            <Route path="/Library" component={Library} />
+            <Route path="/Explore" component={Explore} />
+            <Route path="/Search" component={Search} />
+            <Route path="/Notification" component={Notification} />
+            <Route path="/Profile" component={Profile} />
+            <Route path="/Konto" component={Konto} />
+            <Route path="/Categories" component={Categories} />
+            <Route path="/ChoseCategry" component={ChoseCategry} />
+            <Route path="/Episodes" component={Episodes} />
+            <Route path="/Favorites" component={Favorites} />
+            <Route path="/Signup" component={Signup} />
+            <Route path="/Settings" component={Settings} />
+            <Route path="/Help" component={Help} />
+            <Route path="/Latest" component={Latest} />
+            <Route path="/Test" component={Test} />
+          </Switch>
         </div>
       </header>
     </div>

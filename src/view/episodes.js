@@ -36,8 +36,8 @@ const Episodes = (props) => {
             </DivStyled>
             {SoundData.map(sound => {
                 return (
-                    <ModalColumn url={sound.thumbnail} title={sound.title} description={sound.description}>
-                        <AudioPlayer pageName={Episodes} text={sound.title} thumbnail={sound.img} src='/audio/audiofile1.mp3' />
+                    <ModalColumn url={sound.thumbnail} title={sound.title} key={sound.key} description={sound.description}>
+                        <AudioPlayer pageName={Episodes} text={sound.title} thumbnail={sound.img} key={sound.key} src='/audio/audiofile1.mp3' />
                     </ModalColumn>
                 );
             })}

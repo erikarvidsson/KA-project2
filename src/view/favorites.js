@@ -35,9 +35,19 @@ const Favorites = (props) => {
                 </DivStyled>
                 {SoundData.map(sound => {
                     return (
-                        <ModalColumn url={sound.thumbnail} title={sound.title} description={sound.description}>
-                            <AudioPlayer text={sound.title} thumbnail={sound.img} src='/audio/audiofile1.mp3' />
-                        </ModalColumn >
+                      <ModalColumn
+                        key={sound.key}
+                         url={sound.thumbnail}
+                        title={sound.title}
+                        description={sound.description}
+                      >
+                        <AudioPlayer
+                          key={sound.key}
+                          text={sound.title}
+                          thumbnail={sound.img}
+                          src="/audio/audiofile1.mp3"
+                        />
+                      </ModalColumn>
                     );
                 })}
             </Layout>

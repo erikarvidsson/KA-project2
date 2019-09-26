@@ -31,7 +31,7 @@ const MaxChar = styled.div`
 export const SmallMediaBox = props => {
   return (
     <Container {...props}>
-      <Img src={props.src} alt='' />
+      <Img id='smallBox' src={props.src} alt='' />
         <TextContainer>
           <MaxChar height='66px'>
             <H3 overflow='hidden' marginRight='0px' marginLeft='0px' width='90% 'text={props.title} />

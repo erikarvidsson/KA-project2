@@ -4,12 +4,13 @@ import { P } from '../typo';
 
 const Button = styled.div`
   position: absolute;
-  top: 40px;
+  top: 50px;
   width: 28px;
   height: 28px;
   left: 0;
   color: white;
-  background-image: url('assets/icons/left-arrow.svg');
+  background-image: url('assets/icons/ner-pil-ikon.svg');
+  background-repeat: no-repeat;
   margin-left: 33px;
   z-index: 800;
 `;

@@ -8,11 +8,13 @@ const Icon = styled.img`
 `;
 
 const ProfileIcon2 = () => {
-    return (
-        <div>
-            <Link to='/Profile'><Icon src='assets/icons/Profilbild.svg' /></Link>
-        </div>
-    );
-}
+  return (
+    <div>
+      <Link to='/Profile'>
+        <Icon src='assets/icons/Profilbild.svg' />
+      </Link>
+    </div>
+  );
+};
 
 export default ProfileIcon2;

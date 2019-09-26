@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { P, H3 } from "../typo";
-import YPlayer from "../YPlayer";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { P, H3 } from '../typo';
 
 const Button = styled.div`
   position: absolute;
@@ -11,7 +10,7 @@ const Button = styled.div`
   left: 0;
   color: white;
   background-color: #101010;
-  background-image: url("assets/icons/left-arrow.svg");
+  background-image: url('assets/icons/left-arrow.svg');
   z-index: 99999;
 `;
 
@@ -26,7 +25,6 @@ const Window = styled.div`
   border-radius: 15px;
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(0, 0, 0, 0.7); */
   background-color: black;
   color: white;
   margin: 0 auto;
@@ -36,53 +34,46 @@ const Window = styled.div`
 `;
 
 const Img = styled.img`
-  position: ${props => props.position || "relative"};
-  width: ${props => props.imgWidth || "100%"};
+  position: ${props => props.position || 'relative'};
+  width: ${props => props.imgWidth || '100%'};
   margin-left: ${props => props.imgMarginLeft};
   object-fit: cover;
   height: auto;
   border-radius: 5px;
 `;
 
-const Box = styled.div`
-  color: white;
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  top: 200px;
-  z-index: 9999;
-`;
-const Modal = (props) => {
+const Modal = props => {
   const [show, setShow] = useState(false);
 
+  const handleClose = () => {
+    console.log('closed');
+    setShow(false);
+  };
+  const handleShow = () => {
+    console.log('clicked');
+    console.log(show);
+    setShow(true);
+  };
 
- const handleClose = () => {
-    console.log('closed')
-    setShow(false);}
- const handleShow = () => {
-    console.log('clicked')
-    console.log(show)
-    setShow(true);}
-
-  console.log(props)
+  console.log(props);
   return (
     <>
       <Container onClick={handleShow} {...props}>
         <Img src={props.url} />
         <H3
-          top="0px"
-          width="90%"
-          fontWeight="bold"
-          fontSize="22px;"
+          top='0px'
+          width='90%'
+          fontWeight='bold'
+          fontSize='22px;'
           text={props.title}
-          zIndex="888"
-          marginLeft="23px"
+          zIndex='888'
+          marginLeft='23px'
         ></H3>
         <P
           text={props.description}
-          width="90%"
-          marginLeft="23px"
-          marginTop="22px"
+          width='90%'
+          marginLeft='23px'
+          marginTop='22px'
         ></P>
       </Container>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import ProfileIcon from '../components/ProfileIcon';
@@ -25,7 +25,6 @@ const BackIconStyled = styled.img`
 `;
 
 const Episodes = (props) => {
-  const [show, setShow] = useState(false)
 
     return(
         <Layout>

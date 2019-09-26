@@ -117,7 +117,7 @@ const LoginForm = () => {
                 />
             </DivPasswordStyled>
             <ButtonStyled type='submit'>
-                <P text='Fortsätt' textAlign='center' />
+                <P text='Fortsätt' textAlign='center' marginLeft='0px' />
             </ButtonStyled>
         </FormStyled>
     );

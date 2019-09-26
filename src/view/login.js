@@ -16,7 +16,8 @@ const DivStyled = styled.div`
 const BackIconStyled = styled.img`
     height: 25px;
     width: 25px;
-    margin-left: 10px;  
+    margin-left: 10px;
+    z-index: 800;
 `;
 
 const Login = (props) => {
@@ -28,7 +29,7 @@ const Login = (props) => {
             </DivStyled>
             <LoginForm />
         </div>
-  );
+    );
 }
 
 export default Login;

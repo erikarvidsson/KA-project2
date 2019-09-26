@@ -18,7 +18,7 @@ const DivStyled = styled.div`
     margin-bottom: 20px;
 `;
 
-const BackIconStyled = styled.img `
+const BackIconStyled = styled.img`
     width: 25px;
     margin-left: 21px;
     z-index: 800;;

@@ -50,6 +50,7 @@ const PStyle = styled.p`
   font-weight: ${props => props.fontWeight || "normal"};
   top: ${props => props.top};
   margin-left: ${props => props.marginLeft || "12px"};
+  height: ${props => props.height};
   margin-right: ${props => props.marginRight};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};

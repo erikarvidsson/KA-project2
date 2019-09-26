@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import NavigationButton from '../components/NavigationButton';
-import { H3 } from '../components/typo';
+import { P, H3 } from '../components/typo';
 import VideoData from '../data/youtube.json';
 import { MediaBox } from '../components/MediaBox';
 import Line from '../components/Line';
@@ -26,37 +26,39 @@ const NavigationDivStyled = styled.div`
 
 const Library = () => {
     return (
-        <Layout>
-            <MenuTop text='Mitt bibliotek' />
-            <NavigationDivStyled>
-                <StyledLink to='/Categories'>
-                    <NavigationButton
-                        goTo='Kategorier'
-                        img='assets/icons/right-arrow.svg'
-                    />
-                </StyledLink>
-                <Line />
-                <StyledLink to='/Episodes'>
-                    <NavigationButton
-                        goTo='Avsnitt'
-                        img='assets/icons/right-arrow.svg'
-                    />
-                </StyledLink>
-                <Line />
-                <StyledLink to='/Favorites'>
-                    <NavigationButton
-                        goTo='Favoriter'
-                        img='assets/icons/right-arrow.svg'
-                    />
-                </StyledLink>
-            </NavigationDivStyled>
-            <H3 text='Senaste avsnitt' />
-            <MediaBox
-                src={VideoData[0].thumbnail}
-                title={VideoData[0].title}
-                description={VideoData[0].description}
+      <Layout>
+        <MenuTop text="Mitt bibliotek" />
+        <NavigationDivStyled>
+          <StyledLink to="/Categories">
+            <NavigationButton
+              goTo="Kategorier"
+              img="assets/icons/right-arrow.svg"
             />
-        </Layout>
+          </StyledLink>
+          <Line />
+          <StyledLink to="/Episodes">
+            <NavigationButton
+              goTo="Avsnitt"
+              img="assets/icons/right-arrow.svg"
+            />
+          </StyledLink>
+          <Line />
+          <StyledLink to="/Favorites">
+            <NavigationButton
+              goTo="Favoriter"
+              img="assets/icons/right-arrow.svg"
+            />
+          </StyledLink>
+        </NavigationDivStyled>
+
+        <H3 text="Senaste avsnitt" width="90%" />
+        <MediaBox
+          src={VideoData[0].thumbnail}
+          title={VideoData[0].title}
+          position="initial"
+        />
+        <P text={VideoData[0].description} marginLeft="24px" width="90%"></P>
+      </Layout>
     );
 }
 

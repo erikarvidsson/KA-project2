@@ -10,8 +10,9 @@ const Button = styled.div`
   height: 28px;
   left: 0;
   color: white;
-  background-color: #101010;
+  /* background-color: #101010; */
   background-image: url("assets/icons/left-arrow.svg");
+  z-index: 800;
 `;
 const Container = styled.div`
   position: relative;

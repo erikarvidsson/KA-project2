@@ -12,6 +12,7 @@ const Button = styled.div`
   color: white;
   background-color: #101010;
   background-image: url("assets/icons/left-arrow.svg");
+  z-index: 99999;
 `;
 
 const Container = styled.div`

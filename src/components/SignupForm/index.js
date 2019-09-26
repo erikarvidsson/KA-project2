@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
-import { Header, P, H2, H3 } from '../typo';
+import { P } from '../typo';
 import Line from '../Line';
 
 const FormStyled = styled.form`
     width: 100vw;
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     margin-top: 121px;
-`
+`;
 
 const DivStyled = styled.div`
     height: 51px;
     width: 100vw;
     display: flex;
     justify-content: center;
-`
+`;
 
 const DivPasswordStyled = styled.div `
     height: 51px;
@@ -25,38 +24,36 @@ const DivPasswordStyled = styled.div `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-`
+`;
 
 const InputStyled = styled.input`
     height: 100%;
-    width: 90vw;
+    width: 86vw;
     background-color: #101010;
     border: 0;
     outline: none;
     font-size: 22px;
     color: #FFF;
-    ::placeholder{
-        padding-left: 12px;
+    ::placeholder {
         font-size: 22px;
         color: #FFF;
     }
-`
+`;
 
-const PasswordStyled = styled.input `
+const PasswordStyled = styled.input`
     height: 100%;
-    width: 78.5vw;
+    width: 70vw;
     background-color: #101010;
     border: 0;
     outline: none;
     font-size: 22px;
     color: #FFF;
     margin-top: 1px;
-    ::placeholder{
-        padding-left: 12px;
+    ::placeholder {    
         font-size: 22px;
         color: #FFF;
     }
-`
+`;
 
 const ButtonStyled = styled.button`
     height: 35px;
@@ -69,21 +66,22 @@ const ButtonStyled = styled.button`
     flex-direction: column;
     align-items: center;
     margin-top: 72px;
-`
+`;
 
-const ImgStyled = styled.img `
-    height: 25px;
-    width: 25px;
+const ImgStyled = styled.img`
+    width: 30px;
     margin: 0;
-`
+    margin-right: 5px;
+`;
 
 const SignupForm = () => {
     const [showPassword, setShowPassword] = useState('password')
 
-    const nextPage = () => {
-        window.location = "/categories";
-        window.open();
-    }
+    const nextPage = event => {
+      event.preventDefault();
+      window.location = "/ChoseCategry";
+      // window.open();
+    };
 
     const showPasswordOnClick = () => {
         if(showPassword === 'password'){
@@ -95,7 +93,7 @@ const SignupForm = () => {
 
     return (
       <div>
-        <FormStyled onSubmit={nextPage}>
+        <FormStyled action="/ChoseCategry" method="post" onSubmit={nextPage}>
           <DivStyled>
             <InputStyled
               type="email"
@@ -106,6 +104,7 @@ const SignupForm = () => {
           <Line />
           <DivPasswordStyled>
             <PasswordStyled
+              readonly
               type={showPassword}
               placeholder="Välj lösenord"
               name="password"
@@ -131,10 +130,9 @@ const SignupForm = () => {
               name="lastname"
             ></InputStyled>
           </DivStyled>
-          <ButtonStyled type="submit">
-            <P text="Fortsätt" textAlign="center" />
+          <ButtonStyled type="submit" onClick={nextPage}>
+            <P text="Fortsätt" textAlign="center" marginLeft="0px" />
           </ButtonStyled>
-          <input type="hidden" name="redirect" value="/categories" />
         </FormStyled>
       </div>
     );

@@ -44,17 +44,43 @@ const ImgStyled = styled.img`
 height: 22px;
 
 `;
+
+const categories2 = [
+  "Dans",
+  "Musik",
+  "Kroki",
+  "Teater",
+  "Scenografi"
+];
+
 const Categories = (props) => {
-    return(
-        <div>
-            <Layout>
-                <DivStyled>
-                    <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                    <H3 text='Kategorier' textAlign='center' marginRight='0px'/>
-                    <ProfileIcon />
-                </DivStyled>
-                <CategoryDivStyled>
-                    <Category text='Dans' img='assets/icons/cancel-1.svg'/>
+    return (
+      <div>
+        <Layout>
+          <DivStyled>
+            <BackIconStyled
+              src="assets/icons/left-arrow.svg"
+              onClick={() => props.history.goBack(props)}
+            />
+            <H3 text="Kategorier" textAlign="center" marginRight="0px" />
+            <ProfileIcon />
+          </DivStyled>
+          <CategoryDivStyled>
+            {categories2.map(category => {
+                return (
+                  <>
+                    <Line />
+                    <Category
+                      id={category}
+                      text={category}
+                      img="assets/icons/cancel-1.svg"
+                    />
+                  </>
+                );
+
+            })}
+
+            {/* <Category text='Dans' img='assets/icons/cancel-1.svg'/>
                     <Line />
                     <Category text='Musik' img='assets/icons/cancel-1.svg'/>
                     <Line />
@@ -62,14 +88,15 @@ const Categories = (props) => {
                     <Line />
                     <Category text='Teater' img='assets/icons/cancel-1.svg'/>
                     <Line />
-                    <Category text='Scenografi' img='assets/icons/cancel-1.svg'/>
-                    <LinkStyled to="/ChoseCategry"><H3 text="Add" />
-                      <ImgStyled src='assets/icons/add.svg'></ImgStyled>
-                    </LinkStyled>
-                </CategoryDivStyled>
-            </Layout>
-        </div>
-    )
+                    <Category text='Scenografi' img='assets/icons/cancel-1.svg'/> */}
+            <LinkStyled to="/ChoseCategry">
+              <H3 text="Add" />
+              <ImgStyled src="assets/icons/add.svg"></ImgStyled>
+            </LinkStyled>
+          </CategoryDivStyled>
+        </Layout>
+      </div>
+    );
 }
 
 export default Categories;

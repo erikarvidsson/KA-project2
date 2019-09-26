@@ -23,16 +23,20 @@ const ImgStyled = styled.img`
     margin-right: 12px;
 `;
 
-
 const Category = (props) => {
-    return(
-        <DivStyled>
-            <CategoryDivStyled>
-                <P text={props.text} marginLeft="18px" fontWeight='Bold'/>
-                <ImgStyled src={props.img} alt=''></ImgStyled>
-            </CategoryDivStyled>
-        </DivStyled>
-    )
+    
+    const remove = a => {
+        document.getElementById(a).style.display = "none";
+    };
+
+    return (
+      <DivStyled onClick={() => remove(props.text)} id={props.text}>
+        <CategoryDivStyled>
+          <P text={props.text} marginLeft="18px" fontWeight="Bold" />
+          <ImgStyled src={props.img} alt={props.title}></ImgStyled>
+        </CategoryDivStyled>
+      </DivStyled>
+    );
 }
 
 export default Category;

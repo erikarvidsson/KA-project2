@@ -6,10 +6,10 @@ const Search = () => {
     return(
         <div>
             <Layout>
-              <SearchPage />
+                <SearchPage />
             </Layout>
         </div>
-    )
+    );
 }
 
 export default Search;

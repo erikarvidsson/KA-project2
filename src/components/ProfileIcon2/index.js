@@ -12,7 +12,7 @@ const ProfileIcon2 = () => {
         <div>
             <Link to='/Profile'><Icon src='assets/icons/Profilbild.svg' /></Link>
         </div>
-    )
+    );
 }
 
 export default ProfileIcon2;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import ProfilePage from '../components/ProfilePage';
 
-const BackIconStyled = styled.img `
+const BackIconStyled = styled.img`
     width: 25px;
     margin-left: 21px;
     margin-top: 59px;

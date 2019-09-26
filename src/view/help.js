@@ -29,7 +29,7 @@ const BackIconStyled = styled.img`
 `;
 
 const Help = (props) => {
-    return(
+    return (
         <Layout>
             <DivStyled>
                 <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)} />

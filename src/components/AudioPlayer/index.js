@@ -129,13 +129,13 @@ const AudioPlayer = props => {
       <Progress id='progress' min='0' max='100' value='0'></Progress>
       <ButtonDivStyled>
         <RewindBttn onClick={backwards}>
-          <img src='assets/icons/rewind.svg' />
+          <img src='assets/icons/rewind.svg' alt='' />
         </RewindBttn>
         <PlayBttn onClick={play}>
-          <img src={button} />
+          <img src={button} alt=''/>
         </PlayBttn>
         <RewindBttn onClick={forward}>
-          <img src='assets/icons/forward.svg' />
+          <img src='assets/icons/forward.svg' alt='' />
         </RewindBttn>
       </ButtonDivStyled>
       <Menu />

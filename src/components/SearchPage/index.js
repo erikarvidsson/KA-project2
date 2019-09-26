@@ -12,7 +12,7 @@ const InputStyled = styled.input`
     display: flex;
     position: fixed;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-left: 20px;
 `;
 

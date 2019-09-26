@@ -29,7 +29,6 @@ const MaxChar = styled.div`
 `;
 
 export const MediaBox = props => {
-  console.log(props);
   return (
     <Container {...props}>
       <Img src={props.src} />

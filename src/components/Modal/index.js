@@ -46,16 +46,12 @@ const Modal = props => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => {
-    console.log('closed');
     setShow(false);
   };
   const handleShow = () => {
-    console.log('clicked');
-    console.log(show);
     setShow(true);
   };
 
-  console.log(props);
   return (
     <>
       <Container onClick={handleShow} {...props}>

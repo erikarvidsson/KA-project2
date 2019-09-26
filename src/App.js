@@ -38,7 +38,6 @@ async function registerSW() {
 const history = createBrowserHistory()
 
 function App() {
-  // console.log(Route)
   return (
     <div className="App">
       <header className="App-header">

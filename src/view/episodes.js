@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Category from '../components/Category';
 import ProfileIcon from '../components/ProfileIcon';
 import { Header, P, H2, H3 } from '../components/typo';
 import ModalColumn from "../components/ModalColumn";
+import ModalMediaBox from "../components/ModalMediaBox";
 import SoundData from "../data/playlists.json";
+import AudioPlayer from "../components/AudioPlayer";
 import VideoData from "../data/youtube.json";
 
 const DivStyled = styled.div `
@@ -22,9 +24,15 @@ const BackIconStyled = styled.img `
     height: 25px;
     width: 25px;
     margin-left: 10px;
+    z-index: 800;
 `
 
 const Episodes = (props) => {
+
+  const [show, setShow] = useState(false)
+
+
+console.log(show)
     return(
         <div>
             <Layout>
@@ -32,11 +40,21 @@ const Episodes = (props) => {
                 <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
                 <H3 text='Avsnitt' textAlign='center' marginRight='0px'/>
                 <ProfileIcon />
-            </DivStyled>
+              </DivStyled>
 
             {SoundData.map(sound => {
               return (
-                <ModalColumn url={sound.thumbnail} title={sound.title} description={sound.description}>
+                <ModalColumn
+                  url={sound.thumbnail}
+                  title={sound.title}
+                  description={sound.description}>
+
+                  <AudioPlayer
+                    pageName={Episodes}
+                    text={sound.title}
+                    thumbnail={sound.thumbnail}
+                    src="/audio/audiofile1.mp3"
+                  ></AudioPlayer>
 
                 </ModalColumn >
               );

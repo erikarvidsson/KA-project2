@@ -7,6 +7,7 @@ import { Header, P, H2, H3 } from '../components/typo';
 import ModalColumn from "../components/ModalColumn";
 import SoundData from "../data/playlists.json";
 import VideoData from "../data/youtube.json";
+import AudioPlayer from "../components/AudioPlayer";
 
 const DivStyled = styled.div `
     width: 100vw;
@@ -36,7 +37,16 @@ const Favorites = (props) => {
 
                 {SoundData.map(sound => {
                   return (
-                    <ModalColumn url={sound.thumbnail} title={sound.title} description={sound.description}>
+                    <ModalColumn
+                      url={sound.thumbnail}
+                      title={sound.title}
+                      description={sound.description}>
+
+                      <AudioPlayer
+                        text={sound.title}
+                        thumbnail={sound.thumbnail}
+                        src="/audio/audiofile1.mp3"
+                      ></AudioPlayer>
 
                     </ModalColumn >
                   );

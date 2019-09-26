@@ -5,13 +5,14 @@ import YPlayer from "../YPlayer";
 
 const Button = styled.div`
   position: absolute;
-  top: 50px;
+  top: 40px;
   width: 28px;
   height: 28px;
   left: 0;
   color: white;
   /* background-color: #101010; */
   background-image: url("assets/icons/left-arrow.svg");
+  margin-left: 33px;
   z-index: 800;
 `;
 const Container = styled.div`
@@ -36,7 +37,7 @@ const Window = styled.div`
 const Img = styled.img`
   position: ${props => props.position || "relative"};
   width: ${props => props.imgWidth || "200px"};
-  margin-left: ${props => props.imgMarginLeft || "12px"};
+  margin: ${props => props.imgMargin || "5px"};
   object-fit: cover;
   border-radius: 5px;
 `;

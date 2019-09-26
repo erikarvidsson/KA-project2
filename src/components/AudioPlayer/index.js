@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from "styled-components";
+import Menu from '../Menu';
+import { P } from '../typo';
+import { Link } from 'react-router-dom';
 
 const PlayerWrapper = styled.div`
     position: relative;
@@ -30,7 +33,7 @@ const ButtonDivStyled = styled.div`
 const PlayBttn = styled.button`
     height: 66px;
     width: 66px;
-    color: white;    
+    color: white;
     top: 0;
     left: 0;
 `
@@ -38,7 +41,7 @@ const PlayBttn = styled.button`
 const RewindBttn = styled.button `
     height: 66px;
     width: 66px;
-    color: white;    
+    color: white;
     top: 0;
     left: 0;
 `
@@ -50,9 +53,29 @@ const Progress = styled.progress`
   background-color: blue;
   top: 0;
   left: 0;
-  margin-top: 80vh;
+  margin-top: 70vh;
 `;
 
+const DivStyled = styled.div`
+width: 100vw;
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+
+`;
+const ButtonDown = styled.img`
+
+margin-left: 33px;
+height: 15px;
+
+`;
+
+const MenuIcon = styled.img`
+
+margin-right: 33px;
+height: 5px;
+
+`;
 
 const AudioPlayer = (props) => {
 
@@ -71,7 +94,7 @@ const AudioPlayer = (props) => {
     seek(play);
     console.log(progressBar);
     progressBar.value = percent / 100;
-      
+
       return play
   }
 
@@ -98,11 +121,18 @@ const AudioPlayer = (props) => {
   const testTimer = () => {
     const player = document.getElementById("player");
           console.log(player.currentTime);
-          console.log(player.duration);  
+          console.log(player.duration);
   }
 
+
+
   return (
-    <PlayerWrapper>
+    <PlayerWrapper {...props}>
+      <DivStyled>
+        <P text={props.text} />
+        <MenuIcon src="assets/icons/Meny.svg"></MenuIcon>
+        
+      </DivStyled>
       <ThumbnailStyled src={props.thumbnail} alt="" />
       {/* <audio id="player" controls autoPlay> */}
       <audio
@@ -120,6 +150,7 @@ const AudioPlayer = (props) => {
         {/* <PlayBttn onClick={pause}>Pause<img src='assets/icons/rewind.svg'/></PlayBttn> */}
         <RewindBttn onClick={forward}><img src='assets/icons/forward.svg'/></RewindBttn>
       </ButtonDivStyled >
+      <Menu/>
     </PlayerWrapper>
   );
 }

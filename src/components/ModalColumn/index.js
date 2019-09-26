@@ -10,9 +10,13 @@ const Button = styled.div`
   height: 28px;
   left: 0;
   color: white;
-  background-color: #101010;
-  background-image: url("assets/icons/left-arrow.svg");
+  /* background-color: #101010; */
+  background-image: url("assets/icons/ner-pil-ikon.svg");
+  background-repeat: no-repeat;
+  margin-left: 33px;
+  z-index: 800;
 `;
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -28,7 +32,7 @@ const Window = styled.div`
   width: 100%;
   height: 100vh;
   /* background-color: rgba(0, 0, 0, 0.7); */
-  background-color: black;
+  /* background-color: black; */
   color: white;
   margin: 0 auto;
   left: 0;
@@ -42,14 +46,14 @@ const Img = styled.img`
   object-fit: cover;
   border-radius: 5px;
 `;
-// const Box = styled.div`
-//   color: white;
-//   margin: 0 auto;
-//   position: absolute;
-//   left: 0;
-//   top: 200px;
-//   z-index: 9999;
-// `;
+const Box = styled.div`
+  color: white;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  top: 200px;
+  z-index: 9999;
+`;
 
 const TextContainer = styled.div`
   object-fit: cover;
@@ -93,14 +97,14 @@ const ModalColumn = (props) => {
 
           </MaxChar>
 
-        <MaxChar height="83px">
+        <MaxChar height="63px">
           <P marginTop="0px" marginLeft="0px" fontSize="13px" text={props.description} />
         </MaxChar>
       </TextContainer>
 
       </Container>
       {show && (
-        <Window show={show}  >
+        <Window show={show}>
           <Button onClick={handleClose}></Button>
             {props.children}
         </Window>

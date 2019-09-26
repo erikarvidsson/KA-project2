@@ -44,7 +44,7 @@ const Favorites = (props) => {
 
                       <AudioPlayer
                         text={sound.title}
-                        thumbnail={sound.thumbnail}
+                        thumbnail={sound.img}
                         src="/audio/audiofile1.mp3"
                       ></AudioPlayer>
 

@@ -12,16 +12,16 @@ const DivStyled = styled.div`
 `;
 
 const FormStyled = styled.form`
-    width: 100vw;
-    display: flex;
-    padding-bottom: 25px;
     height: 51px;
     width: 90vw;
+    display: flex;
+    align-items: center;
+    /* padding-bottom: 25px; */
     list-style: none;
 `;
 
 const InputStyled = styled.input`
-    height: 70px;
+    height: 50px;
     width: 60vw;
     background-color: #101010;
     border: none;
@@ -36,15 +36,17 @@ const InputStyled = styled.input`
 `;
 
 const ButtonStyled = styled.div`
-    height: 53px;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     img{
       display: ${props => props.display || 'none' };
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      margin-right: 10px;
     }
 `;
 
@@ -53,7 +55,7 @@ const Label = styled.label`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80px;
+    height: 51px;
     width: 40vw;
 `;
 
@@ -118,7 +120,7 @@ const Form = () => {
     return (
         <DivStyled>
               <FormStyled>
-                  <Label><P text='Namn'/></Label>
+                  <Label><P text='Namn' fontWeight='bold'/></Label>
                   <InputStyled
                       placeholder='Erik Bergstrand'
                       value={namn}
@@ -132,7 +134,7 @@ const Form = () => {
               </FormStyled>
               <Line />
               <FormStyled>
-                  <Label><P text='Yrke'/></Label>
+                  <Label><P text='Yrke' fontWeight='bold'/></Label>
                   <InputStyled
                       placeholder='Kulturakademin'
                       value={yrke}
@@ -146,7 +148,7 @@ const Form = () => {
               </FormStyled>
               <Line />
               <FormStyled>
-                  <Label><P text='Mailadress'/></Label>
+                  <Label><P text='Mailadress' fontWeight='bold'/></Label>
                   <InputStyled
                       placeholder='erik@kulturakademin.se'
                       value={mailadress}
@@ -160,7 +162,7 @@ const Form = () => {
               </FormStyled>
               <Line />
               <FormStyled>
-                  <Label><P text='Telefon'/></Label>
+                  <Label><P text='Telefon' fontWeight='bold'/></Label>
                   <InputStyled
                       placeholder='0739-461928'
                       value={telefon}

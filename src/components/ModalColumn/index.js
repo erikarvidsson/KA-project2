@@ -41,14 +41,6 @@ const Img = styled.img`
   object-fit: cover;
   border-radius: 5px;
 `;
-const Box = styled.div`
-  color: white;
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  top: 200px;
-  z-index: 9999;
-`;
 
 const TextContainer = styled.div`
   object-fit: cover;

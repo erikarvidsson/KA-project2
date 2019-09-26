@@ -66,47 +66,51 @@ width: 100vw;
 height: 40px;
 display: flex;
 flex-direction: row;
+align-items: center;
 justify-content: flex-end;
 
 `;
 const ButtonDown = styled.img`
-
-margin-left: 33px;
-height: 15px;
-
+  margin-left: 33px;
+  height: 15px;
 `;
 
 const MenuIcon = styled.img`
-margin-top: 20px;
-margin-right: 25px;
-height: 5px;
-
+  margin-right: 33px;
+  height: 5px;
 `;
+
 
 const AudioPlayer = (props) => {
 
   const [percent, setPercent] = useState('')
+  const [playButton, setPlaybutton] = useState(true)
+  const [button, setButton] = useState("assets/icons/play-button.svg")
 
-  function seek(e) {
-    // var percent = e.offsetX / this.offsetWidth;
-    var percent = e.duration
-    e.currentTime = percent * e.duration;
-    setPercent('100')
-  }
+  // function seek(e) {
+  //   // var percent = e.offsetX / this.offsetWidth;
+  //   var percent = e.duration
+  //   e.currentTime = percent * e.duration;
+  //   setPercent('100')
+  // }
+  // const testTimer = () => {
+  //   const player = document.getElementById("player");
+  //         console.log(player.currentTime);
+  //         console.log(player.duration);
+  // }
 
   const play = () => {
-    var progressBar = document.getElementById("progress");
-    const play = document.getElementById("player").play();
-    seek(play);
-    console.log(progressBar);
-    progressBar.value = percent / 100;
-
-      return play
-  }
-
-  const pause = () => {
-      const play = document.getElementById("player").pause();
-      return play
+    if (playButton === true){
+      var progressBar = document.getElementById("progress");
+      const play = document.getElementById("player").play();
+      // seek(play);
+      setPlaybutton(false)
+      setButton("assets/icons/pause.svg");
+    } else{
+      const pause = document.getElementById("player").pause();
+      setPlaybutton(true);
+      setButton("assets/icons/play-button.svg");
+    }
   }
 
   const forward = () => {
@@ -124,23 +128,18 @@ const AudioPlayer = (props) => {
       return backwards;
   }
 
-  const testTimer = () => {
-    const player = document.getElementById("player");
-          console.log(player.currentTime);
-          console.log(player.duration);
-  }
-
-
-
   return (
     <PlayerWrapper {...props}>
 
     <DivPlacement>
       <DivStyled>
-        <P text={props.text} fontWeight="Bold" overflow="hidden" width="49%" marginRight="35px" height="20px"/>
+        <P text={props.text} fontWeight="Bold" overflow="hidden" width="49%" marginRight="25px" height="20px"/>
         <MenuIcon src="assets/icons/Meny.svg"></MenuIcon>
       </DivStyled>
+    
   </DivPlacement>
+
+
 
       <ThumbnailStyled src={props.thumbnail} alt="" />
       {/* <audio id="player" controls autoPlay> */}
@@ -155,7 +154,7 @@ const AudioPlayer = (props) => {
       <Progress id="progress" min="0" max="100" value="0"></Progress>
       <ButtonDivStyled >
         <RewindBttn onClick={backwards}><img src='assets/icons/rewind.svg'/></RewindBttn>
-        <PlayBttn onClick={play}><img src='assets/icons/play-button.svg'/></PlayBttn>
+        <PlayBttn onClick={play}><img src={button}/></PlayBttn>
         {/* <PlayBttn onClick={pause}>Pause<img src='assets/icons/rewind.svg'/></PlayBttn> */}
         <RewindBttn onClick={forward}><img src='assets/icons/forward.svg'/></RewindBttn>
       </ButtonDivStyled >

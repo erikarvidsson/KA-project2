@@ -55,12 +55,19 @@ const Progress = styled.progress`
   left: 0;
   margin-top: 70vh;
 `;
+const DivPlacement = styled.div`
+width: 100vw;
+display: flex;
+flex-direction: row;
 
+`;
 const DivStyled = styled.div`
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+width: 100vw;
+height: 40px;
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+
 `;
 const ButtonDown = styled.img`
   margin-left: 33px;
@@ -68,8 +75,9 @@ const ButtonDown = styled.img`
 `;
 
 const MenuIcon = styled.img`
-  margin-right: 33px;
-  height: 5px;
+margin-top: 20px;
+margin-right: 25px;
+height: 5px;
 `;
 
 const AudioPlayer = (props) => {
@@ -121,11 +129,14 @@ const AudioPlayer = (props) => {
   
   return (
     <PlayerWrapper {...props}>
+
+    <DivPlacement>
       <DivStyled>
-        <P text={props.text} />
+        <P text={props.text} fontWeight="Bold" overflow="hidden" width="49%" marginRight="35px" height="20px"/>
         <MenuIcon src="assets/icons/Meny.svg"></MenuIcon>
-        
       </DivStyled>
+  </DivPlacement>
+
       <ThumbnailStyled src={props.thumbnail} alt="" />
       {/* <audio id="player" controls autoPlay> */}
       <audio

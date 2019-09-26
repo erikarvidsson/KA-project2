@@ -113,11 +113,12 @@ const Explore = () => {
               {SoundData.map(sound => {
                 return (
                   <ModalMediaBox
-          
+                  
                     title={sound.title}
                     description={sound.description}
                     url={sound.thumbnailLong}>
                       <AudioPlayer
+                        text={sound.title}
                         thumbnail={sound.img}
                         src="/audio/audiofile1.mp3"
                       ></AudioPlayer>

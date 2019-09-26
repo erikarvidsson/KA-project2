@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import MenuTop from '../MenuTop';
-import VideoData from "../../data/youtube.json"
+import VideoData from '../../data/youtube.json';
 import { SmallMediaBox } from '../SmallMediaBox';
 
 const InputStyled = styled.input`
@@ -19,21 +19,19 @@ const InputStyled = styled.input`
 const Form = styled.form`
     position: relative;
     z-index: 9999;
-    margin-top: 109px;  
+    margin-top: 109px;
     width: 100vw;
     background-color: #101010;
 `;
 
 const ResultWrapper = styled.div`
-  /* width: 100vw; */
-  background-color:#101010;
-  padding-left: 20px;
-  position: absolute;
-  margin-top: 140px;
-  margin-bottom: 50px;
+    background-color:#101010;
+    padding-left: 20px;
+    position: absolute;
+    margin-top: 140px;
+    margin-bottom: 50px;
 `;
 
-// Ska props finnas kvar?
 const SearchPage = (props) => {
     const [searchValue, setSearchValue] = useState([''])
     const [searchKey, setSearchKey] = useState('')

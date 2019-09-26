@@ -6,14 +6,13 @@ import screenfull from "screenfull";
 import { Header, P, H3 } from '../typo';
 
 const PlayerWrapper = styled.div`
-  position: absolute;
+  position: ${props => props.position ||' absolute'};
+  margin-top: ${props => props.marginTop ||''};
   z-index: ${props => props.zIndex || 2};
   height: 100vh;
   width: 100%;
   height: ${props => props.height || "100%"};
   top: ${props => props.top  || '0px'};
-
-  /* padding-top: 56.25%; 720 / 1280 = 0.5625 */
 `;
 
 const PlayerOverlay = styled.div`
@@ -25,21 +24,18 @@ const PlayerOverlay = styled.div`
   z-index: 2;
   pointer-events: none;
   `
+const InfoText = styled.p`
+    font-weight: lighter;
+    position: relative;
+    margin-left: 12px;
+    margin-top: 0px;
+  `;
 
 
 const YPlayer = (props) => {
-  var player, iframe;
 
-  const playFullscreen = () => {
-    // player.playVideo();//won't work on mobile
-
-    var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
-    if (requestFullScreen) {
-      requestFullScreen.bind(iframe)();
-    }
-  }
   return (
-    <PlayerWrapper {...props}>
+    <PlayerWrapper {...props} position="relative">
       {/* <PlayerOverlay /> */}
       <ReactPlayer
         url={props.link}
@@ -48,12 +44,10 @@ const YPlayer = (props) => {
         height="100%"
         width="100%"
         overlayZIndex="1"
-        onClick={playFullscreen}
       />
-
-      <H3 text={props.hText}></H3>
-      <P text={props.pText} ></P>
-
+      <InfoText>DANS</InfoText>
+      <H3 text={props.hText} position="initial" fontFamily="Cabin-Bold"></H3>
+      <P text={props.pText} position="initial"></P>
     </PlayerWrapper>
   );
   }

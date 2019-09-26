@@ -28,7 +28,7 @@ const H2Style = styled.h2`
 `;
 
 const H3Style = styled.h3`
-  font-family: "Cabin";
+  font-family: ${props => props.fontFamily || "Cabin"};
   font-size: ${props => props.fontSize || "22px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};

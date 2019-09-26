@@ -12,6 +12,8 @@ const Img = styled.img`
   width: ${props => props.width || "34vw"};
   height: ${props => props.height || "34vw"};
   border-radius: 5px;
+
+  border: 5px solid #101010;
 `;
 const TextContainer = styled.div`
   object-fit: cover;
@@ -25,7 +27,6 @@ const MaxChar = styled.div`
   width: 100%;
   z-index: 800;
 `;
-const Overlay = styled.div``;
 
 export const SmallMediaBox = props => {
   return (
@@ -33,7 +34,7 @@ export const SmallMediaBox = props => {
       <Img src={props.src} alt="" />
       <TextContainer>
         <MaxChar height="66px">
-          <H3 overflow="hidden" marginLeft="0px" width="100%" text={props.title} />
+          <H3 overflow="hidden" marginRight="0px" marginLeft="0px" width="90%" text={props.title} />
         </MaxChar>
         <MaxChar height="56px">
           <P marginTop="0px" marginLeft="0px" text={props.description} />

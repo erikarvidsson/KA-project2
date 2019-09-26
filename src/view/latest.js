@@ -6,6 +6,7 @@ import { MediaBox } from '../components/MediaBox';
 import ProfileIcon from "../components/ProfileIcon";
 import { H3 } from "../components/typo";
 import YPlayer from "../components/YPlayer";
+import Modal from "../components/Modal";
 
 const LayoutStyled = styled.div`
     /* height: 400vw; */
@@ -54,32 +55,55 @@ const Latest = (props) => {
               <ProfileIcon />
             </DivStyled>
             <SectionDivStyled>
-              <YPlayer
-                link={VideoData[0].url}
-                hText={VideoData[0].title}
-                pText={VideoData[0].description}
-                position="relative"
-                marginTop="28px"
-                ZIndex="10"
-              />
+              <Modal
+                url={VideoData[0].thumbnail}
+                title={VideoData[0].title}
+                description={VideoData[0].description}
+                height="400px"
+                imgWidth="100%"
+                imgMarginLeft="0px"
+              >
+                <YPlayer
+                  link={VideoData[0].url}
+                  hText={VideoData[0].title}
+                  pText={VideoData[0].description}
+                  height="270px"
+                />
+              </Modal>
             </SectionDivStyled>
             <SectionDivStyled>
-              <YPlayer
-                link={VideoData[1].url}
-                hText={VideoData[1].title}
-                pText={VideoData[1].description}
-                position="relative"
-                ZIndex="2"
-              />
+              <Modal
+                url={VideoData[1].thumbnail}
+                title={VideoData[1].title}
+                description={VideoData[1].description}
+                height="400px"
+                imgWidth="100%"
+                imgMarginLeft="0px"
+              >
+                <YPlayer
+                  link={VideoData[1].url}
+                  hText={VideoData[1].title}
+                  pText={VideoData[1].description}
+                  height="270px"
+                />
+              </Modal>
             </SectionDivStyled>
             <SectionDivStyled>
-              <YPlayer
-                link={VideoData[2].url}
-                hText={VideoData[2].title}
-                pText={VideoData[2].description}
-                position="relative"
-                ZIndex="2"
-              />
+              <Modal
+                url={VideoData[2].thumbnail}
+                title={VideoData[2].title}
+                description={VideoData[2].description}
+                height="400px"
+                imgWidth="100%"
+                imgMarginLeft="0px"
+              >
+                <YPlayer
+                  link={VideoData[2].url}
+                  hText={VideoData[2].title}
+                  pText={VideoData[2].description}
+                  height="270px"
+                />
+              </Modal>
             </SectionDivStyled>
           </LayoutStyled>
         </Layout>

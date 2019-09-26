@@ -4,7 +4,6 @@ import './App.css';
 import { createBrowserHistory } from 'history';
 
 import Home from "./view/";
-import About from "./view/about";
 import LogIn from "./view/login";
 import Library from './view/library';
 import Explore from './view/explore';
@@ -45,7 +44,6 @@ function App() {
       <header className="App-header">
         <div history={history}>
           <Route path="/" exact component={Home} />
-          <Route path="/About" component={About} />
           <Route path="/Login" component={LogIn} />
           <Route path="/Library" component={Library} />
           <Route path="/Explore" component={Explore} />

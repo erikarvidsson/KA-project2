@@ -2,7 +2,6 @@ import React,{ useState } from 'react';
 import styled from "styled-components";
 import MenuTop from '../MenuTop';
 import VideoData from "../../data/youtube.json"
-import Layout from '../Layout';
 import { SmallMediaBox } from '../SmallMediaBox';
 
 const InputStyled = styled.input`
@@ -16,9 +15,11 @@ const InputStyled = styled.input`
     margin-top: 100px;
     margin-left: 20px;
 `;
+
 const Form = styled.form`
     position: relative;
-    z-index: 9999;  
+    z-index: 9999;
+    margin-top: 109px;  
 `;
 
 const ResultWrapper = styled.div`
@@ -58,7 +59,7 @@ const SearchPage = (props) => {
     }
 
     return (
-        <Layout>
+        <div>
             <MenuTop text='Sök' />
             <div>
                 <Form>
@@ -84,7 +85,7 @@ const SearchPage = (props) => {
                     );
                 })}
             </ResultWrapper>
-        </Layout>
+        </div>
     );
 }
 

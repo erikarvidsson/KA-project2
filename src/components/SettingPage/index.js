@@ -51,7 +51,7 @@ const DivStyled = styled.div`
     }
 `;
 
-const CategoryDivStyled = styled.div `
+const CategoryDivStyled = styled.div`
     height: 56px;
     width: 100%;
     display: flex;
@@ -61,7 +61,7 @@ const CategoryDivStyled = styled.div `
     margin-right: 0;
 `;
 
-const Div = styled.div `
+const Div = styled.div`
     display: flex;
     flex-direction: row;
     color: #fff;
@@ -71,32 +71,32 @@ const SettingPage = () => {
     return (
         <div>
             <DivStyledUppspelning>
-              <NavigationButton goTo="Uppspelning"/>
+                <NavigationButton goTo='Uppspelning' />
             </DivStyledUppspelning>
             <Line2 />
             <DivStyled>
                 <CategoryDivStyled>
-                    <Category2 text='Mobildataanvändning' img="assets/icons/right-arrow.svg"/>
+                    <Category2 text='Mobildataanvändning' img='assets/icons/right-arrow.svg' />
                 </CategoryDivStyled>
-                <P text="Automatiskt" fontSize="12px" marginLeft="26px" marginTop="0"/>
-                <NavigationButton goTo="Nedladdningar"/>
+                <P text='Automatiskt' fontSize='12px' marginLeft='26px' marginTop='0px' />
+                <NavigationButton goTo='Nedladdningar' />
                 <Line2 />
                 <CategoryDivStyled>
-                    <Category2 text='Endast Wifi'/>
-                    <input type="checkbox" id="toggle" />
+                    <Category2 text='Endast Wifi' />
+                    <input type='checkbox' id='toggle' />
                     <label for="toggle"></label>
                 </CategoryDivStyled>
                 <Line2 />
                 <CategoryDivStyled>
-                    <Category2 text='Videokvalitet' img="assets/icons/right-arrow.svg"/>
+                    <Category2 text='Videokvalitet' img='assets/icons/right-arrow.svg' />
                 </CategoryDivStyled>
-                <P text="Standard" fontSize="12px" marginLeft="26px" marginTop="0"/>
-                <NavigationButton goTo="Textstorlek"/>
+                <P text='Standard' fontSize='12px' marginLeft='26px' marginTop='0' />
+                <NavigationButton goTo='Textstorlek'/>
                 <Line2 />
                 <Div>
-                    <P text="Aa" fontWeight="Bold" marginLeft="26px" width="6%"/>
-                    <P text="Aa" fontWeight="Bold" marginLeft="0" width="6%"/>
-                    <P text="Aa" fontWeight="Bold" marginLeft="0" width="6%"/>
+                    <P text='Aa' fontWeight='Bold' marginLeft='26px' width='6%' />
+                    <P text='Aa' fontWeight='Bold' marginLeft='0px' width='6%' />
+                    <P text='Aa' fontWeight='Bold' marginLeft='0px' width='6%' />
                 </Div>
                 <CategoryDivStyled>
                     <Category2 text='Ta bort allt sparat' img="assets/icons/garbage.svg"/>

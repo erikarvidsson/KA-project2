@@ -15,7 +15,7 @@ const BackIconStyled = styled.img `
     width: 25px;
     margin-left: 21px;
     margin-top: 59px;
-    z-index: 6;
+    z-index: 800;
     position: absolute;
 `;
 

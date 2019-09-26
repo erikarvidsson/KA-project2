@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const HeaderStyle = styled.h1`
   font-family: "Cabin";
-  font-size: ${props => props.fontSize || "48px"};
+  font-size: ${props => props.fontSize || "42px"};
   font-weight: ${props => props.fontWeight || "normal"};
   margin-top: ${props => props.marginTop || "12px"};
   margin-bottom: ${props => props.marginBottom || "12px"};

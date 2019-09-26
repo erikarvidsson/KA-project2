@@ -29,7 +29,7 @@ const Login = (props) => {
             </DivStyled>
             <LoginForm />
         </div>
-  );
+    );
 }
 
 export default Login;

@@ -65,19 +65,19 @@ export const MediaBox = (props) => {
                  fontSize
                  text={props.title}
                  zIndex="999"
-                marginLeft="23px"
+                 marginLeft="23px"
                ></H3>
              </MaxChar>
-             <MaxChar height={props => props.Height || "60px"} top="280px">
+             <MaxChar height={props => props.maxHeight || "60px"} top="280px">
                <P
-                top="300px"
-                width="90%"
-                text={props.description}
-                marginLeft="23px"
-                marginBottom="52px"
-                marginTop="22px"
-
-                ></P>
+                 top="300px"
+                 width="90%"
+                 text={props.description}
+                 marginLeft="23px"
+                 marginBottom="52px"
+                 marginTop="22px"
+                 position={props.position}
+               ></P>
              </MaxChar>
            </Container>
          );

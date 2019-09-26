@@ -118,7 +118,7 @@ const Explore = () => {
                     description={sound.description}
                     url={sound.thumbnailLong}>
                       <AudioPlayer
-                        thumbnail={sound.thumbnail}
+                        thumbnail={sound.img}
                         src="/audio/audiofile1.mp3"
                       ></AudioPlayer>
                   </ModalMediaBox >

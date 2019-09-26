@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
-import styled from 'styled-components';
+import styled from "styled-components";
 import VideoData from "../data/youtube.json";
-import { MediaBox } from '../components/MediaBox';
+import { MediaBox } from "../components/MediaBox";
 import ProfileIcon from "../components/ProfileIcon";
 import { H3 } from "../components/typo";
 import YPlayer from "../components/YPlayer";
@@ -22,9 +22,9 @@ const DivStyled = styled.div `
 `;
 
 const BackIconStyled = styled.img`
-    height: 25px;
-    width: 25px;
-    margin-left: 10px;
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
 `;
 
 const SectionDivStyled = styled.div`

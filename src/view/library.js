@@ -50,11 +50,10 @@ const Library = () => {
             />
           </StyledLink>
         </NavigationDivStyled>
-        <H3 text="Senaste avsnitt" />
+        <H3 text="Senaste avsnitt" width="90%" />
         <MediaBox
           src={VideoData[0].thumbnail}
           title={VideoData[0].title}
-        //   description={VideoData[0].description}
           position="initial"
         />
         <P text={VideoData[0].description} marginLeft="24px" width="90%"></P>

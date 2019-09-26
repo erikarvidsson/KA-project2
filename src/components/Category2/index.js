@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, P, H2, H3 } from '../typo';
+import { P } from '../typo';
 
 const DivStyled = styled.div`
     height: 51px;
@@ -23,16 +23,15 @@ const ImgStyled = styled.img`
     margin-right: 12px;
 `;
 
-
 const Category2 = (props) => {
     return(
         <DivStyled>
             <CategoryDivStyled>
-                <P text={props.text} marginLeft="18px" fontWeight='Bold'/>
-                <ImgStyled src={props.img} alt=''></ImgStyled>
+                <P text={props.text} marginLeft='18px' fontWeight='Bold' />
+                <ImgStyled src={props.img} alt='' />
             </CategoryDivStyled>
         </DivStyled>
-    )
+    );
 }
 
 export default Category2;

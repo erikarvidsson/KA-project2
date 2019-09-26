@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
 import { H3, P } from '../components/typo';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 const DivStyled = styled.div`
@@ -19,7 +19,7 @@ const DivStyled = styled.div`
     
 `;
 
-const ImgStyled = styled.img `
+const ImgStyled = styled.img`
     position: absolute;
     object-fit: cover;
     height: 100vh;
@@ -34,7 +34,7 @@ const LogoStyled = styled.img`
     z-index: 3;
 `;
 
-const GreenButtonStyled = styled.button `
+const GreenButtonStyled = styled.button`
     height: 35px;
     width: 211px;
     background-color: #69DF75;
@@ -49,7 +49,7 @@ const GreenButtonStyled = styled.button `
     z-index: 3;
 `;
 
-const WhiteButtonStyled = styled.button `
+const WhiteButtonStyled = styled.button`
     height: 35px;
     width: 211px;
     background-color: #FFFFFF;
@@ -82,14 +82,14 @@ const DivLineStyled = styled.div`
     z-index: 3;
 `;
 
-const LineStyled = styled.div `
+const LineStyled = styled.div`
     height: 0;
     width: 35vw;
     border-bottom: 1px solid #C4C4C4;
     z-index: 3;
 `;
 
-const Box = styled.div `
+const Box = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     position: absolute;
     height: 100%;
@@ -100,30 +100,30 @@ const Box = styled.div `
 
 const Index = () => {
   
-  const handleCreateAccount = () => {
-    window.location = '/signup';
-  }
+    const handleCreateAccount = () => {
+        window.location = '/signup';
+    }
 
-  const handleLogin = () => {
-    window.location = '/login';
-  }
+    const handleLogin = () => {
+        window.location = '/login';
+    }
 
-  return (  
-    <DivStyled>
-        <LogoStyled src='assets/icons/kplay-logotyp-elva.svg' alt='' />
-        <H3 text='Någon catchig text om Kplay.' textAlign='center' marginTop='38px' zIndex='3'/>
-        <GreenButtonStyled onClick={handleCreateAccount}><P text='Skaffa Kplay-konto'/></GreenButtonStyled>
-        <DivLineStyled>
-            <LineStyled />
-            <P text='eller' width='auto' marginTop='0px' marginLeft='0px' marginBottom='0px'/>
-            <LineStyled />
-        </DivLineStyled>
-        <WhiteButtonStyled onClick={handleLogin}><P text='Logga in' color='#000000'/></WhiteButtonStyled>
-        <StyledLink to='/ChoseCategry'><P text='Skip'/></StyledLink>
-        <Box/>
-        <ImgStyled src='assets/imgs/Cello.jpg'/>
-    </DivStyled>  
-  );
+    return (  
+        <DivStyled>
+            <LogoStyled src='assets/icons/kplay-logotyp-elva.svg' alt='' />
+            <H3 text='Någon catchig text om Kplay.' textAlign='center' marginTop='38px' zIndex='3' />
+            <GreenButtonStyled onClick={handleCreateAccount}><P text='Skaffa Kplay-konto' /></GreenButtonStyled>
+            <DivLineStyled>
+                <LineStyled />
+                <P text='eller' width='auto' marginTop='0px' marginLeft='0px' marginBottom='0px' />
+                <LineStyled />
+            </DivLineStyled>
+            <WhiteButtonStyled onClick={handleLogin}><P text='Logga in' color='#000000' /></WhiteButtonStyled>
+            <StyledLink to='/ChoseCategry'><P text='Skip' /></StyledLink>
+            <Box />
+            <ImgStyled src='assets/imgs/Cello.jpg' />
+        </DivStyled>  
+    );
 }
 
 export default Index;

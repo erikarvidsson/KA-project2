@@ -69,7 +69,7 @@ const Categories = (props) => {
             {categories2.map(category => {
                 return (
                   <>
-                    <Line />
+                    <Line id={category} />
                     <Category
                       id={category}
                       text={category}

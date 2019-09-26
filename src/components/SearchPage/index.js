@@ -20,17 +20,17 @@ const Form = styled.form`
     position: relative;
     z-index: 9999;
     margin-top: 109px;  
+    width: 100vw;
+    background-color: #101010;
 `;
 
 const ResultWrapper = styled.div`
-    margin-left: 20px;
-`;
-
-// Ska denna finnas kvar?
-const Img = styled.img`
-    width: 30vw;
-    margin-top: 150px;
-    margin-left: 20px;
+  /* width: 100vw; */
+  background-color:#101010;
+  padding-left: 20px;
+  position: absolute;
+  margin-top: 140px;
+  margin-bottom: 50px;
 `;
 
 // Ska props finnas kvar?
@@ -45,15 +45,9 @@ const SearchPage = (props) => {
             });
         });
     }
-    
-    // Ska denna användas?
-
-    // useEffect(() => {
-    //   setSearchValue(filterIt(VideoData, searchKey));
-    // }, []);
 
     function checkSubmit(e) {
-        if (e && e.keyCode == 13) {
+        if (e && e.keyCode === 13) {
             setSearchValue(filterIt(VideoData, searchKey));
         }
     }

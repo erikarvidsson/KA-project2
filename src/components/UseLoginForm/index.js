@@ -13,7 +13,6 @@ const UseLoginForm = (callback) => {
         if (values.email === 'test@test.se' && values.password === 'asd') {
             sessionStorage.setItem('loggedIn', 'yes')
             window.location = '/categories';
-
           }
     };
 

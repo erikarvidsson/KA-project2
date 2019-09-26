@@ -7,7 +7,7 @@ import { Header, P, H3 } from '../typo';
 
 const PlayerWrapper = styled.div`
   position: absolute;
-  z-index: ${props => props.zIndex || -2};
+  z-index: ${props => props.zIndex || 2};
   height: 100vh;
   width: 100%;
   height: ${props => props.height || "100%"};

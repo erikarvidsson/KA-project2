@@ -41,9 +41,7 @@ const Explore = () => {
     { name: "SCENKONST", src: "assets/imgs/SCENKONST-kategori.jpg" },
     { name: "FÄRGLÄRA", src: "assets/imgs/FARGLARA-kategori.jpg" }
   ];
-  const [dans, setDanse] = useState(false);
 
-  console.log(categories2)
     return (
       <div>
         <Layout>
@@ -86,14 +84,18 @@ const Explore = () => {
             <SideScroll>
               {VideoData.map(video => {
                 return (
-                  <ModalMediaBox url={video.thumbnail} title={video.title} description={video.description}>
-                    <YPlayer></YPlayer>
-                    <SmallMediaBox
-                      src={VideoData[0].thumbnail}
-                      title={VideoData[0].title}
-                      description={VideoData[0].description}
+                  <ModalMediaBox
+                    url={video.thumbnail}
+                    title={video.title}
+                    description={video.description}
+                  >
+                    <YPlayer
+                      link={video.url}
+                      hText={video.title}
+                      pText={video.description}
+                      height="270px"
                     />
-                  </ModalMediaBox >
+                  </ModalMediaBox>
                 );
               })
               })}
@@ -105,7 +107,6 @@ const Explore = () => {
               marginLeft="23px"
               marginTop="25px"
               width="90%"
-              // marginTop="40px"
             />
 
             <SideScroll>
@@ -119,7 +120,6 @@ const Explore = () => {
                         thumbnail={sound.thumbnail}
                         src="/audio/audiofile1.mp3"
                       ></AudioPlayer>
-                      {/* <LikeButton id={sound.id} /> */}
                   </ModalMediaBox >
                 );
               })}

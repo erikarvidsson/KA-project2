@@ -93,14 +93,22 @@ const ChoseCategory = () => {
       <Layout>
         <TopDivStyled>
           <LogoDivStyled>
-            <LogoStyled src='assets/icons/kplay-logotyp-elva.svg'></LogoStyled>
+            <LogoStyled src="assets/icons/kplay-logotyp-elva.svg"></LogoStyled>
           </LogoDivStyled>
-          
-          <Header text='Välj intressen' marginTop='21' margonBottom='0' marginLeft='0' marginRight='0'/>
-          
+
+          <Header
+            text="Välj intressen"
+            marginTop="21"
+            margonBottom="0"
+            marginLeft="0"
+            marginRight="0"
+          />
         </TopDivStyled>
-        <StyledLink to='/'>
-          <NavigationButton goTo='Gå vidare' img='assets/icons/right-arrow.svg' />
+        <StyledLink to="/latest">
+          <NavigationButton
+            goTo="Gå vidare"
+            img="assets/icons/right-arrow.svg"
+          />
         </StyledLink>
         <DivStyled>
           {/* <Select> */}
@@ -114,12 +122,10 @@ const ChoseCategory = () => {
                 src={category.src}
               />
             );
-          })} 
+          })}
 
           {/* </Select> */}
         </DivStyled>
-
-
       </Layout>
     </div>
   );

@@ -11,12 +11,13 @@ const DivStyled = styled.div `
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    margin-top: 59px;
 `;
 
 const BackIconStyled = styled.img`
-    height: 25px;
     width: 25px;
-    margin-left: 10px;
+    margin-left: 21px;
+    z-index: 800;
 `;
 
 const Konto = (props) => {
@@ -24,9 +25,9 @@ const Konto = (props) => {
         <div>
             <Layout>
                 <DivStyled>
-                    <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)}/>
-                        <H3 text='Konto' textAlign='center' marginLeft='-34px' marginRight='0px'/>
-                    </DivStyled>
+                    <BackIconStyled src='assets/icons/left-arrow.svg' onClick={() => props.history.goBack(props)} />
+                    <H3 text='Konto' textAlign='center' marginLeft='-45px' marginRight='0px' />
+                </DivStyled>
                 <KontoPage />
             </Layout>
         </div>

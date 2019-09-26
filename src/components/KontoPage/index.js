@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import FormStyled from '../Form';
+import Form from '../Form';
 import Line2 from '../Line2';
 import { H3 } from '../typo';
 
@@ -40,7 +40,7 @@ const KontoPage = () => {
                 </H3DivStyled>
             </ProfileStyled>
             <Line2 />
-            <FormStyled/>
+            <Form />
         </div>
     );
 }

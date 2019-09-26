@@ -35,10 +35,9 @@ const Window = styled.div`
 `;
 const Img = styled.img`
   position: ${props => props.position || "relative"};
-  width: ${props => props.imgWidth || "199px"};
+  width: ${props => props.imgWidth || "200px"};
   margin-left: ${props => props.imgMarginLeft || "12px"};
   object-fit: cover;
-  height: 127px;
   border-radius: 5px;
 `;
 const Box = styled.div`

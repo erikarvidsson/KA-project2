@@ -112,10 +112,11 @@ const Explore = () => {
             <SideScroll>
               {SoundData.map(sound => {
                 return (
-                  <ModalMediaBox 
+                  <ModalMediaBox
+          
                     title={sound.title}
                     description={sound.description}
-                    url={sound.thumbnail}>
+                    url={sound.thumbnailLong}>
                       <AudioPlayer
                         thumbnail={sound.thumbnail}
                         src="/audio/audiofile1.mp3"

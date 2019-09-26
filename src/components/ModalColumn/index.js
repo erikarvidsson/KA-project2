@@ -37,7 +37,7 @@ const Window = styled.div`
 `;
 const Img = styled.img`
   position: ${props => props.position || "relative"};
-  width: ${props => props.imgWidth || "200px"};
+  width: ${props => props.imgWidth || "150px"};
   margin: ${props => props.imgMarginLeft || "15px"};
   object-fit: cover;
   border-radius: 5px;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { P } from '../typo';
 import Line from '../Line';
@@ -18,7 +18,7 @@ const DivStyled = styled.div`
     justify-content: center;
 `;
 
-const DivPasswordStyled = styled.div `
+const DivPasswordStyled = styled.div`
     height: 51px;
     width: 100vw;
     display: flex;
@@ -75,12 +75,12 @@ const ImgStyled = styled.img`
 `;
 
 const SignupForm = () => {
+
     const [showPassword, setShowPassword] = useState('password')
 
     const nextPage = event => {
-      event.preventDefault();
-      window.location = "/ChoseCategry";
-      // window.open();
+        event.preventDefault();
+        window.location = '/ChoseCategry';
     };
 
     const showPasswordOnClick = () => {
@@ -92,49 +92,47 @@ const SignupForm = () => {
     }
 
     return (
-      <div>
-        <FormStyled action="/ChoseCategry" method="post" onSubmit={nextPage}>
-          <DivStyled>
-            <InputStyled
-              type="email"
-              placeholder="E-mail"
-              name="email"
-            ></InputStyled>
-          </DivStyled>
-          <Line />
-          <DivPasswordStyled>
-            <PasswordStyled
-              readonly
-              type={showPassword}
-              placeholder="Välj lösenord"
-              name="password"
-            ></PasswordStyled>
-            <ImgStyled
-              src="assets/icons/visible.svg"
-              onClick={showPasswordOnClick}
-            />
-          </DivPasswordStyled>
-          <Line />
-          <DivStyled>
-            <InputStyled
-              type="name"
-              placeholder="Namn"
-              name="name"
-            ></InputStyled>
-          </DivStyled>
-          <Line />
-          <DivStyled>
-            <InputStyled
-              type="text"
-              placeholder="Efternamn"
-              name="lastname"
-            ></InputStyled>
-          </DivStyled>
-          <ButtonStyled type="submit" onClick={nextPage}>
-            <P text="Fortsätt" textAlign="center" marginLeft="0px" />
-          </ButtonStyled>
+        <FormStyled action='/ChoseCategry' method='post' onSubmit={nextPage}>
+            <DivStyled>
+                <InputStyled
+                    type='email'
+                    placeholder='E-mail'
+                    name='email'
+                ></InputStyled>
+            </DivStyled>
+            <Line />
+            <DivPasswordStyled>
+                <PasswordStyled
+                    readonly
+                    type={showPassword}
+                    placeholder='Välj lösenord'
+                    name='password'
+                ></PasswordStyled>
+                <ImgStyled
+                    src='assets/icons/visible.svg'
+                    onClick={showPasswordOnClick}
+                />
+            </DivPasswordStyled>
+            <Line />
+            <DivStyled>
+                <InputStyled
+                    type='name'
+                    placeholder='Namn'
+                    name='name'
+                ></InputStyled>
+            </DivStyled>
+            <Line />
+            <DivStyled>
+                <InputStyled
+                    type='text'
+                    placeholder='Efternamn'
+                    name='lastname'
+                ></InputStyled>
+            </DivStyled>
+            <ButtonStyled type='submit' onClick={nextPage}>
+                <P text='Fortsätt' textAlign='center' marginLeft='0px' />
+            </ButtonStyled>
         </FormStyled>
-      </div>
     );
 }
 

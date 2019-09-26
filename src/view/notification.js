@@ -43,7 +43,7 @@ const Img = styled.img`
 const Notification = () => {
 
 
-    const [friends, setFriends] = useState([
+    const [ friends ] = useState([
         {
             name: 'Camille Jadermark',
             img: 'assets/imgs/Camille.jpg',

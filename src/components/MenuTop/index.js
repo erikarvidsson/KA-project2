@@ -24,8 +24,7 @@ const DivStyled = styled.div`
 `;
 
 const LogoStyled = styled.img`
-    width: 27px;
-    height: 29px;
+    width: 32px;
     margin-left: 22px;
 `;
 

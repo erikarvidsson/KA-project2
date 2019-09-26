@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import KontoPage from '../components/KontoPage';
-import styled from "styled-components";
+import styled from 'styled-components';
 import { H3 } from '../components/typo';
 
-const DivStyled = styled.div `
+const DivStyled = styled.div`
     width: 100vw;
     height: 56px;
     display: flex;

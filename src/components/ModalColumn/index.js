@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { P, H3 } from "../typo";
-import YPlayer from "../YPlayer";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { P } from '../typo';
 
 const Button = styled.div`
   position: absolute;
@@ -10,8 +9,7 @@ const Button = styled.div`
   height: 28px;
   left: 0;
   color: white;
-  /* background-color: #101010; */
-  background-image: url("assets/icons/ner-pil-ikon.svg");
+  background-image: url('assets/icons/ner-pil-ikon.svg');
   background-repeat: no-repeat;
   margin-left: 33px;
   z-index: 800;
@@ -23,7 +21,6 @@ const Container = styled.div`
   position: relative;
   text-align: ${props => props.textAlign || 'start'};
   color: white;
-
 `;
 const Window = styled.div`
   position: fixed;
@@ -31,8 +28,6 @@ const Window = styled.div`
   border-radius: 15px;
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(0, 0, 0, 0.7); */
-  /* background-color: black; */
   color: white;
   margin: 0 auto;
   left: 0;
@@ -40,9 +35,9 @@ const Window = styled.div`
   z-index: 9999;
 `;
 const Img = styled.img`
-  position: ${props => props.position || "relative"};
-  width: ${props => props.imgWidth || "150px"};
-  margin: ${props => props.imgMarginLeft || "15px"};
+  position: ${props => props.position || 'relative'};
+  width: ${props => props.imgWidth || '150px'};
+  margin: ${props => props.imgMarginLeft || '15px'};
   object-fit: cover;
   border-radius: 5px;
 `;
@@ -61,10 +56,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* position: absolute; */
   width: 80%;
-  /* height: 54vw; */
-  /* margin-top: 150px; */
 `;
 const MaxChar = styled.div`
   height: ${props => props.height};
@@ -72,41 +64,49 @@ const MaxChar = styled.div`
   overflow: hidden;
   margin: 5px;
   width: 90%;
-
 `;
-const ModalColumn = (props) => {
+const ModalColumn = props => {
   const [show, setShow] = useState(false);
 
-
- const handleClose = () => {
-    console.log('closed')
-    setShow(false);}
- const handleShow = () => {
-    console.log('clicked')
-    console.log(show)
-    setShow(true);}
-  console.log(props)
+  const handleClose = () => {
+    console.log('closed');
+    setShow(false);
+  };
+  const handleShow = () => {
+    console.log('clicked');
+    console.log(show);
+    setShow(true);
+  };
+  console.log(props);
   return (
     <>
       <Container onClick={handleShow} {...props}>
-
-      <Img src={props.url} alt="" />
-      <TextContainer>
-        <MaxChar height="52px">
-          <P marginLeft="0px" width="0" fontSize="18px" fontWeight="Bold" text={props.title} />
-
+        <Img src={props.url} alt='' />
+        <TextContainer>
+          <MaxChar height='52px'>
+            <P
+              marginLeft='0px'
+              width='0'
+              fontSize='18px'
+              fontWeight='Bold'
+              text={props.title}
+            />
           </MaxChar>
 
-        <MaxChar height="63px">
-          <P marginTop="0px" marginLeft="0px" fontSize="13px" text={props.description} />
-        </MaxChar>
-      </TextContainer>
-
+          <MaxChar height='63px'>
+            <P
+              marginTop='0px'
+              marginLeft='0px'
+              fontSize='13px'
+              text={props.description}
+            />
+          </MaxChar>
+        </TextContainer>
       </Container>
       {show && (
         <Window show={show}>
           <Button onClick={handleClose}></Button>
-            {props.children}
+          {props.children}
         </Window>
       )}
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import NavigationButton from '../NavigationButton';
 import Category2 from '../Category2';
 import { H2, H3, P } from '../typo';
@@ -27,7 +27,7 @@ const CategoryDivStyled = styled.div`
 const ToggleDivStyled = styled.div`
     height: 56px;
     width: 100%;
-    
+
     margin-right: 0;
     display: flex;
     flex-direction: row;
@@ -59,7 +59,7 @@ const SettingPage = () => {
         <div>
             <DivStyledUppspelning>
                 <NavigationButton goTo='Uppspelning' />
-            </DivStyledUppspelning>           
+            </DivStyledUppspelning>
             <DivStyled>
                 <CategoryDivStyled>
                     <Category2 text='Mobildataanvändning' img='assets/icons/right-arrow.svg' />
@@ -68,7 +68,7 @@ const SettingPage = () => {
                 <CategoryDivStyled>
                     <Category2 text='Videokvalitet' img='assets/icons/right-arrow.svg' />
                 </CategoryDivStyled>
-                <P text='Standard' fontSize='12px' marginLeft='26px' marginTop='0' />               
+                <P text='Standard' fontSize='12px' marginLeft='26px' marginTop='0' />
                 <ToggleDivStyled>
                     <ToggleComponent text='Endast Wi-Fi' />
                 </ToggleDivStyled>

@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-
-
-const Layout = (props) => {
-  const [liked, setLiked] = useState(0)
-  const [buttonColor, setButtonColor] = useState('red')
+const Layout = props => {
+  const [liked, setLiked] = useState(0);
+  const [buttonColor, setButtonColor] = useState('red');
 
   const Button = styled.button`
     position: absolute;
@@ -14,32 +12,23 @@ const Layout = (props) => {
     width: 50px;
     margin: 0 auto;
     text-align: center;
-  
-    background-color:${buttonColor};
-  `; 
 
-
-  console.log(sessionStorage.getItem("liked"));
-  console.log(liked);
+    background-color: ${buttonColor};
+  `;
 
   const setSubmit = () => {
     if (liked === 0) {
       setLiked(liked + 1);
-      setButtonColor("red");
+      setButtonColor('red');
       sessionStorage.setItem('liked', liked);
-
-      
-      
     } else {
       setLiked(liked - 1);
-      setButtonColor("blue");
-      sessionStorage.setItem("liked", liked);
+      setButtonColor('blue');
+      sessionStorage.setItem('liked', liked);
     }
   };
-  
-  return (
-  <Button {...props}  onClick={setSubmit} />
-  )
+
+  return <Button {...props} onClick={setSubmit} />;
 };
 
 export default Layout;

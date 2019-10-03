@@ -66,3 +66,30 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+____________________________________________________________________________________________________________________________
+
+### Code Review by Isac Larsson
+
+- The .env file isn't properly written to your .gitignore which makes all the private keys and client_ids reachable for everyone
+- Some imports are unused
+- Audio file is 29 MB big, try to find another way to play it 
+- Remember to make comments on functions, different components and so on
+- There are a lot of Route components in app which generates the pages, try re-using pages with different components or content. For example you have one page for login and one page for signup, these could be made in to one page
+- Explain what your getData.js function does with soundcloud and youtube
+- Even though you're using styled-components you could've put the styling in a seperate file for easier reading and not make the text so long
+- Be consistent with varaibles naming, for example when you use useState: playButton, setPlaybutton. Button in the second word should be uppercase aswell
+- For better responsive design do not use pixels, use % or other alternatives instead. (I understand the usage of pixels because of the amount of time though)
+- Look over the naming of components, there is one named Category and another one name Category 2, this could be easy for you to understand but not for someone who just go through your code
+- Remove unused pages and components like test page and Test component
+- If you are naming your variables in English make it consistent and don't use both Swedish and English
+- Make components that you can re-use, for example in your Form and SignupForm components you could've made components for input, button and label instead of writing all the code and text in those two components. 
+- Use "alt" attribute for all images for better understanding if the image by some reason couldn't load
+- In your notification page you have an useState named "friends" which is never set to something else than the initial value. Why are you using useState?
+- Even though it wouldn't be an useState in notification page it is still a pretty large array, could it be written in a seperate json file instead to make the code cleaner?
+- Your fonts are in the public/assets/fonts folder but also in the src/assets/fonts folder, do you need to have them in both?
+- Update the README file with your own text and gif to make it more personal and fun, so it doesn't look like just another React App
+- Remove unnecessary files such as index.css and app.css which comes with the Create React App package
+- Add the right Title and icon to index.html
+- Update the manifest.json with the right icons. 

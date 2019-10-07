@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### Code Review by Mikael Ravantti
+
+[App.js](https://github.com/erikarvidsson/KA-project2/blob/master/src/App.js#13) - Remember to use english names. e.g. "Account".
+[KontoPage](https://github.com/erikarvidsson/KA-project2/blob/master/src/components/KontoPage/index.js) - Same goes here with naming, would be better to have something like AccountPage.
+[Category](https://github.com/erikarvidsson/KA-project2/blob/master/src/components/Category/index.js), [Category2](https://github.com/erikarvidsson/KA-project2/blob/master/src/components/Category2/index.js) - Both components seems to share alot of the styling used. Could be named something else? Looks like duplicates at first glance.
+[Line](https://github.com/erikarvidsson/KA-project2/blob/master/src/components/Line/index.js), [Line2](https://github.com/erikarvidsson/KA-project2/blob/master/src/components/Line2/index.js) - Both are identical, except for the width. Could be reuse the same element and change the size depending on where you use it.
+[ProfileIcon](https://github.com/erikarvidsson/KA-project2/blob/master/src/components/ProfileIcon/index.js), [ProfileIcon2](https://github.com/erikarvidsson/KA-project2/blob/master/src/components/ProfileIcon2/index.js) - Same thing here as Line and Line2, identical except for the margin-top.
+[test.js](https://github.com/erikarvidsson/KA-project2/blob/master/src/view/test.js) - Remove test page.
